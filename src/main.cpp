@@ -34,12 +34,12 @@ Map<MatrixXf> m2(data,2,2);   // uses m2 as a MatrixXf object
 */
 
 /*  // vec * mat
-Eigen::Matrix<f64, 2, 2> mat;
+Eigen::Matrix<double, 2, 2> mat;
 mat(0, 0) = 1;
 mat(1, 0) = 2;
 mat(0, 1) = 3;
 mat(1, 1) = 4;
-Eigen::Matrix<f64, 2, 1> vec;
+Eigen::Matrix<double, 2, 1> vec;
 vec(0) = 1;
 vec(1) = 2;
 

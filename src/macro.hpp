@@ -1,18 +1,5 @@
 #pragma once
 
-#define int8 char
-#define uint8 unsigned char
-#define int16 short
-#define uint16 unsigned short
-#define int32 long
-#define uint32 unsigned long
-#define int64 long long
-#define uint64 unsigned long long
-
-#define f32 float
-#define f64 double
-
-
 
 #ifdef __GNUC__  // gcc compilers
 	#ifdef __x86_64__
