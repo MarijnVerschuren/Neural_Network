@@ -368,44 +368,38 @@ PUBLIC	??0?$DenseBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ ; E
 PUBLIC	??0?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,-1,0>::DenseStorage<double,-1,-1,-1,0>
 PUBLIC	??0?$DenseBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@IEAA@XZ ; Eigen::DenseBase<Eigen::Matrix<double,-1,1,0,-1,1> >::DenseBase<Eigen::Matrix<double,-1,1,0,-1,1> >
 PUBLIC	??0?$DenseStorage@N$0?0$0?0$00$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,1,0>::DenseStorage<double,-1,-1,1,0>
-PUBLIC	??0?$DenseBase@V?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@@Eigen@@IEAA@XZ ; Eigen::DenseBase<Eigen::Matrix<double,-1,728,0,-1,728> >::DenseBase<Eigen::Matrix<double,-1,728,0,-1,728> >
-PUBLIC	??0?$DenseStorage@N$0?0$0?0$0CNI@$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,728,0>::DenseStorage<double,-1,-1,728,0>
 PUBLIC	??0?$MatrixBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ ; Eigen::MatrixBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::MatrixBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >
 PUBLIC	??0?$MatrixBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@IEAA@XZ ; Eigen::MatrixBase<Eigen::Matrix<double,-1,1,0,-1,1> >::MatrixBase<Eigen::Matrix<double,-1,1,0,-1,1> >
-PUBLIC	??0?$MatrixBase@V?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@@Eigen@@IEAA@XZ ; Eigen::MatrixBase<Eigen::Matrix<double,-1,728,0,-1,728> >::MatrixBase<Eigen::Matrix<double,-1,728,0,-1,728> >
 PUBLIC	?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z ; Eigen::DenseStorage<double,-1,-1,-1,0>::resize
 PUBLIC	??0?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >
 PUBLIC	?_check_template_params@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@SAXXZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::_check_template_params
 PUBLIC	?resize@?$DenseStorage@N$0?0$0?0$00$0A@@Eigen@@QEAAX_J00@Z ; Eigen::DenseStorage<double,-1,-1,1,0>::resize
 PUBLIC	??0?$PlainObjectBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@IEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >::PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >
 PUBLIC	?_check_template_params@?$PlainObjectBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@SAXXZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >::_check_template_params
-PUBLIC	??0?$PlainObjectBase@V?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@@Eigen@@IEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,728,0,-1,728> >::PlainObjectBase<Eigen::Matrix<double,-1,728,0,-1,728> >
-PUBLIC	?_check_template_params@?$PlainObjectBase@V?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@@Eigen@@SAXXZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,728,0,-1,728> >::_check_template_params
+PUBLIC	??0?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@QEAA@XZ ; Eigen::symbolic::SymbolExpr<Eigen::internal::symbolic_last_tag>::SymbolExpr<Eigen::internal::symbolic_last_tag>
+PUBLIC	??R?$FixedInt@$00@internal@Eigen@@QEBA?AV012@XZ	; Eigen::internal::FixedInt<1>::operator()
 PUBLIC	??1?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,-1,0>::~DenseStorage<double,-1,-1,-1,0>
 PUBLIC	?resize@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAX_J0@Z ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::resize
 PUBLIC	??0?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,-1,0,-1,-1>::Matrix<double,-1,-1,0,-1,-1>
 PUBLIC	??1?$DenseStorage@N$0?0$0?0$00$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,1,0>::~DenseStorage<double,-1,-1,1,0>
 PUBLIC	?resize@?$PlainObjectBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@QEAAX_J@Z ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >::resize
 PUBLIC	??0?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ	; Eigen::Matrix<double,-1,1,0,-1,1>::Matrix<double,-1,1,0,-1,1>
-PUBLIC	??1?$DenseStorage@N$0?0$0?0$0CNI@$0A@@Eigen@@QEAA@XZ ; Eigen::DenseStorage<double,-1,-1,728,0>::~DenseStorage<double,-1,-1,728,0>
-PUBLIC	??0?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,728,0,-1,728>::Matrix<double,-1,728,0,-1,728>
+PUBLIC	??0?$initializer_list@_K@std@@QEAA@PEB_K0@Z	; std::initializer_list<unsigned __int64>::initializer_list<unsigned __int64>
+PUBLIC	?begin@?$initializer_list@_K@std@@QEBAPEB_KXZ	; std::initializer_list<unsigned __int64>::begin
+PUBLIC	?end@?$initializer_list@_K@std@@QEBAPEB_KXZ	; std::initializer_list<unsigned __int64>::end
+PUBLIC	?size@?$initializer_list@_K@std@@QEBA_KXZ	; std::initializer_list<unsigned __int64>::size
+PUBLIC	??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::~Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >
+PUBLIC	??1Data_Set@Mnist@@QEAA@XZ			; Mnist::Data_Set::~Data_Set
+PUBLIC	?__autoclassinit2@Network@Neural@@QEAAX_K@Z	; Neural::Network::__autoclassinit2
+PUBLIC	main
 PUBLIC	??1?$PlainObjectBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@QEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >::~PlainObjectBase<Eigen::Matrix<double,-1,1,0,-1,1> >
 PUBLIC	??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ	; Eigen::Matrix<double,-1,1,0,-1,1>::~Matrix<double,-1,1,0,-1,1>
+PUBLIC	??_E?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAAPEAXI@Z ; Eigen::Matrix<double,-1,1,0,-1,1>::`vector deleting destructor'
 PUBLIC	??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::~PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >
 PUBLIC	??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,-1,0,-1,-1>::~Matrix<double,-1,-1,0,-1,-1>
-PUBLIC	??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z ; Eigen::Matrix<double,-1,728,0,-1,728>::`scalar deleting destructor'
-PUBLIC	??_E?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAAPEAXI@Z ; Eigen::Matrix<double,-1,1,0,-1,1>::`vector deleting destructor'
 PUBLIC	??_E?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAAPEAXI@Z ; Eigen::Matrix<double,-1,-1,0,-1,-1>::`vector deleting destructor'
-PUBLIC	??1?$PlainObjectBase@V?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@@Eigen@@QEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,728,0,-1,728> >::~PlainObjectBase<Eigen::Matrix<double,-1,728,0,-1,728> >
-PUBLIC	??1?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,728,0,-1,728>::~Matrix<double,-1,728,0,-1,728>
-PUBLIC	??0?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@QEAA@XZ ; Eigen::symbolic::SymbolExpr<Eigen::internal::symbolic_last_tag>::SymbolExpr<Eigen::internal::symbolic_last_tag>
-PUBLIC	??R?$FixedInt@$00@internal@Eigen@@QEBA?AV012@XZ	; Eigen::internal::FixedInt<1>::operator()
-PUBLIC	??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::~Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >
-PUBLIC	??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ	; Neural::Network<728,10>::Network<728,10>
-PUBLIC	??1?$Network@$0CNI@$09@Neural@@QEAA@XZ		; Neural::Network<728,10>::~Network<728,10>
-PUBLIC	??1Data_Set@Mnist@@QEAA@XZ			; Mnist::Data_Set::~Data_Set
-PUBLIC	?__autoclassinit2@?$Network@$0CNI@$09@Neural@@QEAAX_K@Z ; Neural::Network<728,10>::__autoclassinit2
-PUBLIC	main
+PUBLIC	??1Network@Neural@@QEAA@XZ			; Neural::Network::~Network
+PUBLIC	??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z ; Neural::Network::Network
 PUBLIC	??0all_t@internal@Eigen@@QEAA@XZ		; Eigen::internal::all_t::all_t
 PUBLIC	??_H@YAXPEAX_K1P6APEAX0@Z@Z			; `vector constructor iterator'
 PUBLIC	?aligned_free@internal@Eigen@@YAXPEAX@Z		; Eigen::internal::aligned_free
@@ -517,9 +511,21 @@ $pdata$?resize@?$PlainObjectBase@V?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@@Eigen@@QE
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z DD imagerel $LN24
-	DD	imagerel $LN24+49
-	DD	imagerel $unwind$??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z
+$pdata$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DD imagerel $LN7@Data
+	DD	imagerel $LN7@Data+52
+	DD	imagerel $unwind$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??1Data_Set@Mnist@@QEAA@XZ DD imagerel $LN9@Data_Set
+	DD	imagerel $LN9@Data_Set+52
+	DD	imagerel $unwind$??1Data_Set@Mnist@@QEAA@XZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$main DD	imagerel $LN121
+	DD	imagerel $LN121+619
+	DD	imagerel $unwind$main
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -535,45 +541,27 @@ $pdata$??_E?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAAPEAXI@Z DD imagerel $LN26@v
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DD imagerel $LN7@Data
-	DD	imagerel $LN7@Data+52
-	DD	imagerel $unwind$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ
+$pdata$??1Network@Neural@@QEAA@XZ DD imagerel $LN57
+	DD	imagerel $LN57+133
+	DD	imagerel $unwind$??1Network@Neural@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ DD imagerel $LN126@Network
-	DD	imagerel $LN126@Network+744
-	DD	imagerel $unwind$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ
+$pdata$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z DD imagerel $LN121
+	DD	imagerel $LN121+622
+	DD	imagerel $unwind$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA DD imagerel ?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
-	DD	imagerel ?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA+62
-	DD	imagerel $unwind$?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
+$pdata$?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA DD imagerel ?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
+	DD	imagerel ?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA+62
+	DD	imagerel $unwind$?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA DD imagerel ?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
-	DD	imagerel ?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA+62
-	DD	imagerel $unwind$?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ DD imagerel $LN98
-	DD	imagerel $LN98+184
-	DD	imagerel $unwind$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??1Data_Set@Mnist@@QEAA@XZ DD imagerel $LN9@Data_Set
-	DD	imagerel $LN9@Data_Set+52
-	DD	imagerel $unwind$??1Data_Set@Mnist@@QEAA@XZ
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN161
-	DD	imagerel $LN161+646
-	DD	imagerel $unwind$main
+$pdata$?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA DD imagerel ?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
+	DD	imagerel ?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA+62
+	DD	imagerel $unwind$?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -663,118 +651,80 @@ $unwind$??_H@YAXPEAX_K1P6APEAX0@Z@Z DQ 00006340f00040f01r ; 8.62683e-309
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$main DB 08H
-	DB	0aeH
+$unwind$?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z DB 0aH
+	DB	0b8H
 	DB	00H
-	DB	016H
+	DB	'Z'
 	DB	02H
-	DB	081H, 05H
+	DB	'J'
+	DB	00H
+	DB	'Z'
 	DB	04H
-	DB	0aeH
+	DB	0f6H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$main DB 04H
-	DB	0aH
-	DD	imagerel ??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
-	DB	090H
-	DB	03eH
-	DD	imagerel __imp___std_terminate
+$stateUnwindMap$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z DB 04H
+	DB	0eH
+	DD	imagerel ?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
+	DB	036H
+	DD	imagerel ?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$main DB 028H
-	DD	imagerel $stateUnwindMap$main
-	DD	imagerel $ip2state$main
+$cppxdata$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z DB 028H
+	DD	imagerel $stateUnwindMap$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z
+	DD	imagerel $ip2state$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$main DD	0f3419H
-	DD	086825H
-	DD	01a641fH
-	DD	019541fH
-	DD	018341fH
-	DD	012011fH
-	DD	0e016f018H
-	DD	0c012d014H
-	DD	07010H
-	DD	imagerel __GSHandlerCheck_EH4
-	DD	imagerel $cppxdata$main
-	DD	072H
+$unwind$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z DD 0a1411H
+	DD	0113414H
+	DD	0f0107214H
+	DD	0d00ce00eH
+	DD	07008c00aH
+	DD	050066007H
+	DD	imagerel __CxxFrameHandler4
+	DD	imagerel $cppxdata$??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1Data_Set@Mnist@@QEAA@XZ DQ 03002320600020601r ; 1.96423e-77
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ DB 04H
-	DB	'R'
+$ip2state$??1Network@Neural@@QEAA@XZ DB 04H
+	DB	'P'
 	DB	02H
 	DB	0a4H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ DB 02H
+$stateUnwindMap$??1Network@Neural@@QEAA@XZ DB 02H
 	DB	0eH
 	DD	imagerel __imp___std_terminate
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ DB 068H
-	DD	imagerel $stateUnwindMap$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
-	DD	imagerel $ip2state$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
+$cppxdata$??1Network@Neural@@QEAA@XZ DB 068H
+	DD	imagerel $stateUnwindMap$??1Network@Neural@@QEAA@XZ
+	DD	imagerel $ip2state$??1Network@Neural@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ DD 040a19H
+$unwind$??1Network@Neural@@QEAA@XZ DD 040a19H
 	DD	06340aH
 	DD	07006320aH
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA DQ 05002320600020601r ; 2.6336e+77
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA DQ 05002320600020601r ; 2.6336e+77
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ DQ 05a0264045a02c80er ; 3.89033e+125
-	DQ	0280004990202e106r		; 5.08158e-116
-	DB	02H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$stateUnwindMap$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ DW 0c06H
-	DD	imagerel ??1?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAA@XZ
-	DW	03680H
-	DD	imagerel ?dtor$1@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
-	DB	05eH
-	DD	imagerel ?dtor$2@?0???0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ@4HA
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ DB 028H
-	DD	imagerel $stateUnwindMap$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ
-	DD	imagerel $ip2state$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ DQ 0f01ba21f00091f11r ; -1.07253e+232
-	DQ	07013c015d017e019r		; 7.66569e+231
-	DQ	00000301050116012r		; 2.61097e-310
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DQ 03002320600020601r ; 1.96423e-77
+	DD	imagerel $cppxdata$??1Network@Neural@@QEAA@XZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -810,8 +760,53 @@ $unwind$??_E?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAAPEAXI@Z DQ 03002320600020619
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z DD 020601H
-	DD	030023206H
+$ip2state$main DB 08H
+	DB	0deH
+	DB	00H
+	DB	016H
+	DB	02H
+	DB	0a1H, 05H
+	DB	04H
+	DB	0a6H
+	DB	00H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$stateUnwindMap$main DB 04H
+	DB	0aH
+	DD	imagerel ??1Network@Neural@@QEAA@XZ
+	DB	0c0H
+	DB	03eH
+	DD	imagerel __imp___std_terminate
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$cppxdata$main DB 028H
+	DD	imagerel $stateUnwindMap$main
+	DD	imagerel $ip2state$main
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$main DD	0f3419H
+	DD	086825H
+	DD	01a641fH
+	DD	019541fH
+	DD	018341fH
+	DD	012011fH
+	DD	0e016f018H
+	DD	0c012d014H
+	DD	07010H
+	DD	imagerel __GSHandlerCheck_EH4
+	DD	imagerel $cppxdata$main
+	DD	07aH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??1Data_Set@Mnist@@QEAA@XZ DQ 03002320600020601r ; 1.96423e-77
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DQ 03002320600020601r ; 1.96423e-77
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -886,27 +881,550 @@ xdata	SEGMENT
 $unwind$??$conditional_aligned_malloc@$00@internal@Eigen@@YAPEAX_K@Z DQ 03002320600020601r ; 1.96423e-77
 xdata	ENDS
 ; Function compile flags: /Ogtpy
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+;	COMDAT ??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z
+_TEXT	SEGMENT
+$T5 = 48
+$T1 = 48
+$T4 = 56
+$T2 = 56
+this$ = 128
+input_size$dead$ = 136
+layers$ = 144
+output_size$dead$ = 152
+??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z PROC ; Neural::Network::Network, COMDAT
+
+; 38   : 		Network(uint64_t input_size, std::initializer_list<uint64_t> layers, uint64_t output_size) {
+
+$LN121:
+  00000	48 89 5c 24 10	 mov	 QWORD PTR [rsp+16], rbx
+  00005	55		 push	 rbp
+  00006	56		 push	 rsi
+  00007	57		 push	 rdi
+  00008	41 54		 push	 r12
+  0000a	41 55		 push	 r13
+  0000c	41 56		 push	 r14
+  0000e	41 57		 push	 r15
+  00010	48 83 ec 40	 sub	 rsp, 64			; 00000040H
+  00014	4c 8b f1	 mov	 r14, rcx
+
+; 28   : 		Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>*		weights =		nullptr;
+
+  00017	33 c0		 xor	 eax, eax
+  00019	48 89 01	 mov	 QWORD PTR [rcx], rax
+
+; 29   : 		Eigen::Matrix<double, Eigen::Dynamic, 1>*					biases =		nullptr;
+
+  0001c	48 89 41 08	 mov	 QWORD PTR [rcx+8], rax
+
+; 30   : 		uint64_t													layer_count =	0;
+
+  00020	48 89 41 10	 mov	 QWORD PTR [rcx+16], rax
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+
+; 46   :         return static_cast<size_t>(_Last - _First);
+
+  00024	4d 8b 60 08	 mov	 r12, QWORD PTR [r8+8]
+  00028	49 8b 30	 mov	 rsi, QWORD PTR [r8]
+  0002b	4d 8b fc	 mov	 r15, r12
+  0002e	4c 2b fe	 sub	 r15, rsi
+  00031	49 c1 ff 03	 sar	 r15, 3
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+
+; 40   : 			weights = new Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>[hidden_layer_count + 1];
+
+  00035	49 8d 7f 01	 lea	 rdi, QWORD PTR [r15+1]
+  00039	48 89 7c 24 30	 mov	 QWORD PTR $T1[rsp], rdi
+  0003e	b8 18 00 00 00	 mov	 eax, 24
+  00043	48 f7 e7	 mul	 rdi
+  00046	48 c7 c5 ff ff
+	ff ff		 mov	 rbp, -1
+  0004d	48 0f 40 c5	 cmovo	 rax, rbp
+  00051	48 83 c0 08	 add	 rax, 8
+  00055	48 0f 42 c5	 cmovb	 rax, rbp
+  00059	48 8b c8	 mov	 rcx, rax
+  0005c	e8 00 00 00 00	 call	 ??_U@YAPEAX_K@Z		; operator new[]
+  00061	48 89 44 24 38	 mov	 QWORD PTR $T2[rsp], rax
+  00066	48 89 38	 mov	 QWORD PTR [rax], rdi
+  00069	48 8d 58 08	 lea	 rbx, QWORD PTR [rax+8]
+  0006d	48 8d 05 00 00
+	00 00		 lea	 rax, OFFSET FLAT:??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
+  00074	48 89 44 24 20	 mov	 QWORD PTR [rsp+32], rax
+  00079	4c 8d 0d 00 00
+	00 00		 lea	 r9, OFFSET FLAT:??0?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,-1,0,-1,-1>::Matrix<double,-1,-1,0,-1,-1>
+  00080	4c 8b c7	 mov	 r8, rdi
+  00083	8d 55 19	 lea	 edx, QWORD PTR [rbp+25]
+  00086	48 8b cb	 mov	 rcx, rbx
+  00089	e8 00 00 00 00	 call	 ??_L@YAXPEAX_K1P6AX0@Z2@Z
+  0008e	90		 npad	 1
+  0008f	49 89 1e	 mov	 QWORD PTR [r14], rbx
+
+; 41   : 			biases = new Eigen::Matrix<double, Eigen::Dynamic, 1>[hidden_layer_count + 1];
+
+  00092	48 89 7c 24 38	 mov	 QWORD PTR $T4[rsp], rdi
+  00097	b8 10 00 00 00	 mov	 eax, 16
+  0009c	48 f7 e7	 mul	 rdi
+  0009f	48 0f 40 c5	 cmovo	 rax, rbp
+  000a3	48 83 c0 08	 add	 rax, 8
+  000a7	48 0f 42 c5	 cmovb	 rax, rbp
+  000ab	48 8b c8	 mov	 rcx, rax
+  000ae	e8 00 00 00 00	 call	 ??_U@YAPEAX_K@Z		; operator new[]
+  000b3	48 89 44 24 30	 mov	 QWORD PTR $T5[rsp], rax
+  000b8	48 89 38	 mov	 QWORD PTR [rax], rdi
+  000bb	48 8d 58 08	 lea	 rbx, QWORD PTR [rax+8]
+  000bf	48 8d 05 00 00
+	00 00		 lea	 rax, OFFSET FLAT:??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ
+  000c6	48 89 44 24 20	 mov	 QWORD PTR [rsp+32], rax
+  000cb	4c 8d 0d 00 00
+	00 00		 lea	 r9, OFFSET FLAT:??0?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,1,0,-1,1>::Matrix<double,-1,1,0,-1,1>
+  000d2	4c 8b c7	 mov	 r8, rdi
+  000d5	8d 55 11	 lea	 edx, QWORD PTR [rbp+17]
+  000d8	48 8b cb	 mov	 rcx, rbx
+  000db	e8 00 00 00 00	 call	 ??_L@YAXPEAX_K1P6AX0@Z2@Z
+  000e0	90		 npad	 1
+  000e1	49 89 5e 08	 mov	 QWORD PTR [r14+8], rbx
+
+; 42   : 			layer_count = hidden_layer_count + 1;
+
+  000e5	49 89 7e 10	 mov	 QWORD PTR [r14+16], rdi
+
+; 43   : 
+; 44   : 			uint64_t		i = 0;
+; 45   : 			uint64_t		in_size = input_size;
+
+  000e9	bf d8 02 00 00	 mov	 edi, 728		; 000002d8H
+
+; 46   : 
+; 47   : 			for (uint64_t size : layers) {
+
+  000ee	49 bd ff ff ff
+	ff ff ff ff 7f	 mov	 r13, 9223372036854775807 ; 7fffffffffffffffH
+  000f8	49 3b f4	 cmp	 rsi, r12
+  000fb	0f 84 c2 00 00
+	00		 je	 $LN3@Network
+$LL4@Network:
+  00101	48 8b 1e	 mov	 rbx, QWORD PTR [rsi]
+
+; 48   : 				weights[i].resize(size, in_size);
+
+  00104	49 8b 2e	 mov	 rbp, QWORD PTR [r14]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+
+; 273  :       eigen_assert(   EIGEN_IMPLIES(RowsAtCompileTime!=Dynamic,rows==RowsAtCompileTime)
+
+  00107	48 85 db	 test	 rbx, rbx
+  0010a	78 05		 js	 SHORT $LN14@Network
+  0010c	48 85 ff	 test	 rdi, rdi
+  0010f	79 1a		 jns	 SHORT $LN15@Network
+$LN14@Network:
+  00111	41 b8 15 01 00
+	00		 mov	 r8d, 277		; 00000115H
+  00117	48 8d 15 00 00
+	00 00		 lea	 rdx, OFFSET FLAT:??_C@_1MO@IEDNFCAN@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAm?$AAa?$AAr?$AAi?$AAj?$AA?2@
+  0011e	48 8d 0d 00 00
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_1DBO@BCDCEIEF@?$AA?$CI?$AA?$CB?$AA?$CI?$AAR?$AAo?$AAw?$AAs?$AAA?$AAt?$AAC?$AAo?$AAm?$AAp?$AAi?$AAl@
+  00125	ff 15 00 00 00
+	00		 call	 QWORD PTR __imp__wassert
+$LN15@Network:
+
+; 45   :     bool error = (rows == 0 || cols == 0) ? false
+
+  0012b	48 85 db	 test	 rbx, rbx
+  0012e	74 16		 je	 SHORT $LN112@Network
+  00130	48 85 ff	 test	 rdi, rdi
+  00133	74 11		 je	 SHORT $LN112@Network
+  00135	49 8b c5	 mov	 rax, r13
+  00138	48 99		 cdq
+  0013a	48 f7 ff	 idiv	 rdi
+
+; 46   :                : (rows > max_index / cols);
+; 47   :     if (error)
+
+  0013d	48 3b d8	 cmp	 rbx, rax
+  00140	0f 8f 22 01 00
+	00		 jg	 $LN116@Network
+$LN112@Network:
+
+; 285  :         m_storage.resize(rows*cols, rows, cols);
+
+  00146	48 8b d3	 mov	 rdx, rbx
+  00149	48 0f af d7	 imul	 rdx, rdi
+  0014d	4c 8b cf	 mov	 r9, rdi
+  00150	4c 8b c3	 mov	 r8, rbx
+  00153	48 8b cd	 mov	 rcx, rbp
+  00156	e8 00 00 00 00	 call	 ?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z ; Eigen::DenseStorage<double,-1,-1,-1,0>::resize
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+
+; 49   : 				biases[i].resize(size);
+
+  0015b	49 8b 7e 08	 mov	 rdi, QWORD PTR [r14+8]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+
+; 304  :       eigen_assert(((SizeAtCompileTime == Dynamic && (MaxSizeAtCompileTime==Dynamic || size<=MaxSizeAtCompileTime)) || SizeAtCompileTime == size) && size>=0);
+
+  0015f	48 85 db	 test	 rbx, rbx
+  00162	79 1a		 jns	 SHORT $LN28@Network
+  00164	41 b8 30 01 00
+	00		 mov	 r8d, 304		; 00000130H
+  0016a	48 8d 15 00 00
+	00 00		 lea	 rdx, OFFSET FLAT:??_C@_1MO@IEDNFCAN@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAm?$AAa?$AAr?$AAi?$AAj?$AA?2@
+  00171	48 8d 0d 00 00
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_1BBE@FLFGDPIJ@?$AA?$CI?$AA?$CI?$AAS?$AAi?$AAz?$AAe?$AAA?$AAt?$AAC?$AAo?$AAm?$AAp?$AAi?$AAl?$AAe@
+  00178	ff 15 00 00 00
+	00		 call	 QWORD PTR __imp__wassert
+$LN28@Network:
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+
+; 635  :       if(size != m_rows*_Cols)
+
+  0017e	48 3b 5f 08	 cmp	 rbx, QWORD PTR [rdi+8]
+  00182	74 2b		 je	 SHORT $LN47@Network
+
+; 636  :       {
+; 637  :         internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Cols*m_rows);
+
+  00184	48 8b 0f	 mov	 rcx, QWORD PTR [rdi]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
+
+; 116  :   if (ptr) {
+
+  00187	48 85 c9	 test	 rcx, rcx
+  0018a	74 0a		 je	 SHORT $LN57@Network
+
+; 117  :     EIGEN_USING_STD(free)
+; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
+
+  0018c	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
+  00190	ff 15 00 00 00
+	00		 call	 QWORD PTR __imp_free
+$LN57@Network:
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+
+; 638  :         if (size>0) // >0 and not simply !=0 to let the compiler knows that size cannot be negative
+
+  00196	48 85 db	 test	 rbx, rbx
+  00199	7e 0d		 jle	 SHORT $LN46@Network
+
+; 639  :           m_data = internal::conditional_aligned_new_auto<T,(_Options&DontAlign)==0>(size);
+
+  0019b	48 8b cb	 mov	 rcx, rbx
+  0019e	e8 00 00 00 00	 call	 ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z ; Eigen::internal::conditional_aligned_new_auto<double,1>
+  001a3	48 89 07	 mov	 QWORD PTR [rdi], rax
+  001a6	eb 07		 jmp	 SHORT $LN47@Network
+$LN46@Network:
+
+; 640  :         else
+; 641  :           m_data = 0;
+
+  001a8	48 c7 07 00 00
+	00 00		 mov	 QWORD PTR [rdi], 0
+$LN47@Network:
+
+; 642  :         EIGEN_INTERNAL_DENSE_STORAGE_CTOR_PLUGIN({})
+; 643  :       }
+; 644  :       m_rows = rows;
+
+  001af	48 89 5f 08	 mov	 QWORD PTR [rdi+8], rbx
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+
+; 50   : 				in_size = size;
+
+  001b3	48 8b fb	 mov	 rdi, rbx
+
+; 46   : 
+; 47   : 			for (uint64_t size : layers) {
+
+  001b6	48 83 c6 08	 add	 rsi, 8
+  001ba	49 3b f4	 cmp	 rsi, r12
+  001bd	0f 85 3e ff ff
+	ff		 jne	 $LL4@Network
+$LN3@Network:
+
+; 51   : 			}
+; 52   : 
+; 53   : 			weights[hidden_layer_count].resize(output_size, in_size);
+
+  001c3	4f 8d 0c 7f	 lea	 r9, QWORD PTR [r15+r15*2]
+  001c7	49 8b 06	 mov	 rax, QWORD PTR [r14]
+  001ca	4a 8d 1c c8	 lea	 rbx, QWORD PTR [rax+r9*8]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+
+; 273  :       eigen_assert(   EIGEN_IMPLIES(RowsAtCompileTime!=Dynamic,rows==RowsAtCompileTime)
+
+  001ce	48 85 ff	 test	 rdi, rdi
+  001d1	79 1c		 jns	 SHORT $LN118@Network
+  001d3	41 b8 15 01 00
+	00		 mov	 r8d, 277		; 00000115H
+  001d9	48 8d 15 00 00
+	00 00		 lea	 rdx, OFFSET FLAT:??_C@_1MO@IEDNFCAN@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAm?$AAa?$AAr?$AAi?$AAj?$AA?2@
+  001e0	48 8d 0d 00 00
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_1DBO@BCDCEIEF@?$AA?$CI?$AA?$CB?$AA?$CI?$AAR?$AAo?$AAw?$AAs?$AAA?$AAt?$AAC?$AAo?$AAm?$AAp?$AAi?$AAl@
+  001e7	ff 15 00 00 00
+	00		 call	 QWORD PTR __imp__wassert
+  001ed	eb 02		 jmp	 SHORT $LN115@Network
+$LN118@Network:
+
+; 45   :     bool error = (rows == 0 || cols == 0) ? false
+
+  001ef	74 0e		 je	 SHORT $LN64@Network
+$LN115@Network:
+  001f1	49 8b c5	 mov	 rax, r13
+  001f4	48 99		 cdq
+  001f6	48 f7 ff	 idiv	 rdi
+
+; 46   :                : (rows > max_index / cols);
+; 47   :     if (error)
+
+  001f9	48 83 f8 0a	 cmp	 rax, 10
+  001fd	7c 69		 jl	 SHORT $LN116@Network
+$LN64@Network:
+
+; 285  :         m_storage.resize(rows*cols, rows, cols);
+
+  001ff	48 8d 14 bf	 lea	 rdx, QWORD PTR [rdi+rdi*4]
+  00203	48 03 d2	 add	 rdx, rdx
+  00206	4c 8b cf	 mov	 r9, rdi
+  00209	41 b8 0a 00 00
+	00		 mov	 r8d, 10
+  0020f	48 8b cb	 mov	 rcx, rbx
+  00212	e8 00 00 00 00	 call	 ?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z ; Eigen::DenseStorage<double,-1,-1,-1,0>::resize
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+
+; 54   : 			biases[hidden_layer_count].resize(output_size);
+
+  00217	49 c1 e7 04	 shl	 r15, 4
+  0021b	4d 03 7e 08	 add	 r15, QWORD PTR [r14+8]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+
+; 635  :       if(size != m_rows*_Cols)
+
+  0021f	49 83 7f 08 0a	 cmp	 QWORD PTR [r15+8], 10
+  00224	74 1f		 je	 SHORT $LN93@Network
+
+; 636  :       {
+; 637  :         internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Cols*m_rows);
+
+  00226	49 8b 0f	 mov	 rcx, QWORD PTR [r15]
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
+
+; 116  :   if (ptr) {
+
+  00229	48 85 c9	 test	 rcx, rcx
+  0022c	74 0a		 je	 SHORT $LN114@Network
+
+; 117  :     EIGEN_USING_STD(free)
+; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
+
+  0022e	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
+  00232	ff 15 00 00 00
+	00		 call	 QWORD PTR __imp_free
+$LN114@Network:
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+
+; 639  :           m_data = internal::conditional_aligned_new_auto<T,(_Options&DontAlign)==0>(size);
+
+  00238	b9 0a 00 00 00	 mov	 ecx, 10
+  0023d	e8 00 00 00 00	 call	 ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z ; Eigen::internal::conditional_aligned_new_auto<double,1>
+  00242	49 89 07	 mov	 QWORD PTR [r15], rax
+$LN93@Network:
+
+; 642  :         EIGEN_INTERNAL_DENSE_STORAGE_CTOR_PLUGIN({})
+; 643  :       }
+; 644  :       m_rows = rows;
+
+  00245	49 c7 47 08 0a
+	00 00 00	 mov	 QWORD PTR [r15+8], 10
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+
+; 57   : 		}
+
+  0024d	49 8b c6	 mov	 rax, r14
+  00250	48 8b 9c 24 88
+	00 00 00	 mov	 rbx, QWORD PTR [rsp+136]
+  00258	48 83 c4 40	 add	 rsp, 64			; 00000040H
+  0025c	41 5f		 pop	 r15
+  0025e	41 5e		 pop	 r14
+  00260	41 5d		 pop	 r13
+  00262	41 5c		 pop	 r12
+  00264	5f		 pop	 rdi
+  00265	5e		 pop	 rsi
+  00266	5d		 pop	 rbp
+  00267	c3		 ret	 0
+$LN116@Network:
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\PlainObjectBase.h
+
+; 48   :       throw_std_bad_alloc();
+
+  00268	e8 00 00 00 00	 call	 ?throw_std_bad_alloc@internal@Eigen@@YAXXZ ; Eigen::internal::throw_std_bad_alloc
+  0026d	cc		 int	 3
+$LN117@Network:
+??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z ENDP ; Neural::Network::Network
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+;	COMDAT text$x
+text$x	SEGMENT
+$T5 = 48
+$T1 = 48
+$T4 = 56
+$T2 = 56
+this$ = 128
+input_size$dead$ = 136
+layers$ = 144
+output_size$dead$ = 152
+?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA PROC ; `Neural::Network::Network'::`1'::dtor$0
+  00000	40 55		 push	 rbp
+  00002	48 83 ec 20	 sub	 rsp, 32			; 00000020H
+  00006	48 8b ea	 mov	 rbp, rdx
+  00009	b8 18 00 00 00	 mov	 eax, 24
+  0000e	48 f7 65 30	 mul	 QWORD PTR $T1[rbp]
+  00012	48 8b d0	 mov	 rdx, rax
+  00015	48 c7 c0 ff ff
+	ff ff		 mov	 rax, -1
+  0001c	48 0f 40 d0	 cmovo	 rdx, rax
+  00020	48 83 c2 08	 add	 rdx, 8
+  00024	48 c7 c0 ff ff
+	ff ff		 mov	 rax, -1
+  0002b	48 0f 42 d0	 cmovb	 rdx, rax
+  0002f	48 8b 4d 38	 mov	 rcx, QWORD PTR $T2[rbp]
+  00033	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  00038	48 83 c4 20	 add	 rsp, 32			; 00000020H
+  0003c	5d		 pop	 rbp
+  0003d	c3		 ret	 0
+?dtor$0@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA ENDP ; `Neural::Network::Network'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Ogtpy
+;	COMDAT text$x
+text$x	SEGMENT
+$T5 = 48
+$T1 = 48
+$T4 = 56
+$T2 = 56
+this$ = 128
+input_size$dead$ = 136
+layers$ = 144
+output_size$dead$ = 152
+?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA PROC ; `Neural::Network::Network'::`1'::dtor$1
+  0003e	40 55		 push	 rbp
+  00040	48 83 ec 20	 sub	 rsp, 32			; 00000020H
+  00044	48 8b ea	 mov	 rbp, rdx
+  00047	b8 10 00 00 00	 mov	 eax, 16
+  0004c	48 f7 65 38	 mul	 QWORD PTR $T4[rbp]
+  00050	48 8b d0	 mov	 rdx, rax
+  00053	48 c7 c0 ff ff
+	ff ff		 mov	 rax, -1
+  0005a	48 0f 40 d0	 cmovo	 rdx, rax
+  0005e	48 83 c2 08	 add	 rdx, 8
+  00062	48 c7 c0 ff ff
+	ff ff		 mov	 rax, -1
+  00069	48 0f 42 d0	 cmovb	 rdx, rax
+  0006d	48 8b 4d 30	 mov	 rcx, QWORD PTR $T5[rbp]
+  00071	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  00076	48 83 c4 20	 add	 rsp, 32			; 00000020H
+  0007a	5d		 pop	 rbp
+  0007b	c3		 ret	 0
+?dtor$1@?0???0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z@4HA ENDP ; `Neural::Network::Network'::`1'::dtor$1
+text$x	ENDS
+; Function compile flags: /Ogtpy
+; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
+;	COMDAT ??1Network@Neural@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 48
+??1Network@Neural@@QEAA@XZ PROC				; Neural::Network::~Network, COMDAT
+
+; 58   : 		~Network() {
+
+$LN57:
+  00000	48 89 5c 24 08	 mov	 QWORD PTR [rsp+8], rbx
+  00005	57		 push	 rdi
+  00006	48 83 ec 20	 sub	 rsp, 32			; 00000020H
+  0000a	48 8b f9	 mov	 rdi, rcx
+
+; 59   : 			delete[] weights;
+
+  0000d	48 8b 09	 mov	 rcx, QWORD PTR [rcx]
+  00010	48 85 c9	 test	 rcx, rcx
+  00013	74 30		 je	 SHORT $LN3@Network
+  00015	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
+  00019	4c 8d 0d 00 00
+	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
+  00020	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
+  00023	ba 18 00 00 00	 mov	 edx, 24
+  00028	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
+  0002d	48 8b 03	 mov	 rax, QWORD PTR [rbx]
+  00030	48 8d 14 40	 lea	 rdx, QWORD PTR [rax+rax*2]
+  00034	48 8d 14 d5 08
+	00 00 00	 lea	 rdx, QWORD PTR [rdx*8+8]
+  0003c	48 8b cb	 mov	 rcx, rbx
+  0003f	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  00044	90		 npad	 1
+$LN3@Network:
+
+; 60   : 			delete[] biases;
+
+  00045	48 8b 4f 08	 mov	 rcx, QWORD PTR [rdi+8]
+  00049	48 85 c9	 test	 rcx, rcx
+  0004c	74 2c		 je	 SHORT $LN5@Network
+  0004e	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
+  00052	4c 8d 0d 00 00
+	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ
+  00059	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
+  0005c	ba 10 00 00 00	 mov	 edx, 16
+  00061	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
+  00066	48 8b 13	 mov	 rdx, QWORD PTR [rbx]
+  00069	48 c1 e2 04	 shl	 rdx, 4
+  0006d	48 83 c2 08	 add	 rdx, 8
+  00071	48 8b cb	 mov	 rcx, rbx
+  00074	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  00079	90		 npad	 1
+$LN5@Network:
+
+; 61   : 		}
+
+  0007a	48 8b 5c 24 30	 mov	 rbx, QWORD PTR [rsp+48]
+  0007f	48 83 c4 20	 add	 rsp, 32			; 00000020H
+  00083	5f		 pop	 rdi
+  00084	c3		 ret	 0
+??1Network@Neural@@QEAA@XZ ENDP				; Neural::Network::~Network
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\main.cpp
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\mnist.cpp
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseCoeffsBase.h
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\mnist.cpp
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\main.cpp
 ;	COMDAT main
 _TEXT	SEGMENT
 i$1$ = 32
-tv679 = 40
-dat$ = 48
-net$ = 72
-__$ArrayPad$ = 112
+tv639 = 40
+$T1 = 40
+dat$ = 56
+net$ = 96
+__$ArrayPad$ = 120
 argc$ = 192
 argv$ = 200
 main	PROC						; COMDAT
 
 ; 12   : int main(int argc, char** argv) {
 
-$LN161:
+$LN121:
   00000	4c 8b dc	 mov	 r11, rsp
   00003	49 89 5b 08	 mov	 QWORD PTR [r11+8], rbx
   00007	49 89 6b 10	 mov	 QWORD PTR [r11+16], rbp
@@ -923,441 +1441,346 @@ $LN161:
   00025	48 8b 05 00 00
 	00 00		 mov	 rax, QWORD PTR __security_cookie
   0002c	48 33 c4	 xor	 rax, rsp
-  0002f	48 89 44 24 70	 mov	 QWORD PTR __$ArrayPad$[rsp], rax
+  0002f	48 89 44 24 78	 mov	 QWORD PTR __$ArrayPad$[rsp], rax
   00034	c5 f9 ef c0	 vpxor	 xmm0, xmm0, xmm0
   00038	33 c0		 xor	 eax, eax
-  0003a	c5 fc 11 44 24
-	48		 vmovups YMMWORD PTR net$[rsp], ymm0
-  00040	49 89 43 b0	 mov	 QWORD PTR [r11-80], rax
+  0003a	c5 f8 11 44 24
+	60		 vmovups XMMWORD PTR net$[rsp], xmm0
+  00040	49 89 43 b8	 mov	 QWORD PTR [r11-72], rax
 
 ; 13   : 	// 728 => 16 => 16 => 10
-; 14   : 	Neural::Network<728, 10> net(2, 16, 16);
+; 14   : 	Neural::Network net(728, { 16, 16 }, 10);
 
-  00044	8d 50 02	 lea	 edx, QWORD PTR [rax+2]
-  00047	41 b9 10 00 00
-	00		 mov	 r9d, 16
-  0004d	45 8b c1	 mov	 r8d, r9d
-  00050	49 8d 4b 90	 lea	 rcx, QWORD PTR [r11-112]
-  00054	c5 f8 77	 vzeroupper
-  00057	e8 00 00 00 00	 call	 ??0?$Network@$0CNI@$09@Neural@@QEAA@_KZZ ; Neural::Network<728,10>::Network<728,10>
-  0005c	90		 npad	 1
+  00044	48 c7 44 24 28
+	10 00 00 00	 mov	 QWORD PTR $T1[rsp], 16
+  0004d	48 c7 44 24 30
+	10 00 00 00	 mov	 QWORD PTR $T1[rsp+8], 16
+  00056	48 8d 44 24 28	 lea	 rax, QWORD PTR $T1[rsp]
+  0005b	49 89 43 98	 mov	 QWORD PTR [r11-104], rax
+  0005f	49 8d 43 80	 lea	 rax, QWORD PTR [r11-128]
+  00063	49 89 43 a0	 mov	 QWORD PTR [r11-96], rax
+  00067	4d 8d 43 98	 lea	 r8, QWORD PTR [r11-104]
+  0006b	49 8d 4b a8	 lea	 rcx, QWORD PTR [r11-88]
+  0006f	e8 00 00 00 00	 call	 ??0Network@Neural@@QEAA@_KV?$initializer_list@_K@std@@0@Z ; Neural::Network::Network
+  00074	90		 npad	 1
 
 ; 15   : 
 ; 16   : 	Mnist::Data_Set dat("dat/test_labels.idx1-ubyte", "dat/test_images.idx3-ubyte", 200);
 
-  0005d	48 8d 4c 24 30	 lea	 rcx, QWORD PTR dat$[rsp]
-  00062	e8 00 00 00 00	 call	 ??0Data_Set@Mnist@@QEAA@PEBD0I@Z ; Mnist::Data_Set::Data_Set
+  00075	48 8d 4c 24 38	 lea	 rcx, QWORD PTR dat$[rsp]
+  0007a	e8 00 00 00 00	 call	 ??0Data_Set@Mnist@@QEAA@PEBD0I@Z ; Mnist::Data_Set::Data_Set
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\mnist.cpp
 
-; 46   : 	for (uint32_t i = 0; i < dat->count; i++) {
+; 48   : 	for (uint32_t i = 0; i < dat->count; i++) {
 
-  00067	c7 44 24 20 00
+  0007f	c7 44 24 20 00
 	00 00 00	 mov	 DWORD PTR i$1$[rsp], 0
-  0006f	48 83 7c 24 40
+  00087	48 83 7c 24 48
 	00		 cmp	 QWORD PTR dat$[rsp+16], 0
-  00075	0f 86 06 01 00
-	00		 jbe	 $LN9@main
-  0007b	45 33 ed	 xor	 r13d, r13d
-  0007e	4c 89 6c 24 28	 mov	 QWORD PTR tv679[rsp], r13
-  00083	c5 fb 10 35 00
+  0008d	0f 86 0e 01 00
+	00		 jbe	 $LN11@main
+  00093	45 33 ed	 xor	 r13d, r13d
+  00096	4c 89 6c 24 28	 mov	 QWORD PTR tv639[rsp], r13
+  0009b	c5 fb 10 35 00
 	00 00 00	 vmovsd	 xmm6, QWORD PTR __real@406fe00000000000
-  0008b	0f 1f 44 00 00	 npad	 5
-$LL10@main:
-  00090	4d 69 fd 80 18
+  000a3	0f 1f 40 00 66
+	0f 1f 84 00 00
+	00 00 00	 npad	 13
+$LL12@main:
+  000b0	4d 69 fd 80 18
 	00 00		 imul	 r15, r13, 6272		; 00001880H
 
-; 47   : 		for (uint32_t j = 0; j < 28; j++) {
+; 49   : 		for (uint32_t j = 0; j < 28; j++) {
 
-  00097	45 33 f6	 xor	 r14d, r14d
-  0009a	45 8d 66 1c	 lea	 r12d, QWORD PTR [r14+28]
-  0009e	4c 8d 2d 00 00
+  000b7	45 33 f6	 xor	 r14d, r14d
+  000ba	45 8d 66 1c	 lea	 r12d, QWORD PTR [r14+28]
+  000be	4c 8d 2d 00 00
 	00 00		 lea	 r13, OFFSET FLAT:??_C@_09CIGFLNGD@?$BL?$FL0m?4?4?$BL?$FLm@
-  000a5	66 66 66 0f 1f
+  000c5	66 66 66 0f 1f
 	84 00 00 00 00
 	00		 npad	 11
-$LL13@main:
-  000b0	33 db		 xor	 ebx, ebx
+$LL15@main:
+  000d0	33 db		 xor	 ebx, ebx
 
-; 48   : 			for (uint32_t k = 0; k < 28; k++) {
+; 50   : 			for (uint32_t k = 0; k < 28; k++) {
 
-  000b2	49 8b fe	 mov	 rdi, r14
-  000b5	8d 6b 1c	 lea	 ebp, QWORD PTR [rbx+28]
-  000b8	0f 1f 84 00 00
+  000d2	49 8b fe	 mov	 rdi, r14
+  000d5	8d 6b 1c	 lea	 ebp, QWORD PTR [rbx+28]
+  000d8	0f 1f 84 00 00
 	00 00 00	 npad	 8
-$LL16@main:
+$LL18@main:
 
-; 49   : 				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
+; 51   : 				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
 
-  000c0	48 8b 74 24 38	 mov	 rsi, QWORD PTR dat$[rsp+8]
-  000c5	49 03 f7	 add	 rsi, r15
+  000e0	48 8b 74 24 40	 mov	 rsi, QWORD PTR dat$[rsp+8]
+  000e5	49 03 f7	 add	 rsi, r15
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseCoeffsBase.h
 
 ; 366  :       eigen_assert(row >= 0 && row < rows()
 
-  000c8	48 83 fb 1b	 cmp	 rbx, 27
-  000cc	77 09		 ja	 SHORT $LN24@main
-  000ce	49 81 fe 7f 18
+  000e8	48 83 fb 1b	 cmp	 rbx, 27
+  000ec	77 09		 ja	 SHORT $LN26@main
+  000ee	49 81 fe 7f 18
 	00 00		 cmp	 r14, 6271		; 0000187fH
-  000d5	76 1a		 jbe	 SHORT $LN25@main
-$LN24@main:
-  000d7	41 b8 6f 01 00
+  000f5	76 1a		 jbe	 SHORT $LN27@main
+$LN26@main:
+  000f7	41 b8 6f 01 00
 	00		 mov	 r8d, 367		; 0000016fH
-  000dd	48 8d 15 00 00
+  000fd	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:??_C@_1MO@MNMFCLKA@?$AAC?$AA?3?$AA?2?$AAU?$AAs?$AAe?$AAr?$AAs?$AA?2?$AAm?$AAa?$AAr?$AAi?$AAj?$AA?2@
-  000e4	48 8d 0d 00 00
+  00104	48 8d 0d 00 00
 	00 00		 lea	 rcx, OFFSET FLAT:??_C@_1GK@FICMDKNL@?$AAr?$AAo?$AAw?$AA?5?$AA?$DO?$AA?$DN?$AA?5?$AA0?$AA?5?$AA?$CG?$AA?$CG?$AA?5?$AAr?$AAo?$AAw@
-  000eb	ff 15 00 00 00
+  0010b	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp__wassert
-$LN25@main:
+$LN27@main:
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\mnist.cpp
 
-; 49   : 				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
+; 51   : 				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
 
-  000f1	c5 cb 59 04 37	 vmulsd	 xmm0, xmm6, QWORD PTR [rdi+rsi]
-  000f6	ff 15 00 00 00
+  00111	c5 cb 59 04 37	 vmulsd	 xmm0, xmm6, QWORD PTR [rdi+rsi]
+  00116	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp_round
-  000fc	c5 fb 2c c0	 vcvttsd2si eax, xmm0
+  0011c	c5 fb 2c c0	 vcvttsd2si eax, xmm0
 
-; 50   : 				if (current > 127) { printf("\033[7m..\033[m"); }  // "%02x", current
+; 52   : 				if (current > 127) { printf("\033[7m..\033[m"); }  // "%02x", current
 
-  00100	3c 7f		 cmp	 al, 127			; 0000007fH
-  00102	76 09		 jbe	 SHORT $LN17@main
-  00104	48 8d 0d 00 00
+  00120	3c 7f		 cmp	 al, 127			; 0000007fH
+  00122	76 09		 jbe	 SHORT $LN19@main
+  00124	48 8d 0d 00 00
 	00 00		 lea	 rcx, OFFSET FLAT:??_C@_09CCKALEHK@?$BL?$FL7m?4?4?$BL?$FLm@
-  0010b	eb 0d		 jmp	 SHORT $LN14@main
-$LN17@main:
+  0012b	eb 0d		 jmp	 SHORT $LN16@main
+$LN19@main:
 
-; 51   : 				else if (current != 0) { printf("\033[100m..\033[m"); }  // "%02x", current
+; 53   : 				else if (current != 0) { printf("\033[100m..\033[m"); }  // "%02x", current
 
-  0010d	48 8d 0d 00 00
+  0012d	48 8d 0d 00 00
 	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0M@BAGGIMII@?$BL?$FL100m?4?4?$BL?$FLm@
-  00114	84 c0		 test	 al, al
-  00116	49 0f 44 cd	 cmove	 rcx, r13
-$LN14@main:
+  00134	84 c0		 test	 al, al
+  00136	49 0f 44 cd	 cmove	 rcx, r13
+$LN16@main:
 
-; 48   : 			for (uint32_t k = 0; k < 28; k++) {
+; 50   : 			for (uint32_t k = 0; k < 28; k++) {
 
-  0011a	e8 00 00 00 00	 call	 printf
-  0011f	48 ff c3	 inc	 rbx
-  00122	48 83 c7 08	 add	 rdi, 8
-  00126	48 83 ed 01	 sub	 rbp, 1
-  0012a	75 94		 jne	 SHORT $LL16@main
+  0013a	e8 00 00 00 00	 call	 printf
+  0013f	48 ff c3	 inc	 rbx
+  00142	48 83 c7 08	 add	 rdi, 8
+  00146	48 83 ed 01	 sub	 rbp, 1
+  0014a	75 94		 jne	 SHORT $LL18@main
 
-; 52   : 				else { printf("\033[0m..\033[m"); }  // "00"
-; 53   : 			}
-; 54   : 			printf("\n");
+; 54   : 				else { printf("\033[0m..\033[m"); }  // "00"
+; 55   : 			}
+; 56   : 			printf("\n");
 
-  0012c	48 8d 0d 00 00
+  0014c	48 8d 0d 00 00
 	00 00		 lea	 rcx, OFFSET FLAT:??_C@_01EEMJAFIK@?6@
-  00133	e8 00 00 00 00	 call	 printf
+  00153	e8 00 00 00 00	 call	 printf
 
-; 47   : 		for (uint32_t j = 0; j < 28; j++) {
+; 49   : 		for (uint32_t j = 0; j < 28; j++) {
 
-  00138	49 81 c6 e0 00
+  00158	49 81 c6 e0 00
 	00 00		 add	 r14, 224		; 000000e0H
-  0013f	49 83 ec 01	 sub	 r12, 1
-  00143	0f 85 67 ff ff
-	ff		 jne	 $LL13@main
+  0015f	49 83 ec 01	 sub	 r12, 1
+  00163	0f 85 67 ff ff
+	ff		 jne	 $LL15@main
 
-; 55   : 		}
-; 56   : 		printf(" => %d\n\n", dat->labels[i]);
+; 57   : 		}
+; 58   : 		printf(" => %d\n\n", dat->labels[i]);
 
-  00149	48 8b 44 24 30	 mov	 rax, QWORD PTR dat$[rsp]
-  0014e	4c 8b 6c 24 28	 mov	 r13, QWORD PTR tv679[rsp]
-  00153	42 0f be 14 28	 movsx	 edx, BYTE PTR [rax+r13]
-  00158	48 8d 0d 00 00
+  00169	48 8b 44 24 38	 mov	 rax, QWORD PTR dat$[rsp]
+  0016e	4c 8b 6c 24 28	 mov	 r13, QWORD PTR tv639[rsp]
+  00173	42 0f be 14 28	 movsx	 edx, BYTE PTR [rax+r13]
+  00178	48 8d 0d 00 00
 	00 00		 lea	 rcx, OFFSET FLAT:??_C@_08DACCFJBL@?5?$DN?$DO?5?$CFd?6?6@
-  0015f	e8 00 00 00 00	 call	 printf
+  0017f	e8 00 00 00 00	 call	 printf
 
-; 46   : 	for (uint32_t i = 0; i < dat->count; i++) {
+; 48   : 	for (uint32_t i = 0; i < dat->count; i++) {
 
-  00164	8b 44 24 20	 mov	 eax, DWORD PTR i$1$[rsp]
-  00168	ff c0		 inc	 eax
-  0016a	89 44 24 20	 mov	 DWORD PTR i$1$[rsp], eax
-  0016e	44 8b e8	 mov	 r13d, eax
-  00171	4c 89 6c 24 28	 mov	 QWORD PTR tv679[rsp], r13
-  00176	4c 3b 6c 24 40	 cmp	 r13, QWORD PTR dat$[rsp+16]
-  0017b	0f 82 0f ff ff
-	ff		 jb	 $LL10@main
-$LN9@main:
+  00184	8b 44 24 20	 mov	 eax, DWORD PTR i$1$[rsp]
+  00188	ff c0		 inc	 eax
+  0018a	89 44 24 20	 mov	 DWORD PTR i$1$[rsp], eax
+  0018e	44 8b e8	 mov	 r13d, eax
+  00191	4c 89 6c 24 28	 mov	 QWORD PTR tv639[rsp], r13
+  00196	4c 3b 6c 24 48	 cmp	 r13, QWORD PTR dat$[rsp+16]
+  0019b	0f 82 0f ff ff
+	ff		 jb	 $LL12@main
+$LN11@main:
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
 
 ; 18   : 			if (labels != nullptr)	{ delete[] labels; }
 
-  00181	48 8b 4c 24 30	 mov	 rcx, QWORD PTR dat$[rsp]
-  00186	48 85 c9	 test	 rcx, rcx
-  00189	74 05		 je	 SHORT $LN44@main
-  0018b	e8 00 00 00 00	 call	 ??_V@YAXPEAX@Z		; operator delete[]
-$LN44@main:
+  001a1	48 8b 4c 24 38	 mov	 rcx, QWORD PTR dat$[rsp]
+  001a6	48 85 c9	 test	 rcx, rcx
+  001a9	74 05		 je	 SHORT $LN46@main
+  001ab	e8 00 00 00 00	 call	 ??_V@YAXPEAX@Z		; operator delete[]
+$LN46@main:
 
 ; 19   : 			if (data != nullptr)	{ delete[] data; }
 
-  00190	48 8b 4c 24 38	 mov	 rcx, QWORD PTR dat$[rsp+8]
-  00195	48 85 c9	 test	 rcx, rcx
-  00198	74 0b		 je	 SHORT $LN45@main
-  0019a	ba 20 00 00 00	 mov	 edx, 32			; 00000020H
-  0019f	e8 00 00 00 00	 call	 ??_V@YAXPEAXW4align_val_t@std@@@Z ; operator delete[]
-  001a4	90		 npad	 1
-$LN45@main:
+  001b0	48 8b 4c 24 40	 mov	 rcx, QWORD PTR dat$[rsp+8]
+  001b5	48 85 c9	 test	 rcx, rcx
+  001b8	74 0b		 je	 SHORT $LN47@main
+  001ba	ba 20 00 00 00	 mov	 edx, 32			; 00000020H
+  001bf	e8 00 00 00 00	 call	 ??_V@YAXPEAXW4align_val_t@std@@@Z ; operator delete[]
+  001c4	90		 npad	 1
+$LN47@main:
 
-; 71   : 			delete[] weights;
+; 59   : 			delete[] weights;
 
-  001a5	48 8b 7c 24 58	 mov	 rdi, QWORD PTR net$[rsp+16]
-  001aa	48 85 ff	 test	 rdi, rdi
-  001ad	74 32		 je	 SHORT $LN49@main
-  001af	4c 8d 0d 00 00
+  001c5	48 8b 4c 24 60	 mov	 rcx, QWORD PTR net$[rsp]
+  001ca	48 85 c9	 test	 rcx, rcx
+  001cd	74 30		 je	 SHORT $LN51@main
+  001cf	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
+  001d3	4c 8d 0d 00 00
 	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
-  001b6	4c 8b 47 f8	 mov	 r8, QWORD PTR [rdi-8]
-  001ba	ba 18 00 00 00	 mov	 edx, 24
-  001bf	48 8b cf	 mov	 rcx, rdi
-  001c2	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
-  001c7	48 8b 47 f8	 mov	 rax, QWORD PTR [rdi-8]
-  001cb	48 8d 14 40	 lea	 rdx, QWORD PTR [rax+rax*2]
-  001cf	48 8d 14 d5 08
+  001da	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
+  001dd	ba 18 00 00 00	 mov	 edx, 24
+  001e2	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
+  001e7	48 8b 03	 mov	 rax, QWORD PTR [rbx]
+  001ea	48 8d 14 40	 lea	 rdx, QWORD PTR [rax+rax*2]
+  001ee	48 8d 14 d5 08
 	00 00 00	 lea	 rdx, QWORD PTR [rdx*8+8]
-  001d7	48 8d 4f f8	 lea	 rcx, QWORD PTR [rdi-8]
-  001db	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
-  001e0	90		 npad	 1
-$LN49@main:
-
-; 72   : 			delete[] biases;
-
-  001e1	48 8b 7c 24 60	 mov	 rdi, QWORD PTR net$[rsp+24]
-  001e6	48 85 ff	 test	 rdi, rdi
-  001e9	74 2e		 je	 SHORT $LN51@main
-  001eb	4c 8d 0d 00 00
-	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ
-  001f2	4c 8b 47 f8	 mov	 r8, QWORD PTR [rdi-8]
-  001f6	ba 10 00 00 00	 mov	 edx, 16
-  001fb	48 8b cf	 mov	 rcx, rdi
-  001fe	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
-  00203	48 8b 57 f8	 mov	 rdx, QWORD PTR [rdi-8]
-  00207	48 c1 e2 04	 shl	 rdx, 4
-  0020b	48 83 c2 08	 add	 rdx, 8
-  0020f	48 8d 4f f8	 lea	 rcx, QWORD PTR [rdi-8]
-  00213	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
-  00218	90		 npad	 1
+  001f6	48 8b cb	 mov	 rcx, rbx
+  001f9	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  001fe	90		 npad	 1
 $LN51@main:
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
 
-; 116  :   if (ptr) {
+; 60   : 			delete[] biases;
 
-  00219	48 8b 4c 24 48	 mov	 rcx, QWORD PTR net$[rsp]
-  0021e	48 85 c9	 test	 rcx, rcx
-  00221	74 0a		 je	 SHORT $LN141@main
-
-; 117  :     EIGEN_USING_STD(free)
-; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
-
-  00223	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
-  00227	ff 15 00 00 00
-	00		 call	 QWORD PTR __imp_free
-$LN141@main:
-  0022d	ba 10 00 00 00	 mov	 edx, 16
-  00232	48 8d 4c 24 48	 lea	 rcx, QWORD PTR net$[rsp]
-  00237	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
-
-; 116  :   if (ptr) {
-
-  0023c	48 8b 4c 24 48	 mov	 rcx, QWORD PTR net$[rsp]
-  00241	48 85 c9	 test	 rcx, rcx
-  00244	74 0a		 je	 SHORT $LN158@main
-
-; 117  :     EIGEN_USING_STD(free)
-; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
-
-  00246	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
-  0024a	ff 15 00 00 00
-	00		 call	 QWORD PTR __imp_free
-$LN158@main:
+  001ff	48 8b 4c 24 68	 mov	 rcx, QWORD PTR net$[rsp+8]
+  00204	48 85 c9	 test	 rcx, rcx
+  00207	74 2c		 je	 SHORT $LN118@main
+  00209	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
+  0020d	4c 8d 0d 00 00
+	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ
+  00214	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
+  00217	ba 10 00 00 00	 mov	 edx, 16
+  0021c	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
+  00221	48 8b 13	 mov	 rdx, QWORD PTR [rbx]
+  00224	48 c1 e2 04	 shl	 rdx, 4
+  00228	48 83 c2 08	 add	 rdx, 8
+  0022c	48 8b cb	 mov	 rcx, rbx
+  0022f	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
+  00234	90		 npad	 1
+$LN118@main:
 ; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\main.cpp
 
 ; 21   : }
 
-  00250	33 c0		 xor	 eax, eax
-  00252	48 8b 4c 24 70	 mov	 rcx, QWORD PTR __$ArrayPad$[rsp]
-  00257	48 33 cc	 xor	 rcx, rsp
-  0025a	e8 00 00 00 00	 call	 __security_check_cookie
-  0025f	4c 8d 9c 24 90
+  00235	33 c0		 xor	 eax, eax
+  00237	48 8b 4c 24 78	 mov	 rcx, QWORD PTR __$ArrayPad$[rsp]
+  0023c	48 33 cc	 xor	 rcx, rsp
+  0023f	e8 00 00 00 00	 call	 __security_check_cookie
+  00244	4c 8d 9c 24 90
 	00 00 00	 lea	 r11, QWORD PTR [rsp+144]
-  00267	49 8b 5b 30	 mov	 rbx, QWORD PTR [r11+48]
-  0026b	49 8b 6b 38	 mov	 rbp, QWORD PTR [r11+56]
-  0026f	49 8b 73 40	 mov	 rsi, QWORD PTR [r11+64]
-  00273	c4 c1 78 28 73
+  0024c	49 8b 5b 30	 mov	 rbx, QWORD PTR [r11+48]
+  00250	49 8b 6b 38	 mov	 rbp, QWORD PTR [r11+56]
+  00254	49 8b 73 40	 mov	 rsi, QWORD PTR [r11+64]
+  00258	c4 c1 78 28 73
 	f0		 vmovaps xmm6, XMMWORD PTR [r11-16]
-  00279	49 8b e3	 mov	 rsp, r11
-  0027c	41 5f		 pop	 r15
-  0027e	41 5e		 pop	 r14
-  00280	41 5d		 pop	 r13
-  00282	41 5c		 pop	 r12
-  00284	5f		 pop	 rdi
-  00285	c3		 ret	 0
+  0025e	49 8b e3	 mov	 rsp, r11
+  00261	41 5f		 pop	 r15
+  00263	41 5e		 pop	 r14
+  00265	41 5d		 pop	 r13
+  00267	41 5c		 pop	 r12
+  00269	5f		 pop	 rdi
+  0026a	c3		 ret	 0
 main	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
 ;	COMDAT text$x
 text$x	SEGMENT
 i$1$ = 32
-tv679 = 40
-dat$ = 48
-net$ = 72
-__$ArrayPad$ = 112
+tv639 = 40
+$T1 = 40
+dat$ = 56
+net$ = 96
+__$ArrayPad$ = 120
 argc$ = 192
 argv$ = 200
 main$dtor$0 PROC
-  00000	48 8d 8a 48 00
+  00000	48 8d 8a 60 00
 	00 00		 lea	 rcx, QWORD PTR net$[rdx]
-  00007	e9 00 00 00 00	 jmp	 ??1?$Network@$0CNI@$09@Neural@@QEAA@XZ ; Neural::Network<728,10>::~Network<728,10>
+  00007	e9 00 00 00 00	 jmp	 ??1Network@Neural@@QEAA@XZ ; Neural::Network::~Network
 main$dtor$0 ENDP
 text$x	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
-;	COMDAT ??1?$Network@$0CNI@$09@Neural@@QEAA@XZ
+;	COMDAT ?__autoclassinit2@Network@Neural@@QEAAX_K@Z
 _TEXT	SEGMENT
-this$ = 48
-??1?$Network@$0CNI@$09@Neural@@QEAA@XZ PROC		; Neural::Network<728,10>::~Network<728,10>, COMDAT
-
-; 70   : 		~Network() {
-
-$LN98:
-  00000	48 89 5c 24 08	 mov	 QWORD PTR [rsp+8], rbx
-  00005	57		 push	 rdi
-  00006	48 83 ec 20	 sub	 rsp, 32			; 00000020H
-  0000a	48 8b f9	 mov	 rdi, rcx
-
-; 71   : 			delete[] weights;
-
-  0000d	48 8b 49 10	 mov	 rcx, QWORD PTR [rcx+16]
-  00011	48 85 c9	 test	 rcx, rcx
-  00014	74 30		 je	 SHORT $LN3@Network
-  00016	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
-  0001a	4c 8d 0d 00 00
-	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
-  00021	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
-  00024	ba 18 00 00 00	 mov	 edx, 24
-  00029	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
-  0002e	48 8b 03	 mov	 rax, QWORD PTR [rbx]
-  00031	48 8d 14 40	 lea	 rdx, QWORD PTR [rax+rax*2]
-  00035	48 8d 14 d5 08
-	00 00 00	 lea	 rdx, QWORD PTR [rdx*8+8]
-  0003d	48 8b cb	 mov	 rcx, rbx
-  00040	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
-  00045	90		 npad	 1
-$LN3@Network:
-
-; 72   : 			delete[] biases;
-
-  00046	48 8b 4f 18	 mov	 rcx, QWORD PTR [rdi+24]
-  0004a	48 85 c9	 test	 rcx, rcx
-  0004d	74 2c		 je	 SHORT $LN5@Network
-  0004f	48 8d 59 f8	 lea	 rbx, QWORD PTR [rcx-8]
-  00053	4c 8d 0d 00 00
-	00 00		 lea	 r9, OFFSET FLAT:??1?$Matrix@N$0?0$00$0A@$0?0$00@Eigen@@QEAA@XZ
-  0005a	4c 8b 03	 mov	 r8, QWORD PTR [rbx]
-  0005d	ba 10 00 00 00	 mov	 edx, 16
-  00062	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
-  00067	48 8b 13	 mov	 rdx, QWORD PTR [rbx]
-  0006a	48 c1 e2 04	 shl	 rdx, 4
-  0006e	48 83 c2 08	 add	 rdx, 8
-  00072	48 8b cb	 mov	 rcx, rbx
-  00075	e8 00 00 00 00	 call	 ??_V@YAXPEAX_K@Z	; operator delete[]
-  0007a	90		 npad	 1
-$LN5@Network:
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
-
-; 621  :     EIGEN_DEVICE_FUNC ~DenseStorage() { internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Cols*m_rows); }
-
-  0007b	48 8b 0f	 mov	 rcx, QWORD PTR [rdi]
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
-
-; 116  :   if (ptr) {
-
-  0007e	48 85 c9	 test	 rcx, rcx
-  00081	74 0a		 je	 SHORT $LN94@Network
-
-; 117  :     EIGEN_USING_STD(free)
-; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
-
-  00083	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
-  00087	ff 15 00 00 00
-	00		 call	 QWORD PTR __imp_free
-$LN94@Network:
-  0008d	ba 10 00 00 00	 mov	 edx, 16
-  00092	48 8b cf	 mov	 rcx, rdi
-  00095	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
-
-; 621  :     EIGEN_DEVICE_FUNC ~DenseStorage() { internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Cols*m_rows); }
-
-  0009a	48 8b 0f	 mov	 rcx, QWORD PTR [rdi]
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
-
-; 116  :   if (ptr) {
-
-  0009d	48 85 c9	 test	 rcx, rcx
-  000a0	74 0b		 je	 SHORT $LN25@Network
-
-; 117  :     EIGEN_USING_STD(free)
-; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
-
-  000a2	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
-  000a6	ff 15 00 00 00
-	00		 call	 QWORD PTR __imp_free
-  000ac	90		 npad	 1
-$LN25@Network:
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\src\neural_network.hpp
-
-; 74   : 		}
-
-  000ad	48 8b 5c 24 30	 mov	 rbx, QWORD PTR [rsp+48]
-  000b2	48 83 c4 20	 add	 rsp, 32			; 00000020H
-  000b6	5f		 pop	 rdi
-  000b7	c3		 ret	 0
-??1?$Network@$0CNI@$09@Neural@@QEAA@XZ ENDP		; Neural::Network<728,10>::~Network<728,10>
+this$ = 8
+classSize$dead$ = 16
+?__autoclassinit2@Network@Neural@@QEAAX_K@Z PROC	; Neural::Network::__autoclassinit2, COMDAT
+  00000	c5 f9 ef c0	 vpxor	 xmm0, xmm0, xmm0
+  00004	33 c0		 xor	 eax, eax
+  00006	c5 f8 11 01	 vmovups XMMWORD PTR [rcx], xmm0
+  0000a	48 89 41 10	 mov	 QWORD PTR [rcx+16], rax
+  0000e	c3		 ret	 0
+?__autoclassinit2@Network@Neural@@QEAAX_K@Z ENDP	; Neural::Network::__autoclassinit2
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
-;	COMDAT ??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+;	COMDAT ?size@?$initializer_list@_K@std@@QEBA_KXZ
 _TEXT	SEGMENT
-this$ = 48
-__flags$dead$ = 56
-??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z PROC ; Eigen::Matrix<double,-1,728,0,-1,728>::`scalar deleting destructor', COMDAT
-$LN24:
-  00000	40 53		 push	 rbx
-  00002	48 83 ec 20	 sub	 rsp, 32			; 00000020H
-  00006	48 8b d9	 mov	 rbx, rcx
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\DenseStorage.h
+this$ = 8
+?size@?$initializer_list@_K@std@@QEBA_KXZ PROC		; std::initializer_list<unsigned __int64>::size, COMDAT
 
-; 621  :     EIGEN_DEVICE_FUNC ~DenseStorage() { internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Cols*m_rows); }
+; 46   :         return static_cast<size_t>(_Last - _First);
 
-  00009	48 8b 09	 mov	 rcx, QWORD PTR [rcx]
-; File C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\dependencies\Eigen\src\Core\util\Memory.h
+  00000	48 8b 41 08	 mov	 rax, QWORD PTR [rcx+8]
+  00004	48 2b 01	 sub	 rax, QWORD PTR [rcx]
+  00007	48 c1 f8 03	 sar	 rax, 3
 
-; 116  :   if (ptr) {
+; 47   :     }
 
-  0000c	48 85 c9	 test	 rcx, rcx
-  0000f	74 0a		 je	 SHORT $LN20@scalar
+  0000b	c3		 ret	 0
+?size@?$initializer_list@_K@std@@QEBA_KXZ ENDP		; std::initializer_list<unsigned __int64>::size
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+;	COMDAT ?end@?$initializer_list@_K@std@@QEBAPEB_KXZ
+_TEXT	SEGMENT
+this$ = 8
+?end@?$initializer_list@_K@std@@QEBAPEB_KXZ PROC	; std::initializer_list<unsigned __int64>::end, COMDAT
 
-; 117  :     EIGEN_USING_STD(free)
-; 118  :     free(*(reinterpret_cast<void**>(ptr) - 1));
+; 42   :         return _Last;
 
-  00011	48 8b 49 f8	 mov	 rcx, QWORD PTR [rcx-8]
-  00015	ff 15 00 00 00
-	00		 call	 QWORD PTR __imp_free
-$LN20@scalar:
-  0001b	ba 10 00 00 00	 mov	 edx, 16
-  00020	48 8b cb	 mov	 rcx, rbx
-  00023	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
-  00028	48 8b c3	 mov	 rax, rbx
-  0002b	48 83 c4 20	 add	 rsp, 32			; 00000020H
-  0002f	5b		 pop	 rbx
-  00030	c3		 ret	 0
-??_G?$Matrix@N$0?0$0CNI@$0A@$0?0$0CNI@@Eigen@@QEAAPEAXI@Z ENDP ; Eigen::Matrix<double,-1,728,0,-1,728>::`scalar deleting destructor'
+  00000	48 8b 41 08	 mov	 rax, QWORD PTR [rcx+8]
+
+; 43   :     }
+
+  00004	c3		 ret	 0
+?end@?$initializer_list@_K@std@@QEBAPEB_KXZ ENDP	; std::initializer_list<unsigned __int64>::end
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+;	COMDAT ?begin@?$initializer_list@_K@std@@QEBAPEB_KXZ
+_TEXT	SEGMENT
+this$ = 8
+?begin@?$initializer_list@_K@std@@QEBAPEB_KXZ PROC	; std::initializer_list<unsigned __int64>::begin, COMDAT
+
+; 38   :         return _First;
+
+  00000	48 8b 01	 mov	 rax, QWORD PTR [rcx]
+
+; 39   :     }
+
+  00003	c3		 ret	 0
+?begin@?$initializer_list@_K@std@@QEBAPEB_KXZ ENDP	; std::initializer_list<unsigned __int64>::begin
+_TEXT	ENDS
+; Function compile flags: /Ogtpy
+; File C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.33.31629\include\initializer_list
+;	COMDAT ??0?$initializer_list@_K@std@@QEAA@PEB_K0@Z
+_TEXT	SEGMENT
+this$ = 8
+_First_arg$ = 16
+_Last_arg$ = 24
+??0?$initializer_list@_K@std@@QEAA@PEB_K0@Z PROC	; std::initializer_list<unsigned __int64>::initializer_list<unsigned __int64>, COMDAT
+
+; 35   :         : _First(_First_arg), _Last(_Last_arg) {}
+
+  00000	48 89 11	 mov	 QWORD PTR [rcx], rdx
+  00003	48 8b c1	 mov	 rax, rcx
+  00006	4c 89 41 08	 mov	 QWORD PTR [rcx+8], r8
+  0000a	c3		 ret	 0
+??0?$initializer_list@_K@std@@QEAA@PEB_K0@Z ENDP	; std::initializer_list<unsigned __int64>::initializer_list<unsigned __int64>
 _TEXT	ENDS
 END

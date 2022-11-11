@@ -5,9 +5,9 @@
 
 
 
-Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_name, uint32_t max_length) {
-	uint32_t label_count = 0;
-	uint32_t data_count = 0;
+Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_name, uint64_t max_length) {
+	uint64_t label_count = 0;
+	uint64_t data_count = 0;
 
 	std::fstream label_file(label_file_name, std::fstream::in | std::fstream::ate | std::fstream::binary);
 	std::fstream data_file(data_file_name, std::fstream::in | std::fstream::ate | std::fstream::binary);
@@ -27,11 +27,13 @@ Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_nam
 	count = BS32(label_count);  // file format stores data in big_endian form
 	if (count > max_length) { count = max_length; }
 
-	Initialize(count);
+	this->labels =	new int8_t[count];
+	this->data =	new mnist_data[count];
+	this->count =	count;
 
 	label_file.read((char*)labels, count);
 	int8_t temp_buffer[784];
-	for (uint32_t i = 0; i < count; i++) {
+	for (uint64_t i = 0; i < count; i++) {
 		data_file.read((char*)temp_buffer, 784);
 		// cast image data to double and normalizing it from a range of [0, 255] to a range of [0, 1]
 		data[i] = Eigen::Map<Eigen::Matrix<uint8_t, 28, 28>>((uint8_t*)temp_buffer).cast<double>() / 255;
@@ -43,9 +45,9 @@ Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_nam
 
 void Mnist::print_mnist_data(const Data_Set* dat) {
 	uint8_t current;
-	for (uint32_t i = 0; i < dat->count; i++) {
-		for (uint32_t j = 0; j < 28; j++) {
-			for (uint32_t k = 0; k < 28; k++) {
+	for (uint64_t i = 0; i < dat->count; i++) {
+		for (uint8_t j = 0; j < 28; j++) {
+			for (uint8_t k = 0; k < 28; k++) {
 				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
 				if (current > 127) { printf("\033[7m..\033[m"); }  // "%02x", current
 				else if (current != 0) { printf("\033[100m..\033[m"); }  // "%02x", current

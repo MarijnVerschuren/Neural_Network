@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\bin\x64\Debug\NeuralNetwork_0.exe</FullPath>
+      <FullPath>C:\Users\marij\OneDrive\Documenten\GitHub\Neural_Network\bin\x64\Release\NeuralNetwork_0.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

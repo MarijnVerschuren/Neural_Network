@@ -24,6 +24,9 @@
     <ClCompile Include="src\mnist.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\macro.hpp">
@@ -956,6 +959,9 @@
     <ClInclude Include="dependencies\Eigen\src\UmfPackSupport\UmfPackSupport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\math.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="dat\train_labels.idx1-ubyte" />
@@ -1014,9 +1020,7 @@
     <None Include="bin\intermediatesx64\NeuralNetwork_0.tlog\NeuralNetwork_0.lastbuildstate" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\macro.txt" />
-    <Text Include="src\mnist.txt" />
-    <Text Include="src\neural_network.txt" />
+    <Text Include="src\notes.txt" />
     <Text Include="bin\intermediatesx64\NeuralNetwork_0.log" />
   </ItemGroup>
   <ItemGroup>

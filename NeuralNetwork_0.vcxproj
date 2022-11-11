@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\math.cpp" />
     <ClCompile Include="src\mnist.cpp" />
     <ClCompile Include="src\neural_network.cpp" />
   </ItemGroup>
@@ -332,6 +333,7 @@
     <ClInclude Include="dependencies\Eigen\src\SVD\UpperBidiagonalization.h" />
     <ClInclude Include="dependencies\Eigen\src\UmfPackSupport\UmfPackSupport.h" />
     <ClInclude Include="src\macro.hpp" />
+    <ClInclude Include="src\math.hpp" />
     <ClInclude Include="src\mnist.hpp" />
     <ClInclude Include="src\neural_network.hpp" />
   </ItemGroup>
@@ -393,9 +395,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="bin\intermediatesx64\NeuralNetwork_0.log" />
-    <Text Include="src\macro.txt" />
-    <Text Include="src\mnist.txt" />
-    <Text Include="src\neural_network.txt" />
+    <Text Include="src\notes.txt" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="bin\intermediatesx64\main.obj" />

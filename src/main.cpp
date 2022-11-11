@@ -11,7 +11,7 @@
 
 int main(int argc, char** argv) {
 	// 728 => 16 => 16 => 10
-	Neural::Network<728, 10> net(2, 16, 16);
+	Neural::Network net(728, { 16, 16 }, 10);
 
 	Mnist::Data_Set dat("dat/test_labels.idx1-ubyte", "dat/test_images.idx3-ubyte", 200);
 	Mnist::print_mnist_data(&dat);  // print data
