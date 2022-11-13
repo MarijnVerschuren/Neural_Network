@@ -29,8 +29,8 @@ namespace Neural {
 	private:
 		// type, columns, rows
 		// input is read straigth from data input // Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>		input;
-		dynamic_f64_matrix*			weights =		nullptr;
-		dynamic_f64_row_vector*		biases =		nullptr;
+		dynamic_f64_matrix*		weights =		nullptr;
+		dynamic_f64_row_vector*	biases =		nullptr;
 		// it is assumed that no more than ~4e9 nodes or layers are going to be used
 		uint32_t				layer_count =	0;
 		uint32_t				input_size =	0;
