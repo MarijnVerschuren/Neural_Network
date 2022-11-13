@@ -28,7 +28,7 @@ Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_nam
 	if (count > max_length) { count = max_length; }
 
 	this->labels =	new int8_t[count];
-	this->data =	new mnist_data[count];
+	this->data =	new Eigen::Matrix<double, 28, 28>[count];
 	this->count =	count;
 
 	label_file.read((char*)labels, count);
@@ -43,18 +43,16 @@ Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_nam
 	data_file.close();
 }
 
-void Mnist::print_mnist_data(const Data_Set* dat) {
+
+void Mnist::print_mnist_data(const Eigen::Matrix<double, 28, 28>& dat) {
 	uint8_t current;
-	for (uint64_t i = 0; i < dat->count; i++) {
-		for (uint8_t j = 0; j < 28; j++) {
-			for (uint8_t k = 0; k < 28; k++) {
-				current = (uint8_t)std::round(dat->data[i](k, j) * 255);
-				if (current > 127) { printf("\033[7m..\033[m"); }  // "%02x", current
-				else if (current != 0) { printf("\033[100m..\033[m"); }  // "%02x", current
-				else { printf("\033[0m..\033[m"); }  // "00"
-			}
-			printf("\n");
+	for (uint8_t j = 0; j < 28; j++) {
+		for (uint8_t k = 0; k < 28; k++) {
+			current = (uint8_t)std::round(dat(k, j) * 255);
+			if (current > 127) { printf("\033[7m..\033[m"); }  // "%02x", current
+			else if (current != 0) { printf("\033[100m..\033[m"); }  // "%02x", current
+			else { printf("\033[0m..\033[m"); }  // "00"
 		}
-		printf(" => %d\n\n", dat->labels[i]);
+		printf("\n");
 	}
 }

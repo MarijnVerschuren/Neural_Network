@@ -10,11 +10,22 @@
 
 
 int main(int argc, char** argv) {
-	// 728 => 16 => 16 => 10
-	Neural::Network net(728, { 16, 16 }, 10);
+	Math::init_random();  // set seed using random device (random device is wayyy to slow to work continuosly)
 
-	Mnist::Data_Set dat("dat/test_labels.idx1-ubyte", "dat/test_images.idx3-ubyte", 200);
-	Mnist::print_mnist_data(&dat);  // print data
+	// 784 => 16 => 16 => 10
+	Neural::Network net(784, { 16, 16 }, 10);
+	net.init_network();  // init with random wieghts and biasses for now
+
+	uint16_t data_count = 200;
+	Mnist::Data_Set dat("dat/test_labels.idx1-ubyte", "dat/test_images.idx3-ubyte", data_count);
+	for (uint8_t i = 0; i < data_count; i++) {
+		Mnist::print_mnist_data(dat.get_data(i));
+		auto res = net.calculate(dat.get_data(i));
+		uint16_t index = 0;  // find max
+		for (uint16_t j = 0; j < 10; j++) { if (res[j] > res[index]) { index = j; }	}
+		std::cout << res << "\n";
+		std::cout << "calc: " << index << "\t\tans: " << (int)dat.get_label(i) << "\n";
+	}
 
 	// programm cant exit propperly due to eigen matrecies that are still allocated
 	return 0;
