@@ -1,3 +1,0 @@
-// Neural::Network<input_data_count, output_data_count>
-	typese of neural networks are separated by their input and ouput data counts so that
-	functions can ask for specific io sizes

@@ -1,8 +1,9 @@
 #pragma once
 
 #include "macro.hpp"
+#include "math.hpp"
 
-#include <cstdarg>
+#include <initializer_list>
 #include <Eigen/Dense>
 
 
@@ -12,67 +13,38 @@ namespace Neural {
 	struct Data {
 		label_type*	labels =	nullptr;
 		data_type*	data =		nullptr;
-		uint64		count =	0;
+		uint64_t	count =		0;
 
 		~Data() {
 			if (labels != nullptr)	{ delete[] labels; }
 			if (data != nullptr)	{ delete[] data; }
 		}
 
-		void Initialize(const uint64 count) {
-			this->labels = new label_type[count];
-			this->data = new data_type[count];
-			this->count = count;
-		}
+		inline virtual data_type	get_data(uint64_t index)	{ return data[index]; }
+		inline virtual label_type	get_label(uint64_t index)	{ return labels[index]; }
 	};
 
 
-	template<uint64 input_size, uint64 output_size>
 	class Network {
 	private:
 		// type, columns, rows
-		Eigen::Matrix<f64, Eigen::Dynamic, input_size>			input;
-		Eigen::Matrix<f64, Eigen::Dynamic, Eigen::Dynamic>*		weights =		nullptr;
-		Eigen::Matrix<f64, Eigen::Dynamic, 1>*					biases =		nullptr;
-		uint64													layer_count =	0;
+		// input is read straigth from data input // Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>		input;
+		dynamic_f64_matrix*		weights =		nullptr;
+		dynamic_f64_row_vector*	biases =		nullptr;
+		// it is assumed that no more than ~4e9 nodes or layers are going to be used
+		uint32_t				layer_count =	0;
+		uint32_t				input_size =	0;
+		uint32_t				output_size =	0;
 
 	public:
-		Network() {
-			weights = new Eigen::Matrix<f64, Eigen::Dynamic, Eigen::Dynamic>(output_size, input_size);
-			biases = new Eigen::Matrix<f64, Eigen::Dynamic, 1>(input_size);
-			layer_count = 1;
-		}
-		Network(uint64 hidden_layer_count, ...) {
-			weights = new Eigen::Matrix<f64, Eigen::Dynamic, Eigen::Dynamic>[hidden_layer_count + 1];
-			biases = new Eigen::Matrix<f64, Eigen::Dynamic, 1>[hidden_layer_count + 1];
-			layer_count = hidden_layer_count + 1;
+		Network(uint32_t input_size, uint32_t output_size);
+		Network(uint32_t input_size, std::initializer_list<uint32_t> layers, uint32_t output_size);
+		~Network();
 
-			uint64			i = 0;
-			uint64			arg;
-			uint64			in_size = input_size;
-			std::va_list	list;
-			va_start(list, hidden_layer_count);
-
-			for (; i < hidden_layer_count; i++) {
-				arg = va_arg(list, uint64);
-				weights[i].resize(arg, in_size);
-				biases[i].resize(arg);
-				in_size = arg;
-			}
-
-			va_end(list);
-
-			weights[hidden_layer_count].resize(output_size, in_size);
-			biases[hidden_layer_count].resize(output_size);
-
-			return;
-		}
-		~Network() {
-			delete[] weights;
-			delete[] biases;
-			input.resize(0, 0);  // make sure the data is unalocated
-		}
-
-		// Eigen::Matrix<f64, Eigen::Dynamic, output_size>
+		void init_network();
+		void init_network(const char* path);
+		void store_network(const char* path);
+		
+		dynamic_f64_column_vector calculate(const dynamic_f64_matrix& input);
 	};
 };
