@@ -22,8 +22,8 @@ int main(int argc, char** argv) {
 		Mnist::print_mnist_data(dat.get_data(i));
 		auto res = net.calculate(dat.get_data(i));
 		uint16_t index = 0;  // find max
-		for (uint16_t j = 0; j < 10; j++) { if (res[j] > res[index]) { index = j; }	}
 		std::cout << res << "\n";
+		for (uint16_t j = 0; j < 10; j++) { if (res[j] > res[index]) { res[index] = res[j];  index = j; } }
 		std::cout << "calc: " << index << "\t\tans: " << (int)dat.get_label(i) << "\n";
 	}
 

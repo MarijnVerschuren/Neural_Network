@@ -10,7 +10,8 @@
 
 namespace Neural {
 	template<typename label_type, typename data_type>
-	struct Data {
+	class Data {
+	public:
 		label_type*	labels =	nullptr;
 		data_type*	data =		nullptr;
 		uint64_t	count =		0;
