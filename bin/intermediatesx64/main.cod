@@ -43,7 +43,6 @@ PUBLIC	??_R1A@?0A@EA@?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 ; std::bas
 PUBLIC	??_R1A@?0A@EA@bad_alloc@std@@8			; std::bad_alloc::`RTTI Base Class Descriptor at (0,-1,0,64)'
 PUBLIC	??_8?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@7B?$basic_ostream@DU?$char_traits@D@std@@@1@@ ; std::basic_stringstream<char,std::char_traits<char>,std::allocator<char> >::`vbtable'
 PUBLIC	??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8 ; std::basic_istream<char,std::char_traits<char> >::`RTTI Base Class Array'
-PUBLIC	??_R0?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> > `RTTI Type Descriptor'
 PUBLIC	??_R0?AV?$_Iosb@H@std@@@8			; std::_Iosb<int> `RTTI Type Descriptor'
 PUBLIC	??_7bad_alloc@std@@6B@				; std::bad_alloc::`vftable'
 PUBLIC	??_R0?AV?$basic_streambuf@DU?$char_traits@D@std@@@std@@@8 ; std::basic_streambuf<char,std::char_traits<char> > `RTTI Type Descriptor'
@@ -53,6 +52,7 @@ PUBLIC	??_R2exception@std@@8				; std::exception::`RTTI Base Class Array'
 PUBLIC	??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 ; std::basic_ostream<char,std::char_traits<char> >::`RTTI Base Class Array'
 PUBLIC	??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8	; std::basic_ios<char,std::char_traits<char> >::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_7?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ ; std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char> >::`vftable'
+PUBLIC	??_R0?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> > `RTTI Type Descriptor'
 PUBLIC	??_7exception@std@@6B@				; std::exception::`vftable'
 PUBLIC	??_R1BA@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 ; std::basic_ostream<char,std::char_traits<char> >::`RTTI Base Class Descriptor at (16,-1,0,64)'
 PUBLIC	??_R0?AV?$basic_istream@DU?$char_traits@D@std@@@std@@@8 ; std::basic_istream<char,std::char_traits<char> > `RTTI Type Descriptor'
@@ -534,6 +534,13 @@ CONST	SEGMENT
 	DQ	FLAT:??_Eexception@std@@UEAAPEAXI@Z
 	DQ	FLAT:?what@exception@std@@UEBAPEBDXZ
 CONST	ENDS
+;	COMDAT ??_R0?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8
+data$rs	SEGMENT
+??_R0?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 DQ FLAT:??_7type_info@@6B@ ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> > `RTTI Type Descriptor'
+	DQ	0000000000000000H
+	DB	'.?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@'
+	DB	'Neural@@', 00H
+data$rs	ENDS
 ;	COMDAT ??_7?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@
 CONST	SEGMENT
 ??_7?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ DQ FLAT:??_R4?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ ; std::basic_stringbuf<char,std::char_traits<char>,std::allocator<char> >::`vftable'
@@ -603,13 +610,6 @@ data$rs	SEGMENT
 ??_R0?AV?$_Iosb@H@std@@@8 DQ FLAT:??_7type_info@@6B@	; std::_Iosb<int> `RTTI Type Descriptor'
 	DQ	0000000000000000H
 	DB	'.?AV?$_Iosb@H@std@@', 00H
-data$rs	ENDS
-;	COMDAT ??_R0?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8
-data$rs	SEGMENT
-??_R0?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 DQ FLAT:??_7type_info@@6B@ ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> > `RTTI Type Descriptor'
-	DQ	0000000000000000H
-	DB	'.?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@'
-	DB	'Neural@@', 00H
 data$rs	ENDS
 ;	COMDAT ??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8
 rdata$r	SEGMENT
@@ -698,7 +698,7 @@ rdata$r	SEGMENT
 ??_R4?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@6B@ DD 01H ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::`RTTI Complete Object Locator'
 	DD	00H
 	DD	00H
-	DD	imagerel ??_R0?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8
+	DD	imagerel ??_R0?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8
 	DD	imagerel ??_R3?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@8
 	DD	imagerel ??_R4?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@6B@
 rdata$r	ENDS
@@ -729,7 +729,7 @@ data$rs	SEGMENT
 data$rs	ENDS
 ;	COMDAT ??_R1A@?0A@EA@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@8
 rdata$r	SEGMENT
-??_R1A@?0A@EA@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@8 DD imagerel ??_R0?AU?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::`RTTI Base Class Descriptor at (0,-1,0,64)'
+??_R1A@?0A@EA@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@8 DD imagerel ??_R0?AV?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@@8 ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::`RTTI Base Class Descriptor at (0,-1,0,64)'
 	DD	00H
 	DD	00H
 	DD	0ffffffffH
@@ -1298,6 +1298,7 @@ PUBLIC	??1?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEAA@XZ 
 PUBLIC	??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ	; Eigen::Matrix<double,1,-1,1,1,-1>::~Matrix<double,1,-1,1,1,-1>
 PUBLIC	??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::~PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >
 PUBLIC	??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ ; Eigen::Matrix<double,-1,-1,0,-1,-1>::~Matrix<double,-1,-1,0,-1,-1>
+PUBLIC	?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z	; Mnist::Data_Set::__autoclassinit2
 PUBLIC	??1Data_Set@Mnist@@QEAA@XZ			; Mnist::Data_Set::~Data_Set
 PUBLIC	?__autoclassinit2@Network@Neural@@QEAAX_K@Z	; Neural::Network::__autoclassinit2
 PUBLIC	main
@@ -1381,158 +1382,158 @@ EXTRN	_tls_index:DWORD
 _BSS	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$pstoret@NU__m256d@@$0CA@@internal@Eigen@@YAXPEANAEBU__m256d@@@Z DD imagerel $LN6
-	DD	imagerel $LN6+58
+$pdata$??$pstoret@NU__m256d@@$0CA@@internal@Eigen@@YAXPEANAEBU__m256d@@@Z DD imagerel $LN5
+	DD	imagerel $LN5+58
 	DD	imagerel $unwind$??$pstoret@NU__m256d@@$0CA@@internal@Eigen@@YAXPEANAEBU__m256d@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$ploadt@U__m256d@@$0CA@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN7
-	DD	imagerel $LN7+88
+$pdata$??$ploadt@U__m256d@@$0CA@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN5
+	DD	imagerel $LN5+88
 	DD	imagerel $unwind$??$ploadt@U__m256d@@$0CA@@internal@Eigen@@YA?AU__m256d@@PEBN@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$assignPacket@$0CA@U__m256d@@@?$assign_op@NN@internal@Eigen@@QEBAXPEANAEBU__m256d@@@Z DD imagerel $LN4
-	DD	imagerel $LN4+39
+$pdata$??$assignPacket@$0CA@U__m256d@@@?$assign_op@NN@internal@Eigen@@QEBAXPEANAEBU__m256d@@@Z DD imagerel $LN3
+	DD	imagerel $LN3+39
 	DD	imagerel $unwind$??$assignPacket@$0CA@U__m256d@@@?$assign_op@NN@internal@Eigen@@QEBAXPEANAEBU__m256d@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$packet@$0CA@U__m256d@@@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBA?AU__m256d@@_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+63
+$pdata$??$packet@$0CA@U__m256d@@@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBA?AU__m256d@@_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+63
 	DD	imagerel $unwind$??$packet@$0CA@U__m256d@@@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBA?AU__m256d@@_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+120
+$pdata$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+120
 	DD	imagerel $unwind$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$run@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@@?$unaligned_dense_assignment_loop@$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@12@_J1@Z DD imagerel $LN7
-	DD	imagerel $LN7+78
+$pdata$??$run@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@@?$unaligned_dense_assignment_loop@$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@12@_J1@Z DD imagerel $LN6
+	DD	imagerel $LN6+78
 	DD	imagerel $unwind$??$run@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@@?$unaligned_dense_assignment_loop@$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@12@_J1@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$assignPacket@$0CA@$0CA@U__m256d@@@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+146
+$pdata$??$assignPacket@$0CA@$0CA@U__m256d@@@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+146
 	DD	imagerel $unwind$??$assignPacket@$0CA@$0CA@U__m256d@@@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$first_aligned@$0CA@N_J@internal@Eigen@@YA_JPEBN_J@Z DD imagerel $LN13
-	DD	imagerel $LN13+162
+$pdata$??$first_aligned@$0CA@N_J@internal@Eigen@@YA_JPEBN_J@Z DD imagerel $LN10
+	DD	imagerel $LN10+162
 	DD	imagerel $unwind$??$first_aligned@$0CA@N_J@internal@Eigen@@YA_JPEBN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$resize_if_allowed@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN8
-	DD	imagerel $LN8+170
+$pdata$??$resize_if_allowed@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN7
+	DD	imagerel $LN7+170
 	DD	imagerel $unwind$??$resize_if_allowed@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?rows@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?rows@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?cols@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?cols@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+51
+$pdata$?size@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+51
 	DD	imagerel $unwind$?size@?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?innerSize@?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN8
-	DD	imagerel $LN8+90
+$pdata$?innerSize@?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN7
+	DD	imagerel $LN7+90
 	DD	imagerel $unwind$?innerSize@?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?innerSize@?$DenseBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN8
-	DD	imagerel $LN8+90
+$pdata$?innerSize@?$DenseBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN7
+	DD	imagerel $LN7+90
 	DD	imagerel $unwind$?innerSize@?$DenseBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+25
+$pdata$?outerStride@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+25
 	DD	imagerel $unwind$?outerStride@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?rows@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?rows@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?cols@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?cols@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+25
+$pdata$?outerStride@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+25
 	DD	imagerel $unwind$?outerStride@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$02@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?data@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBAPEBNXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+51
+$pdata$?size@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+51
 	DD	imagerel $unwind$?size@?$EigenBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@$02@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBAPEBNXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAPEANXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAPEANXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?data@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAPEANXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$plainobjectbase_evaluator_data@N$0BM@@internal@Eigen@@QEAA@PEBN_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+52
+$pdata$??0?$plainobjectbase_evaluator_data@N$0BM@@internal@Eigen@@QEAA@PEBN_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+52
 	DD	imagerel $unwind$??0?$plainobjectbase_evaluator_data@N$0BM@@internal@Eigen@@QEAA@PEBN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@2@@Z DD imagerel $LN7
-	DD	imagerel $LN7+106
+$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@2@@Z DD imagerel $LN6
+	DD	imagerel $LN6+106
 	DD	imagerel $unwind$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1543,8 +1544,8 @@ $pdata$?dtor$0@?0???0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0B
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@2@@Z DD imagerel $LN7
-	DD	imagerel $LN7+106
+$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@2@@Z DD imagerel $LN6
+	DD	imagerel $LN6+106
 	DD	imagerel $unwind$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1555,74 +1556,74 @@ $pdata$?dtor$0@?0???0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+28
+$pdata$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+28
 	DD	imagerel $unwind$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?dstDataPtr@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBAPEBNXZ DD imagerel $LN4
-	DD	imagerel $LN4+28
+$pdata$?dstDataPtr@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBAPEBNXZ DD imagerel $LN3
+	DD	imagerel $LN3+28
 	DD	imagerel $unwind$?dstDataPtr@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBAPEBNXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?rows@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?cols@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$02$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z DD imagerel $LN9
-	DD	imagerel $LN9+201
+$pdata$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$02$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z DD imagerel $LN8
+	DD	imagerel $LN8+201
 	DD	imagerel $unwind$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$02$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_dense_assignment_loop@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN6
-	DD	imagerel $LN6+197
+$pdata$??$call_dense_assignment_loop@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN5
+	DD	imagerel $LN5+197
 	DD	imagerel $unwind$??$call_dense_assignment_loop@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1639,14 +1640,14 @@ $pdata$?dtor$1@?0???$call_dense_assignment_loop@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$check_for_aliasing@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@@Z DD imagerel $LN5
-	DD	imagerel $LN5+73
+$pdata$??$check_for_aliasing@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@@Z DD imagerel $LN4
+	DD	imagerel $LN4+73
 	DD	imagerel $unwind$??$check_for_aliasing@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$construct_elements_of_array@N@internal@Eigen@@YAPEANPEAN_K@Z DD imagerel $LN16
-	DD	imagerel $LN16+101
+$pdata$??$construct_elements_of_array@N@internal@Eigen@@YAPEANPEAN_K@Z DD imagerel $LN13
+	DD	imagerel $LN13+101
 	DD	imagerel $unwind$??$construct_elements_of_array@N@internal@Eigen@@YAPEANPEAN_K@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1657,26 +1658,26 @@ $pdata$?catch$0@?0???$construct_elements_of_array@N@internal@Eigen@@YAPEANPEAN_K
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$conditional_aligned_malloc@$00@internal@Eigen@@YAPEAX_K@Z DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??$conditional_aligned_malloc@$00@internal@Eigen@@YAPEAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??$conditional_aligned_malloc@$00@internal@Eigen@@YAPEAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$check_size_for_overflow@N@internal@Eigen@@YAX_K@Z DD imagerel $LN5
-	DD	imagerel $LN5+36
+$pdata$??$check_size_for_overflow@N@internal@Eigen@@YAX_K@Z DD imagerel $LN4
+	DD	imagerel $LN4+36
 	DD	imagerel $unwind$??$check_size_for_overflow@N@internal@Eigen@@YAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?run@?$Assignment@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBU?$assign_op@NN@23@@Z DD imagerel $LN4
-	DD	imagerel $LN4+59
+$pdata$?run@?$Assignment@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBU?$assign_op@NN@23@@Z DD imagerel $LN3
+	DD	imagerel $LN3+59
 	DD	imagerel $unwind$?run@?$Assignment@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@3@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBU?$assign_op@NN@23@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z DD imagerel $LN15
-	DD	imagerel $LN15+87
+$pdata$??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z DD imagerel $LN12
+	DD	imagerel $LN12+87
 	DD	imagerel $unwind$??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1687,14 +1688,14 @@ $pdata$?catch$0@?0???$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_assignment_no_alias@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+54
+$pdata$??$call_assignment_no_alias@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+54
 	DD	imagerel $unwind$??$call_assignment_no_alias@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$run@_J@?$check_rows_cols_for_overflow@$0?0@internal@Eigen@@SAX_J0@Z DD imagerel $LN9
-	DD	imagerel $LN9+128
+$pdata$??$run@_J@?$check_rows_cols_for_overflow@$0?0@internal@Eigen@@SAX_J0@Z DD imagerel $LN8
+	DD	imagerel $LN8+128
 	DD	imagerel $unwind$??$run@_J@?$check_rows_cols_for_overflow@$0?0@internal@Eigen@@SAX_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1717,8 +1718,8 @@ $pdata$?catch$1@?0???$_Insert_string@DU?$char_traits@D@std@@_K@std@@YAAEAV?$basi
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z DD imagerel $LN7
-	DD	imagerel $LN7+158
+$pdata$?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z DD imagerel $LN6
+	DD	imagerel $LN6+158
 	DD	imagerel $unwind$?resize@?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAAX_J00@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1729,20 +1730,20 @@ $pdata$?data@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAPE
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?rows@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?cols@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?resize@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAX_J0@Z DD imagerel $LN6
-	DD	imagerel $LN6+146
+$pdata$?resize@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAX_J0@Z DD imagerel $LN5
+	DD	imagerel $LN5+146
 	DD	imagerel $unwind$?resize@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAX_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1765,14 +1766,14 @@ $pdata$??$max@_J@std@@YAAEB_JAEB_J0@Z DD imagerel $LN5
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_set_noalias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+79
+$pdata$??$_set_noalias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+79
 	DD	imagerel $unwind$??$_set_noalias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@1@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$resizeLike@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAXAEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN10
-	DD	imagerel $LN10+351
+$pdata$??$resizeLike@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAXAEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN9
+	DD	imagerel $LN9+351
 	DD	imagerel $unwind$??$resizeLike@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAAXAEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1819,8 +1820,8 @@ $pdata$?_Getstate@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?digits10@?$GenericNumTraits@N@Eigen@@SAHXZ DD imagerel $LN4
-	DD	imagerel $LN4+14
+$pdata$?digits10@?$GenericNumTraits@N@Eigen@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+14
 	DD	imagerel $unwind$?digits10@?$GenericNumTraits@N@Eigen@@SAHXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1873,14 +1874,14 @@ $pdata$?str@?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@Q
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN7
-	DD	imagerel $LN7+185
+$pdata$?coeff@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN5
+	DD	imagerel $LN5+185
 	DD	imagerel $unwind$?coeff@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBN_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?run@?$significant_decimals_impl@N@internal@Eigen@@SAHXZ DD imagerel $LN4
-	DD	imagerel $LN4+14
+$pdata$?run@?$significant_decimals_impl@N@internal@Eigen@@SAHXZ DD imagerel $LN3
+	DD	imagerel $LN3+14
 	DD	imagerel $unwind$?run@?$significant_decimals_impl@N@internal@Eigen@@SAHXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1891,8 +1892,8 @@ $pdata$?__autoclassinit2@?$basic_stringstream@DU?$char_traits@D@std@@V?$allocato
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1921,14 +1922,14 @@ $pdata$??$_Construct_in_place@PEADAEBQEAD@std@@YAXAEAPEADAEBQEAD@Z DD imagerel $
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$conditional_aligned_free@$00@internal@Eigen@@YAXPEAX@Z DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??$conditional_aligned_free@$00@internal@Eigen@@YAXPEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??$conditional_aligned_free@$00@internal@Eigen@@YAXPEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$print_matrix@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV23@AEBV?$Matrix@N$00$0?0$00$00$0?0@1@AEBUIOFormat@1@@Z DD imagerel $LN36
-	DD	imagerel $LN36+1716
+$pdata$??$print_matrix@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV23@AEBV?$Matrix@N$00$0?0$00$00$0?0@1@AEBUIOFormat@1@@Z DD imagerel $LN34
+	DD	imagerel $LN34+1716
 	DD	imagerel $unwind$??$print_matrix@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV23@AEBV?$Matrix@N$00$0?0$00$00$0?0@1@AEBUIOFormat@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1939,8 +1940,8 @@ $pdata$?dtor$0@?0???$print_matrix@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN5
-	DD	imagerel $LN5+84
+$pdata$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN4
+	DD	imagerel $LN4+84
 	DD	imagerel $unwind$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@IEAA@AEBV?$DenseBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1975,14 +1976,14 @@ $pdata$?_Calculate_growth@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?eval@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBV?$Matrix@N$00$0?0$00$00$0?0@2@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$?eval@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBV?$Matrix@N$00$0?0$00$00$0?0@2@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$?eval@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAAEBV?$Matrix@N$00$0?0$00$00$0?0@2@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1IOFormat@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+135
+$pdata$??1IOFormat@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+135
 	DD	imagerel $unwind$??1IOFormat@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2065,8 +2066,8 @@ $pdata$??$max@PEAD@std@@YAAEBQEADAEBQEAD0@Z DD imagerel $LN5
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$conditional_aligned_delete_auto@N$00@internal@Eigen@@YAXPEAN_K@Z DD imagerel $LN5
-	DD	imagerel $LN5+50
+$pdata$??$conditional_aligned_delete_auto@N$00@internal@Eigen@@YAXPEAN_K@Z DD imagerel $LN4
+	DD	imagerel $LN4+50
 	DD	imagerel $unwind$??$conditional_aligned_delete_auto@N$00@internal@Eigen@@YAXPEAN_K@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2089,8 +2090,8 @@ $pdata$?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$ch
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBV?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@0@@Z DD imagerel $LN11
-	DD	imagerel $LN11+414
+$pdata$??$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBV?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@0@@Z DD imagerel $LN10
+	DD	imagerel $LN10+414
 	DD	imagerel $unwind$??$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBV?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@0@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2137,14 +2138,14 @@ $pdata$?dtor$6@?0???$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@AEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN5
-	DD	imagerel $LN5+47
+$pdata$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@AEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z DD imagerel $LN4
+	DD	imagerel $LN4+47
 	DD	imagerel $unwind$??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@AEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?H$00@?$BaseExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@@symbolic@Eigen@@QEBA?AV?$AddExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@V?$ValueExpr@V?$FixedInt@$00@internal@Eigen@@@23@@12@V?$FixedInt@$00@internal@2@@Z DD imagerel $LN4
-	DD	imagerel $LN4+79
+$pdata$??$?H$00@?$BaseExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@@symbolic@Eigen@@QEBA?AV?$AddExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@V?$ValueExpr@V?$FixedInt@$00@internal@Eigen@@@23@@12@V?$FixedInt@$00@internal@2@@Z DD imagerel $LN3
+	DD	imagerel $LN3+79
 	DD	imagerel $unwind$??$?H$00@?$BaseExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@@symbolic@Eigen@@QEBA?AV?$AddExpr@V?$SymbolExpr@Usymbolic_last_tag@internal@Eigen@@@symbolic@Eigen@@V?$ValueExpr@V?$FixedInt@$00@internal@Eigen@@@23@@12@V?$FixedInt@$00@internal@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2155,32 +2156,32 @@ $pdata$??__E?$fix@$00@Eigen@@YAXXZ DD imagerel ??__E?$fix@$00@Eigen@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?innerSize@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN8
-	DD	imagerel $LN8+92
+$pdata$?innerSize@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN7
+	DD	imagerel $LN7+92
 	DD	imagerel $unwind$?innerSize@?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+25
+$pdata$?outerStride@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+25
 	DD	imagerel $unwind$?outerStride@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$02@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?outerStride@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$02@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?data@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?data@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAPEBNXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?data@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBAPEBNXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$plainobjectbase_evaluator_data@N$0A@@internal@Eigen@@QEAA@PEBN_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+52
+$pdata$??0?$plainobjectbase_evaluator_data@N$0A@@internal@Eigen@@QEAA@PEBN_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+52
 	DD	imagerel $unwind$??0?$plainobjectbase_evaluator_data@N$0A@@internal@Eigen@@QEAA@PEBN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2197,20 +2198,20 @@ $pdata$?assign@?$_Char_traits@DH@std@@SAXAEADAEBD@Z DD imagerel $LN5
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?rows@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?rows@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?cols@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?cols@?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@2@@Z DD imagerel $LN7
-	DD	imagerel $LN7+107
+$pdata$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@2@@Z DD imagerel $LN6
+	DD	imagerel $LN6+107
 	DD	imagerel $unwind$??0?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@AEBV?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2251,14 +2252,14 @@ $pdata$?_Swap_proxy_and_iterators@?$basic_string@DU?$char_traits@D@std@@V?$alloc
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?rows@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?rows@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?cols@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?cols@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2275,26 +2276,26 @@ $pdata$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ DD i
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$00$0?0$00$00$0?0@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$00$0?0$00$00$0?0@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@AEBV?$Matrix@N$00$0?0$00$00$0?0@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2401,20 +2402,20 @@ $pdata$?_Tidy@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@IE
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+65
+$pdata$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+65
 	DD	imagerel $unwind$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+51
+$pdata$?size@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+51
 	DD	imagerel $unwind$?size@?$EigenBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeffRef@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z DD imagerel $LN5
-	DD	imagerel $LN5+102
+$pdata$?coeffRef@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z DD imagerel $LN4
+	DD	imagerel $LN4+102
 	DD	imagerel $unwind$?coeffRef@?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2587,86 +2588,92 @@ $pdata$?seekpos@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DD imagerel $LN6
-	DD	imagerel $LN6+106
+$pdata$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ DD imagerel $LN5
+	DD	imagerel $LN5+106
 	DD	imagerel $unwind$??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?get_data@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z DD imagerel $LN4
-	DD	imagerel $LN4+60
+$pdata$?get_data@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+60
 	DD	imagerel $unwind$?get_data@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+39
+$pdata$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+39
 	DD	imagerel $unwind$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+50
+$pdata$??1?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+50
 	DD	imagerel $unwind$??1?$DenseStorage@N$0?0$0?0$0?0$0A@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z DD imagerel $LN6
-	DD	imagerel $LN6+87
+$pdata$??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z DD imagerel $LN5
+	DD	imagerel $LN5+87
 	DD	imagerel $unwind$??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$DenseStorage@N$0?0$00$0?0$00@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+37
+$pdata$??1?$DenseStorage@N$0?0$00$0?0$00@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
 	DD	imagerel $unwind$??1?$DenseStorage@N$0?0$00$0?0$00@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$??1?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$??1?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1Data_Set@Mnist@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+27
+	DD	imagerel $unwind$?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??1Data_Set@Mnist@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1Data_Set@Mnist@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?__autoclassinit2@Network@Neural@@QEAAX_K@Z DD imagerel $LN4
-	DD	imagerel $LN4+27
+$pdata$?__autoclassinit2@Network@Neural@@QEAAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+27
 	DD	imagerel $unwind$?__autoclassinit2@Network@Neural@@QEAAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$main DD	imagerel $LN15
-	DD	imagerel $LN15+680
+$pdata$main DD	imagerel $LN14
+	DD	imagerel $LN14+754
 	DD	imagerel $unwind$main
 pdata	ENDS
 ;	COMDAT pdata
@@ -2695,14 +2702,14 @@ $pdata$main$dtor$3 DD imagerel main$dtor$3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z DD imagerel $LN4
-	DD	imagerel $LN4+60
+$pdata$?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+60
 	DD	imagerel $unwind$?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0IOFormat@Eigen@@QEAA@HHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00000D@Z DD imagerel $LN15
-	DD	imagerel $LN15+488
+$pdata$??0IOFormat@Eigen@@QEAA@HHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00000D@Z DD imagerel $LN13
+	DD	imagerel $LN13+488
 	DD	imagerel $unwind$??0IOFormat@Eigen@@QEAA@HHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00000D@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2767,50 +2774,50 @@ $pdata$??__Elast@Eigen@@YAXXZ DD imagerel ??__Elast@Eigen@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??_H@YAXPEAX_K1P6APEAX0@Z@Z DD imagerel $LN6
-	DD	imagerel $LN6+102
+$pdata$??_H@YAXPEAX_K1P6APEAX0@Z@Z DD imagerel $LN5
+	DD	imagerel $LN5+102
 	DD	imagerel $unwind$??_H@YAXPEAX_K1P6APEAX0@Z@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$ploadu@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN4
-	DD	imagerel $LN4+44
+$pdata$??$ploadu@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN3
+	DD	imagerel $LN3+44
 	DD	imagerel $unwind$??$ploadu@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$pload@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN4
-	DD	imagerel $LN4+44
+$pdata$??$pload@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z DD imagerel $LN3
+	DD	imagerel $LN3+44
 	DD	imagerel $unwind$??$pload@U__m256d@@@internal@Eigen@@YA?AU__m256d@@PEBN@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?aligned_free@internal@Eigen@@YAXPEAX@Z DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$?aligned_free@internal@Eigen@@YAXPEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$?aligned_free@internal@Eigen@@YAXPEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?aligned_malloc@internal@Eigen@@YAPEAX_K@Z DD imagerel $LN5
-	DD	imagerel $LN5+65
+$pdata$?aligned_malloc@internal@Eigen@@YAPEAX_K@Z DD imagerel $LN4
+	DD	imagerel $LN4+65
 	DD	imagerel $unwind$?aligned_malloc@internal@Eigen@@YAPEAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?handmade_aligned_free@internal@Eigen@@YAXPEAX@Z DD imagerel $LN5
-	DD	imagerel $LN5+37
+$pdata$?handmade_aligned_free@internal@Eigen@@YAXPEAX@Z DD imagerel $LN4
+	DD	imagerel $LN4+37
 	DD	imagerel $unwind$?handmade_aligned_free@internal@Eigen@@YAXPEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?handmade_aligned_malloc@internal@Eigen@@YAPEAX_K0@Z DD imagerel $LN8
-	DD	imagerel $LN8+195
+$pdata$?handmade_aligned_malloc@internal@Eigen@@YAPEAX_K0@Z DD imagerel $LN6
+	DD	imagerel $LN6+195
 	DD	imagerel $unwind$?handmade_aligned_malloc@internal@Eigen@@YAPEAX_K0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?throw_std_bad_alloc@internal@Eigen@@YAXXZ DD imagerel $LN5
-	DD	imagerel $LN5+36
+$pdata$?throw_std_bad_alloc@internal@Eigen@@YAXXZ DD imagerel $LN3
+	DD	imagerel $LN3+36
 	DD	imagerel $unwind$?throw_std_bad_alloc@internal@Eigen@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -3217,13 +3224,13 @@ $ip2state$main DB 010H
 	DB	00H
 	DB	'a', 02H
 	DB	02H
-	DB	'n'
+	DB	090H
 	DB	04H
 	DB	0f2H
 	DB	06H
 	DB	'0'
 	DB	0aH
-	DB	0e9H, 03H
+	DB	0cdH, 04H
 	DB	04H
 	DB	'0'
 	DB	02H
@@ -3253,12 +3260,12 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $unwind$main DD	053319H
-	DD	06440119H
+	DD	06480119H
 	DD	0600b700cH
 	DD	0500aH
 	DD	imagerel __GSHandlerCheck_EH4
 	DD	imagerel $cppxdata$main
-	DD	031d6H
+	DD	031f6H
 	DD	040H
 	DD	020H
 xdata	ENDS
@@ -3271,6 +3278,11 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$??1Data_Set@Mnist@@QEAA@XZ DD 010901H
 	DD	04209H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z DD 010b01H
+	DD	0700bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5964,7 +5976,7 @@ $T1 = 32
 
 ; 68   : {
 
-$LN5:
+$LN3:
   00000	48 83 ec 48	 sub	 rsp, 72			; 00000048H
 
 ; 69   :   #ifdef EIGEN_EXCEPTIONS
@@ -6014,7 +6026,7 @@ alignment$ = 72
 
 ; 101  : {
 
-$LN8:
+$LN6:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -6110,7 +6122,7 @@ ptr$ = 48
 
 ; 115  : {
 
-$LN5:
+$LN4:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -6157,7 +6169,7 @@ size$ = 64
 
 ; 175  : {
 
-$LN5:
+$LN4:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -6219,7 +6231,7 @@ ptr$ = 48
 
 ; 199  : {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -6251,7 +6263,7 @@ from$ = 80
 
 ; 578  : template<> EIGEN_STRONG_INLINE Packet4d pload<Packet4d>(const double*  from) { EIGEN_DEBUG_ALIGNED_LOAD return _mm256_load_pd(from); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	55		 push	 rbp
   00006	48 83 ec 40	 sub	 rsp, 64			; 00000040H
@@ -6276,7 +6288,7 @@ from$ = 80
 
 ; 582  : template<> EIGEN_STRONG_INLINE Packet4d ploadu<Packet4d>(const double* from) { EIGEN_DEBUG_UNALIGNED_LOAD return _mm256_loadu_pd(from); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	55		 push	 rbp
   00006	48 83 ec 40	 sub	 rsp, 64			; 00000040H
@@ -6339,7 +6351,7 @@ __s$ = 72
 __n$ = 80
 __f$ = 88
 ??_H@YAXPEAX_K1P6APEAX0@Z@Z PROC			; `vector constructor iterator', COMDAT
-$LN6:
+$LN5:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -6503,7 +6515,7 @@ _fill$ = 200
 
 ; 60   :   {
 
-$LN15:
+$LN13:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	44 89 44 24 18	 mov	 DWORD PTR [rsp+24], r8d
   0000a	89 54 24 10	 mov	 DWORD PTR [rsp+16], edx
@@ -6929,9 +6941,9 @@ __$ReturnUdt$ = 56
 index$ = 64
 ?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z PROC ; Mnist::Data_Set::get_data, COMDAT
 
-; 10   : 		inline Eigen::Matrix<double, 28, 28>	get_data(uint64_t index)	override { return data[index]; }
+; 11   : 		inline Eigen::Matrix<double, 28, 28>	get_data(uint64_t index)	override { return data[index]; }
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -6956,7 +6968,7 @@ this$ = 8
 index$ = 16
 ?get_label@Data_Set@Mnist@@UEAAC_K@Z PROC		; Mnist::Data_Set::get_label, COMDAT
 
-; 11   : 		inline int8_t							get_label(uint64_t index)	override { return labels[index]; }
+; 12   : 		inline int8_t							get_label(uint64_t index)	override { return labels[index]; }
 
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -6975,34 +6987,35 @@ i$8 = 0
 j$9 = 4
 index$10 = 8
 data_count$ = 12
-tv198 = 16
+tv218 = 16
 $T7 = 20
 $T1 = 24
-tv155 = 40
-tv187 = 48
-tv200 = 56
-$T3 = 64
-$T6 = 80
-$T2 = 104
-$T4 = 128
-$T5 = 6400
-res$11 = 12672
-dat$ = 12688
-net$ = 12720
-__$ArrayPad$ = 12752
-argc$ = 12864
-argv$ = 12872
+tv166 = 40
+tv195 = 48
+tv207 = 56
+tv220 = 64
+$T3 = 80
+$T6 = 96
+$T2 = 120
+$T4 = 160
+$T5 = 6432
+res$11 = 12704
+dat$ = 12720
+net$ = 12752
+__$ArrayPad$ = 12784
+argc$ = 12896
+argv$ = 12904
 main	PROC						; COMDAT
 
 ; 12   : int main(int argc, char** argv) {
 
-$LN15:
+$LN14:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	89 4c 24 08	 mov	 DWORD PTR [rsp+8], ecx
   00009	55		 push	 rbp
   0000a	56		 push	 rsi
   0000b	57		 push	 rdi
-  0000c	b8 20 32 00 00	 mov	 eax, 12832		; 00003220H
+  0000c	b8 40 32 00 00	 mov	 eax, 12864		; 00003240H
   00011	e8 00 00 00 00	 call	 __chkstk
   00016	48 2b e0	 sub	 rsp, rax
   00019	48 8d 6c 24 40	 lea	 rbp, QWORD PTR [rsp+64]
@@ -7010,7 +7023,7 @@ $LN15:
   00022	48 8b 05 00 00
 	00 00		 mov	 rax, QWORD PTR __security_cookie
   00029	48 33 c4	 xor	 rax, rsp
-  0002c	48 89 85 d0 31
+  0002c	48 89 85 f0 31
 	00 00		 mov	 QWORD PTR __$ArrayPad$[rbp], rax
 
 ; 13   : 	Math::init_random();  // set seed using random device (random device is wayyy to slow to work continuosly)
@@ -7022,7 +7035,7 @@ $LN15:
 ; 16   : 	Neural::Network net(784, { 16, 16 }, 10);
 
   00038	ba 20 00 00 00	 mov	 edx, 32			; 00000020H
-  0003d	48 8d 8d b0 31
+  0003d	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
   00044	e8 00 00 00 00	 call	 ?__autoclassinit2@Network@Neural@@QEAAX_K@Z
   00049	c7 45 18 10 00
@@ -7032,25 +7045,25 @@ $LN15:
   00057	48 8d 45 20	 lea	 rax, QWORD PTR $T1[rbp+8]
   0005b	4c 8b c0	 mov	 r8, rax
   0005e	48 8d 55 18	 lea	 rdx, QWORD PTR $T1[rbp]
-  00062	48 8d 4d 68	 lea	 rcx, QWORD PTR $T2[rbp]
+  00062	48 8d 4d 78	 lea	 rcx, QWORD PTR $T2[rbp]
   00066	e8 00 00 00 00	 call	 ??0?$initializer_list@I@std@@QEAA@PEBI0@Z ; std::initializer_list<unsigned int>::initializer_list<unsigned int>
-  0006b	48 8d 4d 40	 lea	 rcx, QWORD PTR $T3[rbp]
+  0006b	48 8d 4d 50	 lea	 rcx, QWORD PTR $T3[rbp]
   0006f	48 8b f9	 mov	 rdi, rcx
   00072	48 8b f0	 mov	 rsi, rax
   00075	b9 10 00 00 00	 mov	 ecx, 16
   0007a	f3 a4		 rep movsb
   0007c	41 b9 0a 00 00
 	00		 mov	 r9d, 10
-  00082	4c 8d 45 40	 lea	 r8, QWORD PTR $T3[rbp]
+  00082	4c 8d 45 50	 lea	 r8, QWORD PTR $T3[rbp]
   00086	ba 10 03 00 00	 mov	 edx, 784		; 00000310H
-  0008b	48 8d 8d b0 31
+  0008b	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
   00092	e8 00 00 00 00	 call	 ??0Network@Neural@@QEAA@IV?$initializer_list@I@std@@I@Z ; Neural::Network::Network
   00097	90		 npad	 1
 
 ; 17   : 	net.init_network();  // init with random wieghts and biasses for now
 
-  00098	48 8d 8d b0 31
+  00098	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
   0009f	e8 00 00 00 00	 call	 ?init_network@Network@Neural@@QEAAXXZ ; Neural::Network::init_network
 
@@ -7062,191 +7075,209 @@ $LN15:
 
 ; 20   : 	Mnist::Data_Set dat("dat/test_labels.idx1-ubyte", "dat/test_images.idx3-ubyte", data_count);
 
-  000ad	0f b7 45 0c	 movzx	 eax, WORD PTR data_count$[rbp]
-  000b1	44 8b c8	 mov	 r9d, eax
-  000b4	4c 8d 05 00 00
-	00 00		 lea	 r8, OFFSET FLAT:$SG4294967164
-  000bb	48 8d 15 00 00
-	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967163
-  000c2	48 8d 8d 90 31
+  000ad	ba 20 00 00 00	 mov	 edx, 32			; 00000020H
+  000b2	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
-  000c9	e8 00 00 00 00	 call	 ??0Data_Set@Mnist@@QEAA@PEBD0_K@Z ; Mnist::Data_Set::Data_Set
-  000ce	90		 npad	 1
+  000b9	e8 00 00 00 00	 call	 ?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z
+  000be	0f b7 45 0c	 movzx	 eax, WORD PTR data_count$[rbp]
+  000c2	44 8b c8	 mov	 r9d, eax
+  000c5	4c 8d 05 00 00
+	00 00		 lea	 r8, OFFSET FLAT:$SG4294967164
+  000cc	48 8d 15 00 00
+	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967163
+  000d3	48 8d 8d b0 31
+	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
+  000da	e8 00 00 00 00	 call	 ??0Data_Set@Mnist@@QEAA@PEBD0_K@Z ; Mnist::Data_Set::Data_Set
+  000df	90		 npad	 1
 
 ; 21   : 	for (uint8_t i = 0; i < data_count; i++) {
 
-  000cf	c6 45 00 00	 mov	 BYTE PTR i$8[rbp], 0
-  000d3	eb 09		 jmp	 SHORT $LN4@main
+  000e0	c6 45 00 00	 mov	 BYTE PTR i$8[rbp], 0
+  000e4	eb 09		 jmp	 SHORT $LN4@main
 $LN2@main:
-  000d5	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
-  000d9	fe c0		 inc	 al
-  000db	88 45 00	 mov	 BYTE PTR i$8[rbp], al
+  000e6	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
+  000ea	fe c0		 inc	 al
+  000ec	88 45 00	 mov	 BYTE PTR i$8[rbp], al
 $LN4@main:
-  000de	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
-  000e2	0f b7 4d 0c	 movzx	 ecx, WORD PTR data_count$[rbp]
-  000e6	3b c1		 cmp	 eax, ecx
-  000e8	0f 8d 7d 01 00
+  000ef	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
+  000f3	0f b7 4d 0c	 movzx	 ecx, WORD PTR data_count$[rbp]
+  000f7	3b c1		 cmp	 eax, ecx
+  000f9	0f 8d b6 01 00
 	00		 jge	 $LN3@main
 
 ; 22   : 		Mnist::print_mnist_data(dat.get_data(i));
 
-  000ee	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
-  000f2	44 8b c0	 mov	 r8d, eax
-  000f5	48 8d 95 80 00
+  000ff	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
+  00103	44 8b c0	 mov	 r8d, eax
+  00106	48 8d 95 a0 00
 	00 00		 lea	 rdx, QWORD PTR $T4[rbp]
-  000fc	48 8d 8d 90 31
+  0010d	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
-  00103	e8 00 00 00 00	 call	 ?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z ; Mnist::Data_Set::get_data
-  00108	48 8b c8	 mov	 rcx, rax
-  0010b	e8 00 00 00 00	 call	 ?print_mnist_data@Mnist@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Z ; Mnist::print_mnist_data
+  00114	e8 00 00 00 00	 call	 ?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z ; Mnist::Data_Set::get_data
+  00119	48 8b c8	 mov	 rcx, rax
+  0011c	e8 00 00 00 00	 call	 ?print_mnist_data@Mnist@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Z ; Mnist::print_mnist_data
 
 ; 23   : 		auto res = net.calculate(dat.get_data(i));
 
-  00110	ba 10 00 00 00	 mov	 edx, 16
-  00115	48 8d 8d 80 31
+  00121	ba 10 00 00 00	 mov	 edx, 16
+  00126	48 8d 8d a0 31
 	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
-  0011c	e8 00 00 00 00	 call	 ?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z
-  00121	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
-  00125	44 8b c0	 mov	 r8d, eax
-  00128	48 8d 95 00 19
+  0012d	e8 00 00 00 00	 call	 ?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z
+  00132	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
+  00136	44 8b c0	 mov	 r8d, eax
+  00139	48 8d 95 20 19
 	00 00		 lea	 rdx, QWORD PTR $T5[rbp]
-  0012f	48 8d 8d 90 31
+  00140	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
-  00136	e8 00 00 00 00	 call	 ?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z ; Mnist::Data_Set::get_data
-  0013b	48 8b d0	 mov	 rdx, rax
-  0013e	48 8d 4d 50	 lea	 rcx, QWORD PTR $T6[rbp]
-  00142	e8 00 00 00 00	 call	 ??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@AEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z ; Eigen::Matrix<double,-1,-1,0,-1,-1>::Matrix<double,-1,-1,0,-1,-1><Eigen::Matrix<double,28,28,0,28,28> >
-  00147	90		 npad	 1
-  00148	4c 8d 45 50	 lea	 r8, QWORD PTR $T6[rbp]
-  0014c	48 8d 95 80 31
+  00147	e8 00 00 00 00	 call	 ?get_data@Data_Set@Mnist@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z ; Mnist::Data_Set::get_data
+  0014c	48 8b d0	 mov	 rdx, rax
+  0014f	48 8d 4d 60	 lea	 rcx, QWORD PTR $T6[rbp]
+  00153	e8 00 00 00 00	 call	 ??$?0V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@AEBU?$EigenBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@1@@Z ; Eigen::Matrix<double,-1,-1,0,-1,-1>::Matrix<double,-1,-1,0,-1,-1><Eigen::Matrix<double,28,28,0,28,28> >
+  00158	90		 npad	 1
+  00159	4c 8d 45 60	 lea	 r8, QWORD PTR $T6[rbp]
+  0015d	48 8d 95 a0 31
 	00 00		 lea	 rdx, QWORD PTR res$11[rbp]
-  00153	48 8d 8d b0 31
+  00164	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
-  0015a	e8 00 00 00 00	 call	 ?calculate@Network@Neural@@QEAA?AV?$Matrix@N$00$0?0$00$00$0?0@Eigen@@AEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@4@@Z ; Neural::Network::calculate
-  0015f	90		 npad	 1
-  00160	48 8d 4d 50	 lea	 rcx, QWORD PTR $T6[rbp]
-  00164	e8 00 00 00 00	 call	 ??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
+  0016b	e8 00 00 00 00	 call	 ?calculate@Network@Neural@@QEAA?AV?$Matrix@N$00$0?0$00$00$0?0@Eigen@@AEBV?$Matrix@N$0?0$0?0$0A@$0?0$0?0@4@@Z ; Neural::Network::calculate
+  00170	90		 npad	 1
+  00171	48 8d 4d 60	 lea	 rcx, QWORD PTR $T6[rbp]
+  00175	e8 00 00 00 00	 call	 ??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
 
 ; 24   : 		uint16_t index = 0;  // find max
 
-  00169	33 c0		 xor	 eax, eax
-  0016b	66 89 45 08	 mov	 WORD PTR index$10[rbp], ax
+  0017a	33 c0		 xor	 eax, eax
+  0017c	66 89 45 08	 mov	 WORD PTR index$10[rbp], ax
 
-; 25   : 		for (uint16_t j = 0; j < 10; j++) { if (res[j] > res[index]) { index = j; }	}
+; 25   : 		std::cout << res << "\n";
 
-  0016f	33 c0		 xor	 eax, eax
-  00171	66 89 45 04	 mov	 WORD PTR j$9[rbp], ax
-  00175	eb 0b		 jmp	 SHORT $LN7@main
-$LN5@main:
-  00177	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
-  0017b	66 ff c0	 inc	 ax
-  0017e	66 89 45 04	 mov	 WORD PTR j$9[rbp], ax
-$LN7@main:
-  00182	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
-  00186	83 f8 0a	 cmp	 eax, 10
-  00189	7d 40		 jge	 SHORT $LN6@main
-  0018b	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
-  0018f	8b d0		 mov	 edx, eax
-  00191	48 8d 8d 80 31
-	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
-  00198	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
-  0019d	48 89 45 28	 mov	 QWORD PTR tv155[rbp], rax
-  001a1	0f b7 4d 08	 movzx	 ecx, WORD PTR index$10[rbp]
-  001a5	8b d1		 mov	 edx, ecx
-  001a7	48 8d 8d 80 31
-	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
-  001ae	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
-  001b3	48 8b 4d 28	 mov	 rcx, QWORD PTR tv155[rbp]
-  001b7	c5 fb 10 01	 vmovsd	 xmm0, QWORD PTR [rcx]
-  001bb	c5 f9 2f 00	 vcomisd xmm0, QWORD PTR [rax]
-  001bf	76 08		 jbe	 SHORT $LN8@main
-  001c1	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
-  001c5	66 89 45 08	 mov	 WORD PTR index$10[rbp], ax
-$LN8@main:
-  001c9	eb ac		 jmp	 SHORT $LN5@main
-$LN6@main:
-
-; 26   : 		std::cout << res << "\n";
-
-  001cb	48 8d 95 80 31
+  00180	48 8d 95 a0 31
 	00 00		 lea	 rdx, QWORD PTR res$11[rbp]
-  001d2	48 8b 0d 00 00
+  00187	48 8b 0d 00 00
 	00 00		 mov	 rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  001d9	e8 00 00 00 00	 call	 ??$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBV?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@0@@Z ; Eigen::operator<<<Eigen::Matrix<double,1,-1,1,1,-1> >
-  001de	48 8d 15 00 00
+  0018e	e8 00 00 00 00	 call	 ??$?6V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBV?$DenseBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@0@@Z ; Eigen::operator<<<Eigen::Matrix<double,1,-1,1,1,-1> >
+  00193	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967162
-  001e5	48 8b c8	 mov	 rcx, rax
-  001e8	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+  0019a	48 8b c8	 mov	 rcx, rax
+  0019d	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+
+; 26   : 		for (uint16_t j = 0; j < 10; j++) { if (res[j] > res[index]) { res[index] = res[j];  index = j; } }
+
+  001a2	33 c0		 xor	 eax, eax
+  001a4	66 89 45 04	 mov	 WORD PTR j$9[rbp], ax
+  001a8	eb 0b		 jmp	 SHORT $LN7@main
+$LN5@main:
+  001aa	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
+  001ae	66 ff c0	 inc	 ax
+  001b1	66 89 45 04	 mov	 WORD PTR j$9[rbp], ax
+$LN7@main:
+  001b5	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
+  001b9	83 f8 0a	 cmp	 eax, 10
+  001bc	7d 79		 jge	 SHORT $LN6@main
+  001be	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
+  001c2	8b d0		 mov	 edx, eax
+  001c4	48 8d 8d a0 31
+	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
+  001cb	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
+  001d0	48 89 45 28	 mov	 QWORD PTR tv166[rbp], rax
+  001d4	0f b7 4d 08	 movzx	 ecx, WORD PTR index$10[rbp]
+  001d8	8b d1		 mov	 edx, ecx
+  001da	48 8d 8d a0 31
+	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
+  001e1	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
+  001e6	48 8b 4d 28	 mov	 rcx, QWORD PTR tv166[rbp]
+  001ea	c5 fb 10 01	 vmovsd	 xmm0, QWORD PTR [rcx]
+  001ee	c5 f9 2f 00	 vcomisd xmm0, QWORD PTR [rax]
+  001f2	76 3e		 jbe	 SHORT $LN8@main
+  001f4	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
+  001f8	8b d0		 mov	 edx, eax
+  001fa	48 8d 8d a0 31
+	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
+  00201	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
+  00206	c5 fb 10 00	 vmovsd	 xmm0, QWORD PTR [rax]
+  0020a	c5 fb 11 45 30	 vmovsd	 QWORD PTR tv195[rbp], xmm0
+  0020f	0f b7 45 08	 movzx	 eax, WORD PTR index$10[rbp]
+  00213	8b d0		 mov	 edx, eax
+  00215	48 8d 8d a0 31
+	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
+  0021c	e8 00 00 00 00	 call	 ??A?$DenseCoeffsBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@$00@Eigen@@QEAAAEAN_J@Z ; Eigen::DenseCoeffsBase<Eigen::Matrix<double,1,-1,1,1,-1>,1>::operator[]
+  00221	c5 fb 10 45 30	 vmovsd	 xmm0, QWORD PTR tv195[rbp]
+  00226	c5 fb 11 00	 vmovsd	 QWORD PTR [rax], xmm0
+  0022a	0f b7 45 04	 movzx	 eax, WORD PTR j$9[rbp]
+  0022e	66 89 45 08	 mov	 WORD PTR index$10[rbp], ax
+$LN8@main:
+  00232	e9 73 ff ff ff	 jmp	 $LN5@main
+$LN6@main:
 
 ; 27   : 		std::cout << "calc: " << index << "\t\tans: " << (int)dat.get_label(i) << "\n";
 
-  001ed	48 8d 15 00 00
+  00237	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967159
-  001f4	48 8b 0d 00 00
+  0023e	48 8b 0d 00 00
 	00 00		 mov	 rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-  001fb	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-  00200	48 89 45 30	 mov	 QWORD PTR tv187[rbp], rax
-  00204	0f b7 55 08	 movzx	 edx, WORD PTR index$10[rbp]
-  00208	48 8b 4d 30	 mov	 rcx, QWORD PTR tv187[rbp]
-  0020c	ff 15 00 00 00
+  00245	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+  0024a	48 89 45 38	 mov	 QWORD PTR tv207[rbp], rax
+  0024e	0f b7 55 08	 movzx	 edx, WORD PTR index$10[rbp]
+  00252	48 8b 4d 38	 mov	 rcx, QWORD PTR tv207[rbp]
+  00256	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@G@Z
-  00212	48 8d 15 00 00
+  0025c	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967160
-  00219	48 8b c8	 mov	 rcx, rax
-  0021c	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-  00221	48 89 45 38	 mov	 QWORD PTR tv200[rbp], rax
-  00225	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
-  00229	8b d0		 mov	 edx, eax
-  0022b	48 8d 8d 90 31
+  00263	48 8b c8	 mov	 rcx, rax
+  00266	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+  0026b	48 89 45 40	 mov	 QWORD PTR tv220[rbp], rax
+  0026f	0f b6 45 00	 movzx	 eax, BYTE PTR i$8[rbp]
+  00273	8b d0		 mov	 edx, eax
+  00275	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
-  00232	e8 00 00 00 00	 call	 ?get_label@Data_Set@Mnist@@UEAAC_K@Z ; Mnist::Data_Set::get_label
-  00237	0f be c0	 movsx	 eax, al
-  0023a	89 45 10	 mov	 DWORD PTR tv198[rbp], eax
-  0023d	8b 55 10	 mov	 edx, DWORD PTR tv198[rbp]
-  00240	48 8b 4d 38	 mov	 rcx, QWORD PTR tv200[rbp]
-  00244	ff 15 00 00 00
+  0027c	e8 00 00 00 00	 call	 ?get_label@Data_Set@Mnist@@UEAAC_K@Z ; Mnist::Data_Set::get_label
+  00281	0f be c0	 movsx	 eax, al
+  00284	89 45 10	 mov	 DWORD PTR tv218[rbp], eax
+  00287	8b 55 10	 mov	 edx, DWORD PTR tv218[rbp]
+  0028a	48 8b 4d 40	 mov	 rcx, QWORD PTR tv220[rbp]
+  0028e	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z
-  0024a	48 8d 15 00 00
+  00294	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:$SG4294967161
-  00251	48 8b c8	 mov	 rcx, rax
-  00254	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-  00259	90		 npad	 1
+  0029b	48 8b c8	 mov	 rcx, rax
+  0029e	e8 00 00 00 00	 call	 ??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+  002a3	90		 npad	 1
 
 ; 28   : 	}
 
-  0025a	48 8d 8d 80 31
+  002a4	48 8d 8d a0 31
 	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
-  00261	e8 00 00 00 00	 call	 ??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ
-  00266	e9 6a fe ff ff	 jmp	 $LN2@main
+  002ab	e8 00 00 00 00	 call	 ??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ
+  002b0	e9 31 fe ff ff	 jmp	 $LN2@main
 $LN3@main:
 
 ; 29   : 
 ; 30   : 	// programm cant exit propperly due to eigen matrecies that are still allocated
 ; 31   : 	return 0;
 
-  0026b	c7 45 14 00 00
+  002b5	c7 45 14 00 00
 	00 00		 mov	 DWORD PTR $T7[rbp], 0
-  00272	48 8d 8d 90 31
+  002bc	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
-  00279	e8 00 00 00 00	 call	 ??1Data_Set@Mnist@@QEAA@XZ
-  0027e	90		 npad	 1
-  0027f	48 8d 8d b0 31
+  002c3	e8 00 00 00 00	 call	 ??1Data_Set@Mnist@@QEAA@XZ
+  002c8	90		 npad	 1
+  002c9	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
-  00286	e8 00 00 00 00	 call	 ??1Network@Neural@@QEAA@XZ ; Neural::Network::~Network
-  0028b	8b 45 14	 mov	 eax, DWORD PTR $T7[rbp]
+  002d0	e8 00 00 00 00	 call	 ??1Network@Neural@@QEAA@XZ ; Neural::Network::~Network
+  002d5	8b 45 14	 mov	 eax, DWORD PTR $T7[rbp]
 
 ; 32   : }
 
-  0028e	48 8b 8d d0 31
+  002d8	48 8b 8d f0 31
 	00 00		 mov	 rcx, QWORD PTR __$ArrayPad$[rbp]
-  00295	48 33 cc	 xor	 rcx, rsp
-  00298	e8 00 00 00 00	 call	 __security_check_cookie
-  0029d	48 81 c4 20 32
-	00 00		 add	 rsp, 12832		; 00003220H
-  002a4	5f		 pop	 rdi
-  002a5	5e		 pop	 rsi
-  002a6	5d		 pop	 rbp
-  002a7	c3		 ret	 0
+  002df	48 33 cc	 xor	 rcx, rsp
+  002e2	e8 00 00 00 00	 call	 __security_check_cookie
+  002e7	48 81 c4 40 32
+	00 00		 add	 rsp, 12864		; 00003240H
+  002ee	5f		 pop	 rdi
+  002ef	5e		 pop	 rsi
+  002f0	5d		 pop	 rbp
+  002f1	c3		 ret	 0
 main	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp
@@ -7256,23 +7287,24 @@ i$8 = 0
 j$9 = 4
 index$10 = 8
 data_count$ = 12
-tv198 = 16
+tv218 = 16
 $T7 = 20
 $T1 = 24
-tv155 = 40
-tv187 = 48
-tv200 = 56
-$T3 = 64
-$T6 = 80
-$T2 = 104
-$T4 = 128
-$T5 = 6400
-res$11 = 12672
-dat$ = 12688
-net$ = 12720
-__$ArrayPad$ = 12752
-argc$ = 12864
-argv$ = 12872
+tv166 = 40
+tv195 = 48
+tv207 = 56
+tv220 = 64
+$T3 = 80
+$T6 = 96
+$T2 = 120
+$T4 = 160
+$T5 = 6432
+res$11 = 12704
+dat$ = 12720
+net$ = 12752
+__$ArrayPad$ = 12784
+argc$ = 12896
+argv$ = 12904
 main$dtor$0 PROC
   00000	40 55		 push	 rbp
   00002	41 55		 push	 r13
@@ -7280,7 +7312,7 @@ main$dtor$0 PROC
   00008	4c 8b ea	 mov	 r13, rdx
   0000b	48 8d 6a 40	 lea	 rbp, QWORD PTR [rdx+64]
   0000f	48 83 e5 e0	 and	 rbp, -32		; ffffffffffffffe0H
-  00013	48 8d 8d b0 31
+  00013	48 8d 8d d0 31
 	00 00		 lea	 rcx, QWORD PTR net$[rbp]
   0001a	e8 00 00 00 00	 call	 ??1Network@Neural@@QEAA@XZ ; Neural::Network::~Network
   0001f	48 83 c4 28	 add	 rsp, 40			; 00000028H
@@ -7296,23 +7328,24 @@ i$8 = 0
 j$9 = 4
 index$10 = 8
 data_count$ = 12
-tv198 = 16
+tv218 = 16
 $T7 = 20
 $T1 = 24
-tv155 = 40
-tv187 = 48
-tv200 = 56
-$T3 = 64
-$T6 = 80
-$T2 = 104
-$T4 = 128
-$T5 = 6400
-res$11 = 12672
-dat$ = 12688
-net$ = 12720
-__$ArrayPad$ = 12752
-argc$ = 12864
-argv$ = 12872
+tv166 = 40
+tv195 = 48
+tv207 = 56
+tv220 = 64
+$T3 = 80
+$T6 = 96
+$T2 = 120
+$T4 = 160
+$T5 = 6432
+res$11 = 12704
+dat$ = 12720
+net$ = 12752
+__$ArrayPad$ = 12784
+argc$ = 12896
+argv$ = 12904
 main$dtor$1 PROC
   00027	40 55		 push	 rbp
   00029	41 55		 push	 r13
@@ -7320,7 +7353,7 @@ main$dtor$1 PROC
   0002f	4c 8b ea	 mov	 r13, rdx
   00032	48 8d 6a 40	 lea	 rbp, QWORD PTR [rdx+64]
   00036	48 83 e5 e0	 and	 rbp, -32		; ffffffffffffffe0H
-  0003a	48 8d 8d 90 31
+  0003a	48 8d 8d b0 31
 	00 00		 lea	 rcx, QWORD PTR dat$[rbp]
   00041	e8 00 00 00 00	 call	 ??1Data_Set@Mnist@@QEAA@XZ
   00046	48 83 c4 28	 add	 rsp, 40			; 00000028H
@@ -7336,23 +7369,24 @@ i$8 = 0
 j$9 = 4
 index$10 = 8
 data_count$ = 12
-tv198 = 16
+tv218 = 16
 $T7 = 20
 $T1 = 24
-tv155 = 40
-tv187 = 48
-tv200 = 56
-$T3 = 64
-$T6 = 80
-$T2 = 104
-$T4 = 128
-$T5 = 6400
-res$11 = 12672
-dat$ = 12688
-net$ = 12720
-__$ArrayPad$ = 12752
-argc$ = 12864
-argv$ = 12872
+tv166 = 40
+tv195 = 48
+tv207 = 56
+tv220 = 64
+$T3 = 80
+$T6 = 96
+$T2 = 120
+$T4 = 160
+$T5 = 6432
+res$11 = 12704
+dat$ = 12720
+net$ = 12752
+__$ArrayPad$ = 12784
+argc$ = 12896
+argv$ = 12904
 main$dtor$2 PROC
   0004e	40 55		 push	 rbp
   00050	41 55		 push	 r13
@@ -7360,7 +7394,7 @@ main$dtor$2 PROC
   00056	4c 8b ea	 mov	 r13, rdx
   00059	48 8d 6a 40	 lea	 rbp, QWORD PTR [rdx+64]
   0005d	48 83 e5 e0	 and	 rbp, -32		; ffffffffffffffe0H
-  00061	48 8d 4d 50	 lea	 rcx, QWORD PTR $T6[rbp]
+  00061	48 8d 4d 60	 lea	 rcx, QWORD PTR $T6[rbp]
   00065	e8 00 00 00 00	 call	 ??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
   0006a	48 83 c4 28	 add	 rsp, 40			; 00000028H
   0006e	41 5d		 pop	 r13
@@ -7375,23 +7409,24 @@ i$8 = 0
 j$9 = 4
 index$10 = 8
 data_count$ = 12
-tv198 = 16
+tv218 = 16
 $T7 = 20
 $T1 = 24
-tv155 = 40
-tv187 = 48
-tv200 = 56
-$T3 = 64
-$T6 = 80
-$T2 = 104
-$T4 = 128
-$T5 = 6400
-res$11 = 12672
-dat$ = 12688
-net$ = 12720
-__$ArrayPad$ = 12752
-argc$ = 12864
-argv$ = 12872
+tv166 = 40
+tv195 = 48
+tv207 = 56
+tv220 = 64
+$T3 = 80
+$T6 = 96
+$T2 = 120
+$T4 = 160
+$T5 = 6432
+res$11 = 12704
+dat$ = 12720
+net$ = 12752
+__$ArrayPad$ = 12784
+argc$ = 12896
+argv$ = 12904
 main$dtor$3 PROC
   00072	40 55		 push	 rbp
   00074	41 55		 push	 r13
@@ -7399,7 +7434,7 @@ main$dtor$3 PROC
   0007a	4c 8b ea	 mov	 r13, rdx
   0007d	48 8d 6a 40	 lea	 rbp, QWORD PTR [rdx+64]
   00081	48 83 e5 e0	 and	 rbp, -32		; ffffffffffffffe0H
-  00085	48 8d 8d 80 31
+  00085	48 8d 8d a0 31
 	00 00		 lea	 rcx, QWORD PTR res$11[rbp]
   0008c	e8 00 00 00 00	 call	 ??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ
   00091	48 83 c4 28	 add	 rsp, 40			; 00000028H
@@ -7414,7 +7449,7 @@ _TEXT	SEGMENT
 this$ = 16
 classSize$ = 24
 ?__autoclassinit2@Network@Neural@@QEAAX_K@Z PROC	; Neural::Network::__autoclassinit2, COMDAT
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	57		 push	 rdi
@@ -7431,7 +7466,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1Data_Set@Mnist@@QEAA@XZ PROC				; Mnist::Data_Set::~Data_Set, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -7441,11 +7476,29 @@ $LN4:
 ??1Data_Set@Mnist@@QEAA@XZ ENDP				; Mnist::Data_Set::~Data_Set
 _TEXT	ENDS
 ; Function compile flags: /Odtp
+;	COMDAT ?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z
+_TEXT	SEGMENT
+this$ = 16
+classSize$ = 24
+?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z PROC	; Mnist::Data_Set::__autoclassinit2, COMDAT
+$LN3:
+  00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
+  00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
+  0000a	57		 push	 rdi
+  0000b	48 8b 7c 24 10	 mov	 rdi, QWORD PTR this$[rsp]
+  00010	33 c0		 xor	 eax, eax
+  00012	48 8b 4c 24 18	 mov	 rcx, QWORD PTR classSize$[rsp]
+  00017	f3 aa		 rep stosb
+  00019	5f		 pop	 rdi
+  0001a	c3		 ret	 0
+?__autoclassinit2@Data_Set@Mnist@@QEAAX_K@Z ENDP	; Mnist::Data_Set::__autoclassinit2
+_TEXT	ENDS
+; Function compile flags: /Odtp
 ;	COMDAT ??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
 ??1?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@QEAA@XZ PROC	; Eigen::Matrix<double,-1,-1,0,-1,-1>::~Matrix<double,-1,-1,0,-1,-1>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -7459,7 +7512,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@QEAA@XZ PROC ; Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >::~PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -7474,7 +7527,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAA@XZ PROC	; Eigen::Matrix<double,1,-1,1,1,-1>::~Matrix<double,1,-1,1,1,-1>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -7488,7 +7541,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@QEAA@XZ PROC ; Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >::~PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -7504,7 +7557,7 @@ _TEXT	SEGMENT
 this$ = 16
 classSize$ = 24
 ?__autoclassinit2@?$Matrix@N$00$0?0$00$00$0?0@Eigen@@QEAAX_K@Z PROC ; Eigen::Matrix<double,1,-1,1,1,-1>::__autoclassinit2, COMDAT
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	57		 push	 rdi
@@ -7525,7 +7578,7 @@ this$ = 48
 
 ; 545  :     EIGEN_DEVICE_FUNC ~DenseStorage() { internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, _Rows*m_cols); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -7548,7 +7601,7 @@ index$ = 56
 
 ; 407  :     {
 
-$LN6:
+$LN5:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -7597,7 +7650,7 @@ this$ = 48
 
 ; 465  :     EIGEN_DEVICE_FUNC ~DenseStorage() { internal::conditional_aligned_delete_auto<T,(_Options&DontAlign)==0>(m_data, m_rows*m_cols); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -7647,7 +7700,7 @@ other$ = 56
 
 ; 415  :     { }
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -7673,7 +7726,7 @@ this$ = 8
 index$ = 16
 ?get_label@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@UEAAC_K@Z PROC ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::get_label, COMDAT
 
-; 24   : 		inline virtual label_type	get_label(uint64_t index)	{ return labels[index]; }
+; 25   : 		inline virtual label_type	get_label(uint64_t index)	{ return labels[index]; }
 
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -7693,9 +7746,9 @@ __$ReturnUdt$ = 56
 index$ = 64
 ?get_data@?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@UEAA?AV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@_K@Z PROC ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::get_data, COMDAT
 
-; 23   : 		inline virtual data_type	get_data(uint64_t index)	{ return data[index]; }
+; 24   : 		inline virtual data_type	get_data(uint64_t index)	{ return data[index]; }
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -7721,9 +7774,9 @@ $T2 = 40
 this$ = 64
 ??1?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@QEAA@XZ PROC ; Neural::Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >::~Data<signed char,Eigen::Matrix<double,28,28,0,28,28> >, COMDAT
 
-; 18   : 		~Data() {
+; 19   : 		~Data() {
 
-$LN6:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
   00009	48 8b 44 24 40	 mov	 rax, QWORD PTR this$[rsp]
@@ -7731,7 +7784,7 @@ $LN6:
 	00 00		 lea	 rcx, OFFSET FLAT:??_7?$Data@CV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Neural@@6B@
   00015	48 89 08	 mov	 QWORD PTR [rax], rcx
 
-; 19   : 			if (labels != nullptr)	{ delete[] labels; }
+; 20   : 			if (labels != nullptr)	{ delete[] labels; }
 
   00018	48 8b 44 24 40	 mov	 rax, QWORD PTR this$[rsp]
   0001d	48 83 78 08 00	 cmp	 QWORD PTR [rax+8], 0
@@ -7743,7 +7796,7 @@ $LN6:
   00037	e8 00 00 00 00	 call	 ??_V@YAXPEAX@Z		; operator delete[]
 $LN2@Data:
 
-; 20   : 			if (data != nullptr)	{ delete[] data; }
+; 21   : 			if (data != nullptr)	{ delete[] data; }
 
   0003c	48 8b 44 24 40	 mov	 rax, QWORD PTR this$[rsp]
   00041	48 83 78 10 00	 cmp	 QWORD PTR [rax+16], 0
@@ -7756,7 +7809,7 @@ $LN2@Data:
   00060	e8 00 00 00 00	 call	 ??_V@YAXPEAXW4align_val_t@std@@@Z ; operator delete[]
 $LN3@Data:
 
-; 21   : 		}
+; 22   : 		}
 
   00065	48 83 c4 38	 add	 rsp, 56			; 00000038H
   00069	c3		 ret	 0
@@ -9975,7 +10028,7 @@ index$ = 104
 
 ; 390  :     {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 58	 sub	 rsp, 88			; 00000058H
@@ -10040,7 +10093,7 @@ this$ = 64
 
 ; 67   :   inline Index size() const EIGEN_NOEXCEPT { return rows() * cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
   00009	48 8b 4c 24 40	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10065,7 +10118,7 @@ other$ = 72
 
 ; 512  :       : Base(), m_storage(other.m_storage) { }
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	56		 push	 rsi
@@ -11351,7 +11404,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::Matrix<double,1,-1,1,1,-1> >::~evaluator<Eigen::Matrix<double,1,-1,1,1,-1> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -11365,7 +11418,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$00$0?0$00$00$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> > >::~evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,1,-1,1,1,-1> > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -11383,7 +11436,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -11403,7 +11456,7 @@ m$ = 56
 
 ; 284  :   { }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11579,7 +11632,7 @@ this$ = 48
 
 ; 63   :   inline Index cols() const EIGEN_NOEXCEPT { return derived().cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -11600,7 +11653,7 @@ this$ = 48
 
 ; 60   :   inline Index rows() const EIGEN_NOEXCEPT { return derived().rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -12082,7 +12135,7 @@ m$ = 72
 
 ; 197  :   {
 
-$LN7:
+$LN6:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -12148,7 +12201,7 @@ this$ = 48
 
 ; 145  :     Index cols() const EIGEN_NOEXCEPT { return m_storage.cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -12167,7 +12220,7 @@ this$ = 48
 
 ; 143  :     Index rows() const EIGEN_NOEXCEPT { return m_storage.rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?rows@?$DenseStorage@N$0?0$00$0?0$00@Eigen@@SA_JXZ ; Eigen::DenseStorage<double,-1,1,-1,1>::rows
@@ -12356,7 +12409,7 @@ outerStride$ = 64
 
 ; 140  :   {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -12406,7 +12459,7 @@ this$ = 48
 
 ; 248  :     { return m_storage.data(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -12452,7 +12505,7 @@ this$ = 48
 
 ; 586  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -12479,7 +12532,7 @@ this$ = 48
 
 ; 429  :     inline Index outerStride() const EIGEN_NOEXCEPT { return this->innerSize(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -12515,7 +12568,7 @@ this$ = 64
 
 ; 236  :     {
 
-$LN8:
+$LN7:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -12579,7 +12632,7 @@ __formal$ = 96
 
 ; 118  :   { return AddExpr<Derived,ValueExpr<internal::FixedInt<N> > >(derived(), ValueExpr<internal::FixedInt<N> >()); }
 
-$LN4:
+$LN3:
   00000	44 88 44 24 18	 mov	 BYTE PTR [rsp+24], r8b
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -12609,7 +12662,7 @@ other$ = 56
 
 ; 424  :     { }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -12651,7 +12704,7 @@ m$ = 584
 
 ; 252  : {
 
-$LN11:
+$LN10:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 81 ec 38 02
@@ -13528,7 +13581,7 @@ size$ = 56
 
 ; 443  : {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -15084,7 +15137,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1IOFormat@Eigen@@QEAA@XZ PROC				; Eigen::IOFormat::~IOFormat, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -15130,7 +15183,7 @@ this$ = 48
 
 ; 408  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -15609,7 +15662,7 @@ other$ = 56
 
 ; 591  :     {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -15701,7 +15754,7 @@ fmt$ = 544
 
 ; 132  : {
 
-$LN36:
+$LN34:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -16486,7 +16539,7 @@ ptr$ = 48
 
 ; 258  : {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -16866,7 +16919,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -16902,7 +16955,7 @@ _TEXT	SEGMENT
 
 ; 123  :   {
 
-$LN4:
+$LN3:
   00000	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
 ; 124  :     return NumTraits<Scalar>::digits10();
@@ -16930,7 +16983,7 @@ colId$ = 96
 
 ; 153  :     {
 
-$LN7:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -17393,7 +17446,7 @@ _TEXT	SEGMENT
 
 ; 181  :   {
 
-$LN4:
+$LN3:
   00000	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
 ; 182  :     return internal::default_digits10_impl<T>::run();
@@ -17936,7 +17989,7 @@ _other$ = 120
 
 ; 355  :     {
 
-$LN10:
+$LN9:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 68	 sub	 rsp, 104		; 00000068H
@@ -18086,7 +18139,7 @@ other$ = 88
 
 ; 791  :     {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 48	 sub	 rsp, 72			; 00000048H
@@ -18433,7 +18486,7 @@ cols$ = 80
 
 ; 272  :     {
 
-$LN6:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -18525,7 +18578,7 @@ this$ = 48
 
 ; 145  :     Index cols() const EIGEN_NOEXCEPT { return m_storage.cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?cols@?$DenseStorage@N$0DBA@$0BM@$0BM@$0A@@Eigen@@SA_JXZ ; Eigen::DenseStorage<double,784,28,28,0>::cols
@@ -18542,7 +18595,7 @@ this$ = 48
 
 ; 143  :     Index rows() const EIGEN_NOEXCEPT { return m_storage.rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?rows@?$DenseStorage@N$0DBA@$0BM@$0BM@$0A@@Eigen@@SA_JXZ ; Eigen::DenseStorage<double,784,28,28,0>::rows
@@ -18587,7 +18640,7 @@ cols$ = 72
 
 ; 481  :     {
 
-$LN7:
+$LN6:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -19265,7 +19318,7 @@ cols$ = 88
 
 ; 41   :   {
 
-$LN9:
+$LN8:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 48	 sub	 rsp, 72			; 00000048H
@@ -19338,7 +19391,7 @@ func$ = 80
 
 ; 874  : {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -19386,7 +19439,7 @@ size$ = 64
 
 ; 400  : {
 
-$LN15:
+$LN12:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -19450,7 +19503,7 @@ $LN5@conditiona:
 
   00052	48 83 c4 38	 add	 rsp, 56			; 00000038H
   00056	c3		 ret	 0
-$LN13@conditiona:
+$LN10@conditiona:
 ??$conditional_aligned_new_auto@N$00@internal@Eigen@@YAPEAN_K@Z ENDP ; Eigen::internal::conditional_aligned_new_auto<double,1>
 _TEXT	ENDS
 ; Function compile flags: /Odtp
@@ -19501,7 +19554,7 @@ func$ = 64
 
 ; 949  :   {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -19538,7 +19591,7 @@ size$ = 48
 
 ; 317  : {
 
-$LN5:
+$LN4:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -19569,7 +19622,7 @@ size$ = 48
 
 ; 240  : {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -19596,7 +19649,7 @@ size$ = 72
 
 ; 296  : {
 
-$LN16:
+$LN13:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -19651,7 +19704,7 @@ $LN6@construct_:
   0005f	48 83 c4 38	 add	 rsp, 56			; 00000038H
   00063	c3		 ret	 0
   00064	cc		 int	 3
-$LN14@construct_:
+$LN11@construct_:
 ??$construct_elements_of_array@N@internal@Eigen@@YAPEANPEAN_K@Z ENDP ; Eigen::internal::construct_elements_of_array<double>
 _TEXT	ENDS
 ; Function compile flags: /Odtp
@@ -19704,7 +19757,7 @@ src$ = 56
 
 ; 453  : {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -19751,7 +19804,7 @@ func$ = 144
 
 ; 770  : {
 
-$LN6:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -19877,7 +19930,7 @@ text$x	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::Matrix<double,28,28,0,28,28> >::~evaluator<Eigen::Matrix<double,28,28,0,28,28> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -19891,7 +19944,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,28,28,0,28,28> > >::~evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,28,28,0,28,28> > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -19905,7 +19958,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::Matrix<double,-1,-1,0,-1,-1> >::~evaluator<Eigen::Matrix<double,-1,-1,0,-1,-1> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -19919,7 +19972,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0?0$0?0$0A@$0?0$0?0@Eigen@@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> > >::~evaluator<Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1> > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -19942,7 +19995,7 @@ kernel$ = 96
 
 ; 419  :   {
 
-$LN9:
+$LN8:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 58	 sub	 rsp, 88			; 00000058H
 
@@ -20088,7 +20141,7 @@ m$ = 56
 
 ; 284  :   { }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -20129,7 +20182,7 @@ m$ = 56
 
 ; 284  :   { }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -20187,7 +20240,7 @@ this$ = 48
 
 ; 145  :     Index cols() const EIGEN_NOEXCEPT { return m_storage.cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20206,7 +20259,7 @@ this$ = 48
 
 ; 143  :     Index rows() const EIGEN_NOEXCEPT { return m_storage.rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20239,7 +20292,7 @@ this$ = 48
 
 ; 711  :   {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -20264,7 +20317,7 @@ this$ = 48
 
 ; 641  :   EIGEN_DEVICE_FUNC EIGEN_CONSTEXPR Index size() const EIGEN_NOEXCEPT { return m_dstExpr.size(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20286,7 +20339,7 @@ m$ = 72
 
 ; 197  :   {
 
-$LN7:
+$LN6:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -20355,7 +20408,7 @@ m$ = 72
 
 ; 197  :   {
 
-$LN7:
+$LN6:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -20491,7 +20544,7 @@ outerStride$ = 64
 
 ; 140  :   {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -20541,7 +20594,7 @@ this$ = 48
 
 ; 252  :     { return m_storage.data(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20560,7 +20613,7 @@ this$ = 48
 
 ; 248  :     { return m_storage.data(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20579,7 +20632,7 @@ this$ = 48
 
 ; 586  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -20607,7 +20660,7 @@ this$ = 64
 
 ; 67   :   inline Index size() const EIGEN_NOEXCEPT { return rows() * cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
   00009	48 8b 4c 24 40	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20631,7 +20684,7 @@ this$ = 48
 
 ; 248  :     { return m_storage.data(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -20650,7 +20703,7 @@ this$ = 48
 
 ; 586  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -20677,7 +20730,7 @@ this$ = 48
 
 ; 429  :     inline Index outerStride() const EIGEN_NOEXCEPT { return this->innerSize(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20726,7 +20779,7 @@ this$ = 48
 
 ; 63   :   inline Index cols() const EIGEN_NOEXCEPT { return derived().cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20747,7 +20800,7 @@ this$ = 48
 
 ; 60   :   inline Index rows() const EIGEN_NOEXCEPT { return derived().rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20782,7 +20835,7 @@ this$ = 48
 
 ; 429  :     inline Index outerStride() const EIGEN_NOEXCEPT { return this->innerSize(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20817,7 +20870,7 @@ this$ = 64
 
 ; 236  :     {
 
-$LN8:
+$LN7:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -20866,7 +20919,7 @@ this$ = 64
 
 ; 236  :     {
 
-$LN8:
+$LN7:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -20914,7 +20967,7 @@ this$ = 64
 
 ; 67   :   inline Index size() const EIGEN_NOEXCEPT { return rows() * cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
   00009	48 8b 4c 24 40	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20938,7 +20991,7 @@ this$ = 48
 
 ; 63   :   inline Index cols() const EIGEN_NOEXCEPT { return derived().cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20959,7 +21012,7 @@ this$ = 48
 
 ; 60   :   inline Index rows() const EIGEN_NOEXCEPT { return derived().rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -20984,7 +21037,7 @@ __formal$ = 80
 
 ; 760  : {
 
-$LN8:
+$LN7:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -21065,7 +21118,7 @@ size$ = 72
 
 ; 470  : {
 
-$LN13:
+$LN10:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -21201,7 +21254,7 @@ index$ = 184
 
 ; 680  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	55		 push	 rbp
@@ -21260,7 +21313,7 @@ end$ = 80
 
 ; 409  :   {
 
-$LN7:
+$LN6:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -21309,7 +21362,7 @@ index$ = 104
 
 ; 659  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 58	 sub	 rsp, 88			; 00000058H
@@ -21426,7 +21479,7 @@ index$ = 64
 
 ; 244  :   {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -21461,7 +21514,7 @@ b$ = 64
 
 ; 28   :   { internal::pstoret<DstScalar,Packet,Alignment>(a,b); }
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -21484,7 +21537,7 @@ from$ = 144
 
 ; 965  : {
 
-$LN7:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	55		 push	 rbp
   00006	48 81 ec 80 00
@@ -21538,7 +21591,7 @@ from$ = 56
 
 ; 976  : {
 
-$LN6:
+$LN5:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H

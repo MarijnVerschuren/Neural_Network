@@ -7,7 +7,7 @@ INCLUDELIB OLDNAMES
 EXTRN	__imp_?_Random_device@std@@YAIXZ:PROC
 EXTRN	__imp_srand:PROC
 	ORG $+2
-$SG4294956716 DB 'AVX SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2', 00H
+$SG4294956712 DB 'AVX SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2', 00H
 PUBLIC	?_Get_bits@?$_Rng_from_urng@IVrandom_device@std@@@std@@AEAAIXZ ; std::_Rng_from_urng<unsigned int,std::random_device>::_Get_bits
 PUBLIC	?_Adjust@?$uniform_int@I@std@@CAII@Z		; std::uniform_int<unsigned int>::_Adjust
 PUBLIC	??0?$_Rng_from_urng@IVrandom_device@std@@@std@@QEAA@AEAVrandom_device@1@@Z ; std::_Rng_from_urng<unsigned int,std::random_device>::_Rng_from_urng<unsigned int,std::random_device>
@@ -103,8 +103,8 @@ $pdata$??0?$uniform_int_distribution@I@std@@QEAA@II@Z DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init_random@Math@@YAXI@Z DD imagerel $LN4
-	DD	imagerel $LN4+23
+$pdata$?init_random@Math@@YAXI@Z DD imagerel $LN3
+	DD	imagerel $LN3+23
 	DD	imagerel $unwind$?init_random@Math@@YAXI@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -133,8 +133,8 @@ $pdata$??__Elast@Eigen@@YAXXZ DD imagerel ??__Elast@Eigen@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init_random@Math@@YAXXZ DD imagerel $LN4
-	DD	imagerel $LN4+87
+$pdata$?init_random@Math@@YAXXZ DD imagerel $LN3
+	DD	imagerel $LN3+87
 	DD	imagerel $unwind$?init_random@Math@@YAXXZ
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -237,7 +237,7 @@ __$ArrayPad$ = 48
 
 ; 6    : void Math::init_random() {
 
-$LN4:
+$LN3:
   00000	48 83 ec 48	 sub	 rsp, 72			; 00000048H
   00004	48 8b 05 00 00
 	00 00		 mov	 rax, QWORD PTR __security_cookie
@@ -444,7 +444,7 @@ seed$ = 48
 
 ; 5    : void Math::init_random(uint32_t seed) { srand(seed); }
 
-$LN4:
+$LN3:
   00000	89 4c 24 08	 mov	 DWORD PTR [rsp+8], ecx
   00004	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00008	8b 4c 24 30	 mov	 ecx, DWORD PTR seed$[rsp]

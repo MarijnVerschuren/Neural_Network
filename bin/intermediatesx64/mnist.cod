@@ -22,7 +22,6 @@ PUBLIC	??_R0?AV?$basic_fstream@DU?$char_traits@D@std@@@std@@@8 ; std::basic_fstr
 PUBLIC	??_8?$basic_fstream@DU?$char_traits@D@std@@@std@@7B?$basic_ostream@DU?$char_traits@D@std@@@1@@ ; std::basic_fstream<char,std::char_traits<char> >::`vbtable'
 PUBLIC	??_R4Data_Set@Mnist@@6B@			; Mnist::Data_Set::`RTTI Complete Object Locator'
 PUBLIC	??_R1A@?0A@EA@bad_cast@std@@8			; std::bad_cast::`RTTI Base Class Descriptor at (0,-1,0,64)'
-PUBLIC	??_R0?AUData_Set@Mnist@@@8			; Mnist::Data_Set `RTTI Type Descriptor'
 PUBLIC	??_R3?$basic_fstream@DU?$char_traits@D@std@@@std@@8 ; std::basic_fstream<char,std::char_traits<char> >::`RTTI Class Hierarchy Descriptor'
 PUBLIC	??_R1A@?0A@EA@?$basic_fstream@DU?$char_traits@D@std@@@std@@8 ; std::basic_fstream<char,std::char_traits<char> >::`RTTI Base Class Descriptor at (0,-1,0,64)'
 PUBLIC	??_7?$basic_filebuf@DU?$char_traits@D@std@@@std@@6B@ ; std::basic_filebuf<char,std::char_traits<char> >::`vftable'
@@ -32,6 +31,7 @@ PUBLIC	??_R2bad_cast@std@@8				; std::bad_cast::`RTTI Base Class Array'
 PUBLIC	??_7bad_cast@std@@6B@				; std::bad_cast::`vftable'
 PUBLIC	??_R0?AVbad_cast@std@@@8			; std::bad_cast `RTTI Type Descriptor'
 PUBLIC	_TI2?AVbad_cast@std@@
+PUBLIC	??_R0?AVData_Set@Mnist@@@8			; Mnist::Data_Set `RTTI Type Descriptor'
 PUBLIC	??_R1A@?0A@EA@Data_Set@Mnist@@8			; Mnist::Data_Set::`RTTI Base Class Descriptor at (0,-1,0,64)'
 PUBLIC	??_R4?$basic_filebuf@DU?$char_traits@D@std@@@std@@6B@ ; std::basic_filebuf<char,std::char_traits<char> >::`RTTI Complete Object Locator'
 PUBLIC	??_7?$basic_fstream@DU?$char_traits@D@std@@@std@@6B@ ; std::basic_fstream<char,std::char_traits<char> >::`vftable'
@@ -198,7 +198,7 @@ rdata$r	SEGMENT
 rdata$r	ENDS
 ;	COMDAT ??_R1A@?0A@EA@Data_Set@Mnist@@8
 rdata$r	SEGMENT
-??_R1A@?0A@EA@Data_Set@Mnist@@8 DD imagerel ??_R0?AUData_Set@Mnist@@@8 ; Mnist::Data_Set::`RTTI Base Class Descriptor at (0,-1,0,64)'
+??_R1A@?0A@EA@Data_Set@Mnist@@8 DD imagerel ??_R0?AVData_Set@Mnist@@@8 ; Mnist::Data_Set::`RTTI Base Class Descriptor at (0,-1,0,64)'
 	DD	01H
 	DD	00H
 	DD	0ffffffffH
@@ -206,6 +206,12 @@ rdata$r	SEGMENT
 	DD	040H
 	DD	imagerel ??_R3Data_Set@Mnist@@8
 rdata$r	ENDS
+;	COMDAT ??_R0?AVData_Set@Mnist@@@8
+data$rs	SEGMENT
+??_R0?AVData_Set@Mnist@@@8 DQ FLAT:??_7type_info@@6B@	; Mnist::Data_Set `RTTI Type Descriptor'
+	DQ	0000000000000000H
+	DB	'.?AVData_Set@Mnist@@', 00H
+data$rs	ENDS
 ;	COMDAT _TI2?AVbad_cast@std@@
 xdata$x	SEGMENT
 _TI2?AVbad_cast@std@@ DD 00H
@@ -273,12 +279,6 @@ rdata$r	SEGMENT
 	DD	0aH
 	DD	imagerel ??_R2?$basic_fstream@DU?$char_traits@D@std@@@std@@8
 rdata$r	ENDS
-;	COMDAT ??_R0?AUData_Set@Mnist@@@8
-data$rs	SEGMENT
-??_R0?AUData_Set@Mnist@@@8 DQ FLAT:??_7type_info@@6B@	; Mnist::Data_Set `RTTI Type Descriptor'
-	DQ	0000000000000000H
-	DB	'.?AUData_Set@Mnist@@', 00H
-data$rs	ENDS
 ;	COMDAT ??_R1A@?0A@EA@bad_cast@std@@8
 rdata$r	SEGMENT
 ??_R1A@?0A@EA@bad_cast@std@@8 DD imagerel ??_R0?AVbad_cast@std@@@8 ; std::bad_cast::`RTTI Base Class Descriptor at (0,-1,0,64)'
@@ -294,7 +294,7 @@ rdata$r	SEGMENT
 ??_R4Data_Set@Mnist@@6B@ DD 01H				; Mnist::Data_Set::`RTTI Complete Object Locator'
 	DD	00H
 	DD	00H
-	DD	imagerel ??_R0?AUData_Set@Mnist@@@8
+	DD	imagerel ??_R0?AVData_Set@Mnist@@@8
 	DD	imagerel ??_R3Data_Set@Mnist@@8
 	DD	imagerel ??_R4Data_Set@Mnist@@6B@
 rdata$r	ENDS
@@ -519,15 +519,15 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_08EPJLHIJG@bad?5cast@ DB 'bad cast', 00H		; `string'
 	ORG $+2
-$SG4294948171 DB 0aH, 00H
+$SG4294948167 DB 0aH, 00H
 	ORG $+5
-$SG4294948283 DB 'AVX SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2', 00H
+$SG4294948279 DB 'AVX SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2', 00H
 	ORG $+5
-$SG4294948174 DB 01bH, '[7m..', 01bH, '[m', 00H
+$SG4294948170 DB 01bH, '[7m..', 01bH, '[m', 00H
 	ORG $+6
-$SG4294948173 DB 01bH, '[100m..', 01bH, '[m', 00H
+$SG4294948169 DB 01bH, '[100m..', 01bH, '[m', 00H
 	ORG $+4
-$SG4294948172 DB 01bH, '[0m..', 01bH, '[m', 00H
+$SG4294948168 DB 01bH, '[0m..', 01bH, '[m', 00H
 PUBLIC	??_E?$basic_fstream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@EAAPEAXI@Z ; std::basic_fstream<char,std::char_traits<char> >::`vector deleting destructor'
 PUBLIC	??R?$scalar_constant_op@N@internal@Eigen@@QEBA?BNXZ ; Eigen::internal::scalar_constant_op<double>::operator()
 PUBLIC	??$run@_J@?$check_rows_cols_for_overflow@$0DBA@@internal@Eigen@@SAX_J0@Z ; Eigen::internal::check_rows_cols_for_overflow<784>::run<__int64>
@@ -756,86 +756,86 @@ _BSS	SEGMENT
 _BSS	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?R_J@?$nullary_wrapper@NU?$scalar_constant_op@N@internal@Eigen@@$00$0A@$0A@@internal@Eigen@@QEBANAEBU?$scalar_constant_op@N@12@_J1@Z DD imagerel $LN4
-	DD	imagerel $LN4+39
+$pdata$??$?R_J@?$nullary_wrapper@NU?$scalar_constant_op@N@internal@Eigen@@$00$0A@$0A@@internal@Eigen@@QEBANAEBU?$scalar_constant_op@N@12@_J1@Z DD imagerel $LN3
+	DD	imagerel $LN3+39
 	DD	imagerel $unwind$??$?R_J@?$nullary_wrapper@NU?$scalar_constant_op@N@internal@Eigen@@$00$0A@$0A@@internal@Eigen@@QEBANAEBU?$scalar_constant_op@N@12@_J1@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?resize@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEAAX_J0@Z DD imagerel $LN8
-	DD	imagerel $LN8+181
+$pdata$?resize@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEAAX_J0@Z DD imagerel $LN7
+	DD	imagerel $LN7+181
 	DD	imagerel $unwind$?resize@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@QEAAX_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ DD imagerel $LN6
-	DD	imagerel $LN6+71
+$pdata$?rows@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ DD imagerel $LN5
+	DD	imagerel $LN5+71
 	DD	imagerel $unwind$?rows@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ DD imagerel $LN6
-	DD	imagerel $LN6+71
+$pdata$?cols@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ DD imagerel $LN5
+	DD	imagerel $LN5+71
 	DD	imagerel $unwind$?cols@?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$cast@EN@internal@Eigen@@YANAEBE@Z DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??$cast@EN@internal@Eigen@@YANAEBE@Z DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??$cast@EN@internal@Eigen@@YANAEBE@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$coeff@_J@?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEBAN_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+59
+$pdata$??$coeff@_J@?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEBAN_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+59
 	DD	imagerel $unwind$??$coeff@_J@?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEBAN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$resize_if_allowed@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN8
-	DD	imagerel $LN8+170
+$pdata$??$resize_if_allowed@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN7
+	DD	imagerel $LN7+170
 	DD	imagerel $unwind$??$resize_if_allowed@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@NN@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?rows@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?rows@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+33
+$pdata$?cols@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+33
 	DD	imagerel $unwind$?cols@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+51
+$pdata$?size@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+51
 	DD	imagerel $unwind$?size@?$EigenBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$variable_if_dynamic@_J$00@internal@Eigen@@QEAA@_J@Z DD imagerel $LN5
-	DD	imagerel $LN5+60
+$pdata$??0?$variable_if_dynamic@_J$00@internal@Eigen@@QEAA@_J@Z DD imagerel $LN4
+	DD	imagerel $LN4+60
 	DD	imagerel $unwind$??0?$variable_if_dynamic@_J$00@internal@Eigen@@QEAA@_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?innerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ DD imagerel $LN6
-	DD	imagerel $LN6+58
+$pdata$?innerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ DD imagerel $LN5
+	DD	imagerel $LN5+58
 	DD	imagerel $unwind$?innerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ DD imagerel $LN12
-	DD	imagerel $LN12+245
+$pdata$?outerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ DD imagerel $LN11
+	DD	imagerel $LN11+245
 	DD	imagerel $unwind$?outerStride@?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+128
+$pdata$??0?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+128
 	DD	imagerel $unwind$??0?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -846,26 +846,26 @@ $pdata$?dtor$0@?0???0?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@@Z DD imagerel $LN5
-	DD	imagerel $LN5+71
+$pdata$??0Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@@Z DD imagerel $LN4
+	DD	imagerel $LN4+71
 	DD	imagerel $unwind$??0Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN6
-	DD	imagerel $LN6+61
+$pdata$??0?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN5
+	DD	imagerel $LN5+61
 	DD	imagerel $unwind$??0?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -876,26 +876,26 @@ $pdata$?dtor$0@?0???0?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@inte
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??R?$scalar_cast_op@EN@internal@Eigen@@QEBA?BNAEBE@Z DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??R?$scalar_cast_op@EN@internal@Eigen@@QEBA?BNAEBE@Z DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??R?$scalar_cast_op@EN@internal@Eigen@@QEBA?BNAEBE@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEBAAEBE_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+70
+$pdata$?coeff@?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEBAAEBE_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+70
 	DD	imagerel $unwind$?coeff@?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEBAAEBE_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+69
+$pdata$??0?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+69
 	DD	imagerel $unwind$??0?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -906,32 +906,32 @@ $pdata$?dtor$0@?0???0?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@inter
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEBAN_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+86
+$pdata$?coeff@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEBAN_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+86
 	DD	imagerel $unwind$?coeff@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEBAN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEBAN_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+127
+$pdata$?coeff@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEBAN_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+127
 	DD	imagerel $unwind$?coeff@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEBAN_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@@Z DD imagerel $LN6
-	DD	imagerel $LN6+110
+$pdata$??0Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@@Z DD imagerel $LN5
+	DD	imagerel $LN5+110
 	DD	imagerel $unwind$??0Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -942,8 +942,8 @@ $pdata$?dtor$0@?0???0Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z DD imagerel $LN6
-	DD	imagerel $LN6+61
+$pdata$??0?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z DD imagerel $LN5
+	DD	imagerel $LN5+61
 	DD	imagerel $unwind$??0?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -954,104 +954,104 @@ $pdata$?dtor$0@?0???0?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@N
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+28
+$pdata$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+28
 	DD	imagerel $unwind$?size@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN4
-	DD	imagerel $LN4+121
+$pdata$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z DD imagerel $LN3
+	DD	imagerel $LN3+121
 	DD	imagerel $unwind$?assignCoeff@?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@QEAAX_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z DD imagerel $LN5
-	DD	imagerel $LN5+39
+$pdata$??0?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z DD imagerel $LN4
+	DD	imagerel $LN4+39
 	DD	imagerel $unwind$??0?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$00$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z DD imagerel $LN7
-	DD	imagerel $LN7+82
+$pdata$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$00$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z DD imagerel $LN6
+	DD	imagerel $LN6+82
 	DD	imagerel $unwind$?run@?$dense_assignment_loop@V?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@internal@Eigen@@$00$0A@@internal@Eigen@@SAXAEAV?$generic_dense_assignment_kernel@U?$evaluator@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@internal@Eigen@@U?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@23@U?$assign_op@NN@23@$0A@@23@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+31
+$pdata$??1Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+31
 	DD	imagerel $unwind$??1Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+37
+$pdata$??1?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
 	DD	imagerel $unwind$??1?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+48
+$pdata$??1Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+48
 	DD	imagerel $unwind$??1Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+37
+$pdata$??1?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+37
 	DD	imagerel $unwind$??1?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+24
+$pdata$??1?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+24
 	DD	imagerel $unwind$??1?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_dense_assignment_loop@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN6
-	DD	imagerel $LN6+209
+$pdata$??$call_dense_assignment_loop@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN5
+	DD	imagerel $LN5+209
 	DD	imagerel $unwind$??$call_dense_assignment_loop@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1068,32 +1068,32 @@ $pdata$?dtor$1@?0???$call_dense_assignment_loop@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$check_for_aliasing@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z DD imagerel $LN5
-	DD	imagerel $LN5+73
+$pdata$??$check_for_aliasing@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z DD imagerel $LN4
+	DD	imagerel $LN4+73
 	DD	imagerel $unwind$??$check_for_aliasing@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?run@?$Assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@AEBU?$assign_op@NN@23@@Z DD imagerel $LN4
-	DD	imagerel $LN4+59
+$pdata$?run@?$Assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@AEBU?$assign_op@NN@23@@Z DD imagerel $LN3
+	DD	imagerel $LN3+59
 	DD	imagerel $unwind$?run@?$Assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@UDense2Dense@52@X@internal@Eigen@@SAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@3@AEBU?$assign_op@NN@23@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_assignment_no_alias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+54
+$pdata$??$call_assignment_no_alias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+54
 	DD	imagerel $unwind$??$call_assignment_no_alias@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@PEAX@Z DD imagerel $LN4
-	DD	imagerel $LN4+49
+$pdata$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@PEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+49
 	DD	imagerel $unwind$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@U?$assign_op@NN@internal@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBU?$assign_op@NN@01@PEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+42
+$pdata$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+42
 	DD	imagerel $unwind$??$call_assignment@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@2@@internal@Eigen@@YAXAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1110,8 +1110,8 @@ $pdata$??$exchange@PEAV_Facet_base@std@@$$T@std@@YAPEAV_Facet_base@0@AEAPEAV10@$
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_set@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+74
+$pdata$??$_set@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+74
 	DD	imagerel $unwind$??$_set@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAAAEAV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@1@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1122,26 +1122,26 @@ $pdata$??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+20
+$pdata$?rows@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+20
 	DD	imagerel $unwind$?rows@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+20
+$pdata$?cols@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+20
 	DD	imagerel $unwind$?cols@?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?rows@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?rows@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?cols@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?cols@?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1152,80 +1152,80 @@ $pdata$??R?$default_delete@V_Facet_base@std@@@std@@QEBAXPEAV_Facet_base@1@@Z DD 
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseUnaryOpImpl@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@UDense@3@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$CwiseUnaryOpImpl@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@UDense@3@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$CwiseUnaryOpImpl@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@UDense@3@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+60
+$pdata$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+60
 	DD	imagerel $unwind$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+81
+$pdata$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+81
 	DD	imagerel $unwind$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+60
+$pdata$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+60
 	DD	imagerel $unwind$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseBinaryOpImpl@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@UDense@3@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$CwiseBinaryOpImpl@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@UDense@3@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$CwiseBinaryOpImpl@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@UDense@3@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@1@AEBU?$scalar_cast_op@EN@internal@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+68
+$pdata$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@1@AEBU?$scalar_cast_op@EN@internal@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+68
 	DD	imagerel $unwind$??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@1@AEBU?$scalar_cast_op@EN@internal@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?rows@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+31
+$pdata$?rows@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+31
 	DD	imagerel $unwind$?rows@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?cols@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+31
+$pdata$?cols@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+31
 	DD	imagerel $unwind$?cols@?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@_J0AEBU?$scalar_constant_op@N@internal@1@@Z DD imagerel $LN7
-	DD	imagerel $LN7+202
+$pdata$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@_J0AEBU?$scalar_constant_op@N@internal@1@@Z DD imagerel $LN6
+	DD	imagerel $LN6+202
 	DD	imagerel $unwind$??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@_J0AEBU?$scalar_constant_op@N@internal@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@1@AEBU?$scalar_quotient_op@NN@internal@1@@Z DD imagerel $LN6
-	DD	imagerel $LN6+200
+$pdata$??0?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@1@AEBU?$scalar_quotient_op@NN@internal@1@@Z DD imagerel $LN5
+	DD	imagerel $LN5+200
 	DD	imagerel $unwind$??0?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@QEAA@AEBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@AEBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@1@AEBU?$scalar_quotient_op@NN@internal@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1266,20 +1266,20 @@ $pdata$?dtor$1@?0???$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAAEBV?$code
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?4V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAAAEAV01@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+34
+$pdata$??$?4V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAAAEAV01@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+34
 	DD	imagerel $unwind$??$?4V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAAAEAV01@AEBV?$DenseBase@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$?KH@?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@QEBA?BV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBH@Z DD imagerel $LN4
-	DD	imagerel $LN4+198
+$pdata$??$?KH@?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@QEBA?BV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBH@Z DD imagerel $LN3
+	DD	imagerel $LN3+198
 	DD	imagerel $unwind$??$?KH@?$MatrixBase@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@Eigen@@QEBA?BV?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@1@AEBH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$cast@N@?$DenseBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA?BV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@XZ DD imagerel $LN4
-	DD	imagerel $LN4+52
+$pdata$??$cast@N@?$DenseBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA?BV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@XZ DD imagerel $LN3
+	DD	imagerel $LN3+52
 	DD	imagerel $unwind$??$cast@N@?$DenseBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@QEBA?BV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@1@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1302,20 +1302,20 @@ $pdata$?_Clamp_suffix_size@?$_String_val@U?$_Simple_types@D@std@@@std@@QEBA_K_K0
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$plain_array@N$0DBA@$0A@$0CA@@internal@Eigen@@QEAA@XZ DD imagerel $LN6
-	DD	imagerel $LN6+78
+$pdata$??0?$plain_array@N$0DBA@$0A@$0CA@@internal@Eigen@@QEAA@XZ DD imagerel $LN5
+	DD	imagerel $LN5+78
 	DD	imagerel $unwind$??0?$plain_array@N$0DBA@$0A@$0CA@@internal@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$variable_if_dynamic@_J$0BM@@internal@Eigen@@QEAA@_J@Z DD imagerel $LN5
-	DD	imagerel $LN5+60
+$pdata$??0?$variable_if_dynamic@_J$0BM@@internal@Eigen@@QEAA@_J@Z DD imagerel $LN4
+	DD	imagerel $LN4+60
 	DD	imagerel $unwind$??0?$variable_if_dynamic@_J$0BM@@internal@Eigen@@QEAA@_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MatrixBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+$pdata$??0?$MatrixBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+29
 	DD	imagerel $unwind$??0?$MatrixBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1332,32 +1332,32 @@ $pdata$?_Erase_noexcept@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$DenseStorage@N$0DBA@$0BM@$0BM@$0A@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+32
+$pdata$??0?$DenseStorage@N$0DBA@$0BM@$0BM@$0A@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+32
 	DD	imagerel $unwind$??0?$DenseStorage@N$0DBA@$0BM@$0BM@$0A@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?outer@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?outer@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?outer@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?inner@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN4
-	DD	imagerel $LN4+19
+$pdata$?inner@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ DD imagerel $LN3
+	DD	imagerel $LN3+19
 	DD	imagerel $unwind$?inner@?$Stride@$0A@$0A@@Eigen@@QEBA_JXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEAA@PEAE@Z DD imagerel $LN4
-	DD	imagerel $LN4+117
+$pdata$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEAA@PEAE@Z DD imagerel $LN3
+	DD	imagerel $LN3+117
 	DD	imagerel $unwind$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$0A@@Eigen@@QEAA@PEAE@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN7
-	DD	imagerel $LN7+176
+$pdata$?coeff@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN5
+	DD	imagerel $LN5+176
 	DD	imagerel $unwind$?coeff@?$evaluator@V?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@@internal@Eigen@@QEBAAEBN_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1374,14 +1374,14 @@ $pdata$?front@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$variable_if_dynamic@_J$0A@@internal@Eigen@@QEAA@_J@Z DD imagerel $LN5
-	DD	imagerel $LN5+60
+$pdata$??0?$variable_if_dynamic@_J$0A@@internal@Eigen@@QEAA@_J@Z DD imagerel $LN4
+	DD	imagerel $LN4+60
 	DD	imagerel $unwind$??0?$variable_if_dynamic@_J$0A@@internal@Eigen@@QEAA@_J@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?coeff@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN5
-	DD	imagerel $LN5+112
+$pdata$?coeff@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN4
+	DD	imagerel $LN4+112
 	DD	imagerel $unwind$?coeff@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1392,8 +1392,8 @@ $pdata$?dtor$0@?0??coeff@?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@E
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+42
+$pdata$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+42
 	DD	imagerel $unwind$??0?$PlainObjectBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Eigen@@IEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1464,14 +1464,14 @@ $pdata$?_Set_back@?$basic_filebuf@DU?$char_traits@D@std@@@std@@AEAAXXZ DD imager
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Stride@$0A@$0A@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN4
-	DD	imagerel $LN4+93
+$pdata$??0?$Stride@$0A@$0A@@Eigen@@QEAA@AEBV01@@Z DD imagerel $LN3
+	DD	imagerel $LN3+93
 	DD	imagerel $unwind$??0?$Stride@$0A@$0A@@Eigen@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$00@Eigen@@QEAA@PEAE@Z DD imagerel $LN4
-	DD	imagerel $LN4+39
+$pdata$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$00@Eigen@@QEAA@PEAE@Z DD imagerel $LN3
+	DD	imagerel $LN3+39
 	DD	imagerel $unwind$??0?$MapBase@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@$00@Eigen@@QEAA@PEAE@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1500,14 +1500,14 @@ $pdata$?data@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAPE
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??R?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN6
-	DD	imagerel $LN6+122
+$pdata$??R?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z DD imagerel $LN5
+	DD	imagerel $LN5+122
 	DD	imagerel $unwind$??R?$DenseCoeffsBase@V?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@@Eigen@@QEBAAEBN_J0@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+34
+$pdata$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+34
 	DD	imagerel $unwind$??0?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1644,14 +1644,14 @@ $pdata$?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z 
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Stride@$0A@$0A@@Eigen@@QEAA@XZ DD imagerel $LN4
-	DD	imagerel $LN4+66
+$pdata$??0?$Stride@$0A@$0A@@Eigen@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+66
 	DD	imagerel $unwind$??0?$Stride@$0A@$0A@@Eigen@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@PEAEAEBV?$Stride@$0A@$0A@@1@@Z DD imagerel $LN4
-	DD	imagerel $LN4+91
+$pdata$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@PEAEAEBV?$Stride@$0A@$0A@@1@@Z DD imagerel $LN3
+	DD	imagerel $LN3+91
 	DD	imagerel $unwind$??0?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@QEAA@PEAEAEBV?$Stride@$0A@$0A@@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1746,20 +1746,20 @@ $pdata$??0bad_cast@std@@QEAA@XZ DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$printf DD imagerel $LN4
-	DD	imagerel $LN4+133
+$pdata$printf DD imagerel $LN3
+	DD	imagerel $LN3+133
 	DD	imagerel $unwind$printf
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN4
-	DD	imagerel $LN4+68
+$pdata$_vfprintf_l DD imagerel $LN3
+	DD	imagerel $LN3+68
 	DD	imagerel $unwind$_vfprintf_l
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Data_Set@Mnist@@QEAA@PEBD0_K@Z DD imagerel $LN20
-	DD	imagerel $LN20+1378
+$pdata$??0Data_Set@Mnist@@QEAA@PEBD0_K@Z DD imagerel $LN17
+	DD	imagerel $LN17+1378
 	DD	imagerel $unwind$??0Data_Set@Mnist@@QEAA@PEBD0_K@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1788,8 +1788,8 @@ $pdata$?dtor$3@?0???0Data_Set@Mnist@@QEAA@PEBD0_K@Z@4HA DD imagerel ?dtor$3@?0??
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?print_mnist_data@Mnist@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Z DD imagerel $LN14
-	DD	imagerel $LN14+206
+$pdata$?print_mnist_data@Mnist@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Z DD imagerel $LN13
+	DD	imagerel $LN13+206
 	DD	imagerel $unwind$?print_mnist_data@Mnist@@YAXAEBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@@Z
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3165,7 +3165,7 @@ dat$ = 64
 
 ; 47   : void Mnist::print_mnist_data(const Eigen::Matrix<double, 28, 28>& dat) {
 
-$LN14:
+$LN13:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -3219,7 +3219,7 @@ $LN7@print_mnis:
   0007d	83 f8 7f	 cmp	 eax, 127		; 0000007fH
   00080	7e 0e		 jle	 SHORT $LN8@print_mnis
   00082	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948174
+	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948170
   00089	e8 00 00 00 00	 call	 printf
   0008e	eb 23		 jmp	 SHORT $LN9@print_mnis
 $LN8@print_mnis:
@@ -3230,7 +3230,7 @@ $LN8@print_mnis:
   00095	85 c0		 test	 eax, eax
   00097	74 0e		 je	 SHORT $LN10@print_mnis
   00099	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948173
+	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948169
   000a0	e8 00 00 00 00	 call	 printf
   000a5	eb 0c		 jmp	 SHORT $LN11@print_mnis
 $LN10@print_mnis:
@@ -3238,7 +3238,7 @@ $LN10@print_mnis:
 ; 54   : 			else { printf("\033[0m..\033[m"); }  // "00"
 
   000a7	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948172
+	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948168
   000ae	e8 00 00 00 00	 call	 printf
 $LN11@print_mnis:
 $LN9@print_mnis:
@@ -3251,7 +3251,7 @@ $LN6@print_mnis:
 ; 56   : 		printf("\n");
 
   000b8	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948171
+	00 00		 lea	 rcx, OFFSET FLAT:$SG4294948167
   000bf	e8 00 00 00 00	 call	 printf
 
 ; 57   : 	}
@@ -3310,7 +3310,7 @@ max_length$ = 1976
 
 ; 8    : Mnist::Data_Set::Data_Set(const char* label_file_name, const char* data_file_name, uint64_t max_length) {
 
-$LN20:
+$LN17:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -4017,7 +4017,7 @@ _vfprintf_l PROC					; COMDAT
 
 ; 644  :     {
 
-$LN4:
+$LN3:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -4056,7 +4056,7 @@ printf	PROC						; COMDAT
 
 ; 956  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
@@ -4687,7 +4687,7 @@ stride$ = 80
 
 ; 131  :     {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -4730,7 +4730,7 @@ this$ = 64
 
 ; 61   :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -7122,7 +7122,7 @@ this$ = 48
 
 ; 260  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -7154,7 +7154,7 @@ col$ = 64
 
 ; 117  :     {
 
-$LN6:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -7353,7 +7353,7 @@ dataPtr$ = 56
 
 ; 287  :     EIGEN_DEVICE_FUNC explicit inline MapBase(PointerType dataPtr) : Base(dataPtr) {}
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -7377,7 +7377,7 @@ other$ = 72
 
 ; 78   :     {}
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -8354,7 +8354,7 @@ this$ = 48
 
 ; 477  :     {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -8391,7 +8391,7 @@ col$ = 112
 
 ; 98   :     {
 
-$LN5:
+$LN4:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -8458,7 +8458,7 @@ v$ = 56
 
 ; 133  :     EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE explicit variable_if_dynamic(T v) { EIGEN_ONLY_USED_FOR_DEBUG(v); eigen_assert(v == T(Value)); }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -8567,7 +8567,7 @@ col$ = 96
 
 ; 203  :   {
 
-$LN7:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -8643,7 +8643,7 @@ dataPtr$ = 72
 
 ; 153  :     {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -8691,7 +8691,7 @@ this$ = 48
 
 ; 85   :     inline Index inner() const { return m_inner.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0A@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,0>::value
@@ -8708,7 +8708,7 @@ this$ = 48
 
 ; 82   :     inline Index outer() const { return m_outer.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0A@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,0>::value
@@ -8725,7 +8725,7 @@ this$ = 48
 
 ; 211  :     EIGEN_DEVICE_FUNC DenseStorage() {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -8879,7 +8879,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -8913,7 +8913,7 @@ v$ = 56
 
 ; 133  :     EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE explicit variable_if_dynamic(T v) { EIGEN_ONLY_USED_FOR_DEBUG(v); eigen_assert(v == T(Value)); }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -8970,7 +8970,7 @@ this$ = 48
 
 ; 126  :   plain_array()
 
-$LN6:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -9105,7 +9105,7 @@ __$ReturnUdt$ = 72
 
 ; 63   : {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -9146,7 +9146,7 @@ scalar$ = 144
 
 ; 69   : EIGEN_MAKE_SCALAR_BINARY_OP_ONTHERIGHT(operator/,quotient)
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -9204,7 +9204,7 @@ other$ = 56
 
 ; 224  :     {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -9621,7 +9621,7 @@ func$ = 104
 
 ; 112  :     {
 
-$LN6:
+$LN5:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -9720,7 +9720,7 @@ func$ = 104
 
 ; 70   :     {
 
-$LN7:
+$LN6:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -9802,7 +9802,7 @@ this$ = 48
 
 ; 71   :     Index cols() const EIGEN_NOEXCEPT { return m_xpr.cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -9822,7 +9822,7 @@ this$ = 48
 
 ; 69   :     Index rows() const EIGEN_NOEXCEPT { return m_xpr.rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -9845,7 +9845,7 @@ func$ = 80
 
 ; 66   :       : m_xpr(xpr), m_functor(func) {}
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -9896,7 +9896,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??0?$CwiseBinaryOpImpl@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@UDense@3@@Eigen@@QEAA@XZ PROC ; Eigen::CwiseBinaryOpImpl<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const ,Eigen::Dense>::CwiseBinaryOpImpl<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const ,Eigen::Dense>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -9915,7 +9915,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -9932,7 +9932,7 @@ tv84 = 32
 this$ = 64
 __that$ = 72
 ??0?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@QEAA@AEBV01@@Z PROC ; Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -9960,7 +9960,7 @@ __that$ = 88
 
 ; 162  :     EIGEN_INHERIT_ASSIGNMENT_OPERATORS(Map)
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	56		 push	 rsi
@@ -9992,7 +9992,7 @@ tv84 = 32
 this$ = 64
 __that$ = 72
 ??0?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@QEAA@AEBV01@@Z PROC ; Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const >::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -10018,7 +10018,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10033,7 +10033,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??0?$CwiseUnaryOpImpl@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@UDense@3@@Eigen@@QEAA@XZ PROC ; Eigen::CwiseUnaryOpImpl<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const ,Eigen::Dense>::CwiseUnaryOpImpl<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const ,Eigen::Dense>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10052,7 +10052,7 @@ this$ = 48
 
 ; 485  :     EIGEN_DEFAULT_EMPTY_CONSTRUCTOR_AND_DESTRUCTOR(MatrixBase)
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10183,7 +10183,7 @@ this$ = 48
 
 ; 80   :     Index cols() const { return m_cols.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0BM@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,28>::value
@@ -10200,7 +10200,7 @@ this$ = 48
 
 ; 78   :     Index rows() const { return m_rows.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0BM@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,28>::value
@@ -10269,7 +10269,7 @@ this$ = 48
 
 ; 94   :     inline Index cols() const EIGEN_NOEXCEPT { return m_cols.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0BM@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,28>::value
@@ -10287,7 +10287,7 @@ this$ = 48
 
 ; 91   :     inline Index rows() const EIGEN_NOEXCEPT { return m_rows.value(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	e8 00 00 00 00	 call	 ?value@?$variable_if_dynamic@_J$0BM@@internal@Eigen@@SA_JXZ ; Eigen::internal::variable_if_dynamic<__int64,28>::value
@@ -10347,7 +10347,7 @@ other$ = 72
 
 ; 778  :     {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -10480,7 +10480,7 @@ src$ = 72
 
 ; 835  : {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -10531,7 +10531,7 @@ __formal$ = 72
 
 ; 857  : {
 
-$LN4:
+$LN3:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
@@ -10563,7 +10563,7 @@ func$ = 80
 
 ; 874  : {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -10612,7 +10612,7 @@ func$ = 64
 
 ; 949  :   {
 
-$LN4:
+$LN3:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -10650,7 +10650,7 @@ src$ = 56
 
 ; 453  : {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -10697,7 +10697,7 @@ func$ = 176
 
 ; 770  : {
 
-$LN6:
+$LN5:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -10827,7 +10827,7 @@ text$x	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const > >::~evaluator<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10841,7 +10841,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::binary_evaluator<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const >,Eigen::internal::IndexBased,Eigen::internal::IndexBased,double,double>::~binary_evaluator<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const >,Eigen::internal::IndexBased,Eigen::internal::IndexBased,double,double>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -10858,7 +10858,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1Data@?$binary_evaluator@V?$CwiseBinaryOp@U?$scalar_quotient_op@NN@internal@Eigen@@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@3@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@3@@Eigen@@UIndexBased@internal@2@U342@NN@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::binary_evaluator<Eigen::CwiseBinaryOp<Eigen::internal::scalar_quotient_op<double,double>,Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const ,Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const >,Eigen::internal::IndexBased,Eigen::internal::IndexBased,double,double>::Data::~Data, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -10878,7 +10878,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@$$CBV?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const >::~evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > const >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10892,7 +10892,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > >::~evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10906,7 +10906,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::unary_evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >,Eigen::internal::IndexBased,double>::~unary_evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >,Eigen::internal::IndexBased,double>, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -10923,7 +10923,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1Data@?$unary_evaluator@V?$CwiseUnaryOp@U?$scalar_cast_op@EN@internal@Eigen@@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@3@@Eigen@@UIndexBased@internal@2@N@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::unary_evaluator<Eigen::CwiseUnaryOp<Eigen::internal::scalar_cast_op<unsigned char,double>,Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >,Eigen::internal::IndexBased,double>::Data::~Data, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -10939,7 +10939,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@$$CBV?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >::~evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > const >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10953,7 +10953,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > >::~evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10967,7 +10967,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$mapbase_evaluator@V?$Map@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@Eigen@@$0A@V?$Stride@$0A@$0A@@2@@Eigen@@V?$Matrix@E$0BM@$0BM@$0A@$0BM@$0BM@@2@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::mapbase_evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> >,Eigen::Matrix<unsigned char,28,28,0,28,28> >::~mapbase_evaluator<Eigen::Map<Eigen::Matrix<unsigned char,28,28,0,28,28>,0,Eigen::Stride<0,0> >,Eigen::Matrix<unsigned char,28,28,0,28,28> >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10981,7 +10981,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@$$CBV?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const >::~evaluator<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > const >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -10995,7 +10995,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 this$ = 48
 ??1?$evaluator@V?$CwiseNullaryOp@U?$scalar_constant_op@N@internal@Eigen@@$$CBV?$Matrix@N$0BM@$0BM@$0A@$0BM@$0BM@@3@@Eigen@@@internal@Eigen@@QEAA@XZ PROC ; Eigen::internal::evaluator<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > >::~evaluator<Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<double>,Eigen::Matrix<double,28,28,0,28,28> const > >, COMDAT
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -11015,7 +11015,7 @@ kernel$ = 64
 
 ; 515  :   {
 
-$LN7:
+$LN6:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -11105,7 +11105,7 @@ xpr$ = 56
 
 ; 729  :   explicit evaluator(const XprType& xpr) : Base(xpr) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11216,7 +11216,7 @@ index$ = 104
 
 ; 659  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 58	 sub	 rsp, 88			; 00000058H
@@ -11261,7 +11261,7 @@ this$ = 48
 
 ; 641  :   EIGEN_DEVICE_FUNC EIGEN_CONSTEXPR Index size() const EIGEN_NOEXCEPT { return m_dstExpr.size(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 44 24 30	 mov	 rax, QWORD PTR this$[rsp]
@@ -11282,7 +11282,7 @@ xpr$ = 72
 
 ; 759  :   {
 
-$LN6:
+$LN5:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11337,7 +11337,7 @@ xpr$ = 72
 
 ; 800  :     Data(const XprType& xpr) : op(xpr.functor()), lhsImpl(xpr.lhs()), rhsImpl(xpr.rhs()) {}
 
-$LN6:
+$LN5:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11400,7 +11400,7 @@ index$ = 104
 
 ; 774  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 58	 sub	 rsp, 88			; 00000058H
@@ -11501,7 +11501,7 @@ xpr$ = 56
 
 ; 104  :   explicit evaluator(const T& xpr) : evaluator<T>(xpr) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11523,7 +11523,7 @@ xpr$ = 56
 
 ; 104  :   explicit evaluator(const T& xpr) : evaluator<T>(xpr) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11548,7 +11548,7 @@ index$ = 88
 
 ; 588  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 48	 sub	 rsp, 72			; 00000048H
@@ -11653,7 +11653,7 @@ n$ = 72
 
 ; 516  :   {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11707,7 +11707,7 @@ xpr$ = 56
 
 ; 94   :   explicit evaluator(const T& xpr) : Base(xpr) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11745,7 +11745,7 @@ index$ = 72
 
 ; 916  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11781,7 +11781,7 @@ a$ = 56
 
 ; 163  :   EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE const NewType operator() (const Scalar& a) const { return cast<Scalar, NewType>(a); }
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11816,7 +11816,7 @@ op$ = 72
 
 ; 573  :   {
 
-$LN6:
+$LN5:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11897,7 +11897,7 @@ xpr$ = 72
 
 ; 612  :     Data(const XprType& xpr) : op(xpr.functor()), argImpl(xpr.nestedExpression()) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -11940,7 +11940,7 @@ xpr$ = 56
 
 ; 104  :   explicit evaluator(const T& xpr) : evaluator<T>(xpr) {}
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -11992,7 +11992,7 @@ map$ = 56
 
 ; 1006 :   { }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -12022,7 +12022,7 @@ map$ = 72
 
 ; 902  :   {
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -12118,7 +12118,7 @@ this$ = 112
 
 ; 115  :     {
 
-$LN12:
+$LN11:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 68	 sub	 rsp, 104		; 00000068H
 
@@ -12210,7 +12210,7 @@ this$ = 64
 
 ; 109  :     {
 
-$LN6:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -12262,7 +12262,7 @@ v$ = 56
 
 ; 133  :     EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE explicit variable_if_dynamic(T v) { EIGEN_ONLY_USED_FOR_DEBUG(v); eigen_assert(v == T(Value)); }
 
-$LN5:
+$LN4:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 28	 sub	 rsp, 40			; 00000028H
@@ -12294,7 +12294,7 @@ this$ = 64
 
 ; 67   :   inline Index size() const EIGEN_NOEXCEPT { return rows() * cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
   00009	48 8b 4c 24 40	 mov	 rcx, QWORD PTR this$[rsp]
@@ -12318,7 +12318,7 @@ this$ = 48
 
 ; 63   :   inline Index cols() const EIGEN_NOEXCEPT { return derived().cols(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -12339,7 +12339,7 @@ this$ = 48
 
 ; 60   :   inline Index rows() const EIGEN_NOEXCEPT { return derived().rows(); }
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
   00009	48 8b 4c 24 30	 mov	 rcx, QWORD PTR this$[rsp]
@@ -12364,7 +12364,7 @@ __formal$ = 80
 
 ; 760  : {
 
-$LN8:
+$LN7:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -12441,7 +12441,7 @@ index$ = 72
 
 ; 532  :   {
 
-$LN4:
+$LN3:
   00000	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   00005	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   0000a	48 83 ec 38	 sub	 rsp, 56			; 00000038H
@@ -12473,7 +12473,7 @@ x$ = 48
 
 ; 461  : {
 
-$LN4:
+$LN3:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 28	 sub	 rsp, 40			; 00000028H
 
@@ -12520,7 +12520,7 @@ this$ = 64
 
 ; 125  :     Index cols() const EIGEN_NOEXCEPT {
 
-$LN6:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -12561,7 +12561,7 @@ this$ = 64
 
 ; 120  :     Index rows() const EIGEN_NOEXCEPT {
 
-$LN6:
+$LN5:
   00000	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
   00005	48 83 ec 38	 sub	 rsp, 56			; 00000038H
 
@@ -12604,7 +12604,7 @@ cols$ = 80
 
 ; 272  :     {
 
-$LN8:
+$LN7:
   00000	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   00005	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
   0000a	48 89 4c 24 08	 mov	 QWORD PTR [rsp+8], rcx
@@ -12721,7 +12721,7 @@ __formal$ = 72
 
 ; 401  :   EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE Scalar operator()(const NullaryOp& op, IndexType=0, IndexType=0) const { return op(); }
 
-$LN4:
+$LN3:
   00000	4c 89 4c 24 20	 mov	 QWORD PTR [rsp+32], r9
   00005	4c 89 44 24 18	 mov	 QWORD PTR [rsp+24], r8
   0000a	48 89 54 24 10	 mov	 QWORD PTR [rsp+16], rdx
